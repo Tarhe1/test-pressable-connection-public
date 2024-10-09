@@ -1,0 +1,140 @@
+.navigation.pagination {
+	align-items: center;
+	border-radius: 0;
+	box-shadow: none;
+	display: flex;
+	justify-content: center;
+	max-width: 100%;
+	padding: 15px 0;
+	width: 100%;
+}
+
+.nav-links {
+	align-items: flex-start;
+	column-gap: 15px;
+	display: flex;
+	flex-wrap: wrap;
+	flex: 0 0 auto;
+	justify-content: center;
+	.page-numbers.current,
+	.current {
+		color: $pagination-current;
+		position: relative;
+	}
+	.page-numbers.next,
+	.page-numbers.prev {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		&:hover {
+			color: $pagination-current;
+			&::before {
+				color: $pagination-current;
+			}
+		}
+	}
+	.prev.page-numbers,
+	.next.page-numbers {
+		display: inline;
+		vertical-align: top;
+	}
+	.prev.page-numbers::before,
+	.next.page-numbers::before {
+		@include font-heading;
+		color: $pagination-numbers;
+		display: inline-block;
+		font-size: px-to-rem($pagination-font-size);
+		font-weight: $pagination-font-weight;
+		letter-spacing: $pagination-letter-spacing;
+		line-height: px-to-rem($pagination-line-height);
+		text-transform: $pagination-text-transform;
+	}
+	.prev.page-numbers {
+		flex-direction: row-reverse;
+		&::before {
+			content: "Previous";
+			@include media-breakpoint-down(sm) {
+				content: "Prev";
+			}
+		}
+	}
+	.next.page-numbers {
+		&::before {
+			content: "Next";
+		}
+	}
+	.pagination,
+	.page-numbers,
+	.nav-links > a,
+	.page {
+		@include font-heading;
+		background: transparent;
+		border: none;
+		color: $text;
+		display: inline-block;
+		font-size: px-to-rem($pagination-font-size);
+		font-weight: $pagination-font-weight;
+		letter-spacing: $pagination-letter-spacing;
+		line-height: px-to-rem($pagination-line-height);
+		min-height: 25px;
+		min-width: 25px;
+		text-align: center;
+		text-decoration: none;
+		text-transform: $pagination-text-transform;
+		transition: all 0.4s ease;
+		&:hover {
+			text-decoration: none;
+			color: $pagination-current;
+		}
+		&.prev,
+		&.next {
+			border: none;
+			font-size: 0;
+			font-stretch: normal;
+			font-style: normal;
+			font-weight: normal;
+			letter-spacing: normal;
+			line-height: normal;
+			margin: 0;
+			padding: 0;
+			position: relative;
+			text-align: center;
+		}
+		&.prev {
+			margin-right: 60px;
+			@include media-breakpoint-down(sm) {
+				margin-right: 20px;
+			}
+			&::before {
+				content: "Previous";
+				@include media-breakpoint-down(sm) {
+					content: "Prev";
+				}
+			}
+		}
+		&.next {
+			margin-left: 60px;
+			@include media-breakpoint-down(sm) {
+				margin-left: 20px;
+			}
+			&::before {
+				content: "Next";
+			}
+		}
+		&.current {
+			color: $pagination-current;
+			position: relative;
+			&::after {
+				content: "";
+				background-color: $pagination-current;
+				width: 11px;
+				height: 2px;
+				transform: translate(-50%, 0%);
+				position: absolute;
+				top: unset;
+				left: 50%;
+				bottom: 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,11 @@
+{
+  "name": "elevation/globals",
+  "version": "1.0.0",
+  "title": "Globals",
+  "icon": "admin-site",
+  "description": "This is use to compile global assets.",
+  "editorScript": "file:index.js",
+  "viewScript": "file:script.js",
+  "editorStyle": "file:index.css",
+  "style": "file:style-index.css"
+}

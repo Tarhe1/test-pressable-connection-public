@@ -1,0 +1,27 @@
+{
+  "name": "elevation/home-banner",
+  "title": "Homepage - Banner",
+  "category": "elevation-blocks",
+  "icon": "block-default",
+  "keywords": [
+    "homepage",
+    "banner",
+    "editor",
+    "button",
+    "image",
+    "elevation",
+    "block"
+  ],
+  "description": "",
+  "acf": {
+    "mode": "edit",
+    "renderCallback": "home_banner_block_render_callback"
+  },
+  "style": [
+    "file:./style-index.css"
+  ],
+  "script": "file:./index.js",
+  "editorStyle": [
+    "file:./index.css"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+	"name": "elevation/whatwedo-firststeps",
+	"title": "What We Do - First Steps",
+	"category": "elevation-blocks",
+	"icon": "block-default",
+	"keywords": [
+		"what we do",
+		"first steps",
+		"title",
+		"cards",
+		"button",
+		"image",
+		"elevation",
+		"block"
+	],
+	"description": "",
+	"acf": {
+		"mode": "edit",
+		"renderCallback": "whatwedo_firststeps_block_render_callback"
+	},
+	"style": ["file:./style-index.css"],
+	"script": "file:./index.js",
+	"editorStyle": ["file:./index.css"]
+}

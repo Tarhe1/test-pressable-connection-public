@@ -1,0 +1,97 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "../../assets/styles/scss/utilities/_functions";
+@import "../../assets/styles/scss/utilities/_variables";
+@import "../../assets/styles/scss/utilities/_mixins";
+@import "../../assets/styles/scss/utilities/_swiper";
+
+@import "swiper/css/bundle";
+
+$block: ".block";
+#{$block} {
+	&__content + &__carousel {
+		margin-top: 30px;
+	}
+}
+
+div[class*="swiper__container--carousel"] {
+	position: relative;
+	.carousel {
+		overflow: hidden;
+		position: relative;
+		width: auto;
+		figure {
+			margin-bottom: 0;
+			display: inline-flex;
+			flex-direction: column;
+
+			img {
+				object-fit: cover;
+				width: auto;
+				z-index: 1;
+				@include media-breakpoint-down(lg) {
+					height: 300px;
+				}
+				@media (max-width: 575.98px) {
+					object-position: center left;
+				}
+			}
+			&.mask::after {
+				content: "";
+				left: 0;
+				position: absolute;
+				top: 0;
+				width: 100%;
+				z-index: 2;
+				@include media-breakpoint-down(lg) {
+					height: 300px;
+				}
+			}
+		}
+		&__image {
+			position: relative;
+			display: block;
+			background-color: transparent;
+			margin-bottom: 0;
+			// &--size-1 {
+			// 	img {
+			// 		height: 460px; /*equal height*/
+			// 	}
+			// 	&.mask::after {
+			// 		height: 460px; /*equal height*/
+			// 	}
+			// }
+			&--size-2 {
+				img {
+					height: 440px; /*equal height*/
+				}
+				&.mask::after {
+					height: 440px; /*equal height*/
+				}
+			}
+		}
+		&__caption {
+			padding-top: 1rem;
+			> * {
+				@include font-body;
+				margin: 0;
+				font-size: px-to-rem(14px);
+				line-height: px-to-rem(16px);
+			}
+		}
+	}
+}
+// .swiper__images {
+// 	.carousel {
+// 		@include media-breakpoint-up(lg) {
+// 			width: auto !important;
+// 		}
+// 		// .carousel__caption {
+// 		// 	display: none;
+// 		// }
+// 	}
+// }
+.swiper__container--carousel-value {
+	object-fit: cover;
+}

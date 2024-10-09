@@ -1,0 +1,379 @@
+/*START footer------------------------*/
+@import "../../../../critical-assets/styles/scss/utilities/mixins";
+
+.footer {
+	padding-top: 0;
+	position: relative;
+	color: $white;
+	padding-bottom: 60px;
+
+	&__form{
+
+		padding: 45px 20px 145px 20px;
+		border-radius: 20px;
+		background: $white;
+		box-shadow: 0px 4px 21px 2px rgba(0, 0, 0, 0.10);
+		display: flex;
+		flex-wrap: wrap;
+
+		@include media-breakpoint-up(md) {
+			padding: 40px 0;
+		}
+
+		@include media-breakpoint-up(xl) {
+			padding: 75px 0 87px 0;
+		}
+
+		&-title{
+			flex: 0 0 auto;
+			width: 100%;
+			color: $text;
+			padding-bottom: 28px;
+		}
+
+		&-newsletter{
+			width: 100%;
+		}
+
+		&-title, &-newsletter{
+			@include media-breakpoint-up(md) {
+				flex: 0 0 calc(8 * (100% / 10));
+				margin: 0 auto;
+			}
+		}
+	}
+
+	&__contain{
+		padding: 40px 20px 46px 20px;
+		background-color: $primary;
+		border-radius: 30px;
+		margin-top: -90px;
+		z-index: 1;
+		position: relative;
+
+		@include media-breakpoint-up(md) {
+			padding: 134px 0 40px 0;
+			margin-top: -90px;
+			position: unset;
+		}
+
+		@include media-breakpoint-up(xl) {
+			padding: 114px 0 70px 0;
+			margin-top: -50px;
+		}
+	}
+
+	&__row-inner{
+		display: flex;
+		flex-wrap: wrap;
+		row-gap: 35px;
+
+		@include media-breakpoint-up(md) {
+			column-gap: 20px;
+		}
+
+		@include media-breakpoint-up(lg) {
+			column-gap: 0;
+		}
+		
+	}
+
+	&__col{
+		width: 100%;
+		flex: 0 0 auto;
+		display: flex;
+		flex-direction: column;
+		
+		&-logo{
+			row-gap: 25px;
+			@include media-breakpoint-up(md) {
+				flex: 0 0 29%;
+				row-gap: 20px;
+			}
+			@include media-breakpoint-between(lg, xl) {
+				flex: 0 0 calc(4 * (100% / 10));
+			}
+			@include media-breakpoint-up(xl) {
+				flex: 0 0 calc(3 * (100% / 10));
+				row-gap: 40px;
+			}
+		}
+		&-menu{
+			@include media-breakpoint-between(md, xl) {
+				flex: 0 0 calc(3 * (100% / 10));
+				padding-right: 25px;
+			}
+			@include media-breakpoint-up(xl) {
+				flex: 0 0 calc(2 * (100% / 10));
+				padding-right: 25px;
+			}
+		}
+		&-contact{
+			@include media-breakpoint-between(md, xl) {
+				flex: 0 0 calc(3 * (100% / 10));
+			}
+			@include media-breakpoint-up(xl) {
+				flex: 0 0 calc(2 * (100% / 10));
+			}
+		}
+
+		&-awards-links{
+			@include media-breakpoint-between(md, xl) {
+				flex: 0 0 calc(9 * (100% / 10));
+				flex-direction: row;
+			}
+			@include media-breakpoint-up(xl) {
+				flex: 0 0 calc(3 * (100% / 10));
+				flex-direction: row;
+			}
+		}
+	}
+
+	&__logo{
+		img{
+			padding: 14px;
+			border-radius: 10px;
+			background-color: $white;
+		}
+	}
+
+	&__title{
+		strong{
+			font-size: px-to-rem(16px);
+			font-style: normal;
+			font-weight: 700;
+			line-height: px-to-rem(24px);
+		}
+	}
+
+	&__address {
+		color: $white;
+		position: relative;
+		padding-left: 25px;
+
+		@include media-breakpoint-up(md) {
+			padding-left: 0;
+		}
+		
+		&::before {
+			content: "";
+			background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.0007 10.0001C9.08398 10.0001 8.33398 9.25008 8.33398 8.33342C8.33398 7.41675 9.08398 6.66675 10.0007 6.66675C10.9173 6.66675 11.6673 7.41675 11.6673 8.33342C11.6673 9.25008 10.9173 10.0001 10.0007 10.0001ZM15.0007 8.50008C15.0007 5.47508 12.7923 3.33341 10.0007 3.33341C7.20898 3.33341 5.00065 5.47508 5.00065 8.50008C5.00065 10.4501 6.62565 13.0334 10.0007 16.1167C13.3757 13.0334 15.0007 10.4501 15.0007 8.50008ZM10.0007 1.66675C13.5007 1.66675 16.6673 4.35008 16.6673 8.50008C16.6673 11.2667 14.4423 14.5417 10.0007 18.3334C5.55898 14.5417 3.33398 11.2667 3.33398 8.50008C3.33398 4.35008 6.50065 1.66675 10.0007 1.66675Z' fill='%23FBF9F9'/%3E%3C/svg%3E%0A");
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-color: transparent;
+			background-size: contain;
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			top: 0;
+			left: 0;
+
+			@include media-breakpoint-up(md) {
+				left: -25px;
+			}
+		}
+	}
+
+	&__title + .footer__address{
+		margin-top: 20px;
+	}
+
+	
+	&__address + .footer__contact{
+		margin-top: 25px;
+	}
+
+	&__contact--row a, &__address p{
+		@include font-heading;
+		font-size: px-to-rem(14px);
+		font-style: normal;
+		font-weight: 400;
+		line-height: px-to-rem(21px);
+		color: $white;
+	}
+
+	&__contact {
+		display: flex;
+		flex-direction: column;
+		row-gap: 25px;
+		padding-left: 25px;
+
+		@include media-breakpoint-up(md) {
+			padding-left: 0;
+			// row-gap: 0;
+		}
+
+		&--row {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			gap: 5px;
+		}
+		a[href^="tel"],
+		a.phone {
+			position: relative;
+			color: $white;
+			&::before {
+				content: "";
+				background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.45 4.16667C5.5 4.90833 5.625 5.63333 5.825 6.325L4.825 7.325C4.48333 6.325 4.26667 5.26667 4.19167 4.16667H5.45ZM13.6667 14.1833C14.375 14.3833 15.1 14.5083 15.8333 14.5583V15.8C14.7333 15.725 13.675 15.5083 12.6667 15.175L13.6667 14.1833ZM6.25 2.5H3.33333C2.875 2.5 2.5 2.875 2.5 3.33333C2.5 11.1583 8.84167 17.5 16.6667 17.5C17.125 17.5 17.5 17.125 17.5 16.6667V13.7583C17.5 13.3 17.125 12.925 16.6667 12.925C15.6333 12.925 14.625 12.7583 13.6917 12.45C13.6083 12.4167 13.5167 12.4083 13.4333 12.4083C13.2167 12.4083 13.0083 12.4917 12.8417 12.65L11.0083 14.4833C8.65 13.275 6.71667 11.35 5.51667 8.99167L7.35 7.15833C7.58333 6.925 7.65 6.6 7.55833 6.30833C7.25 5.375 7.08333 4.375 7.08333 3.33333C7.08333 2.875 6.70833 2.5 6.25 2.5Z' fill='%23FBF9F9'/%3E%3C/svg%3E%0A");
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-color: transparent;
+				background-size: contain;
+				position: absolute;
+				width: 20px;
+				height: 20px;
+				top: 0;
+				left: -25px;
+			}
+		}
+		a[href^="mailto"],
+		a.email {
+			position: relative;
+			&::before {
+				content: "";
+				background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.99935 1.66675C5.39935 1.66675 1.66602 5.40008 1.66602 10.0001C1.66602 14.6001 5.39935 18.3334 9.99935 18.3334H14.166V16.6667H9.99935C6.38268 16.6667 3.33268 13.6167 3.33268 10.0001C3.33268 6.38341 6.38268 3.33341 9.99935 3.33341C13.616 3.33341 16.666 6.38341 16.666 10.0001V11.1917C16.666 11.8501 16.0743 12.5001 15.416 12.5001C14.7577 12.5001 14.166 11.8501 14.166 11.1917V10.0001C14.166 7.70008 12.2993 5.83342 9.99935 5.83342C7.69935 5.83342 5.83268 7.70008 5.83268 10.0001C5.83268 12.3001 7.69935 14.1667 9.99935 14.1667C11.1493 14.1667 12.1993 13.7001 12.9493 12.9417C13.491 13.6834 14.4243 14.1667 15.416 14.1667C17.0577 14.1667 18.3327 12.8334 18.3327 11.1917V10.0001C18.3327 5.40008 14.5993 1.66675 9.99935 1.66675ZM9.99935 12.5001C8.61602 12.5001 7.49935 11.3834 7.49935 10.0001C7.49935 8.61675 8.61602 7.50008 9.99935 7.50008C11.3827 7.50008 12.4993 8.61675 12.4993 10.0001C12.4993 11.3834 11.3827 12.5001 9.99935 12.5001Z' fill='%23FBF9F9'/%3E%3C/svg%3E%0A");
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-color: transparent;
+				background-size: contain;
+				position: absolute;
+				width: 20px;
+				height: 20px;
+				top: 0;
+				left: -25px;
+			}
+		}
+	}
+
+	&__social {
+		ul.social-network {
+			text-decoration: none;
+			justify-content: flex-start;
+		}
+	}
+
+	&__menu, .menu ul {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		margin: 0;
+		padding: 0 !important;
+		position: relative;
+		list-style-type: none;
+		li {
+			padding-left: 0;
+			&::marker {
+				content: none;
+			}
+			a {
+				@include font-heading;
+				bottom: 0;
+				color: $white;
+				display: inline-block;
+				font-size: px-to-rem(16px);
+				font-weight: 700;
+				letter-spacing: normal;
+				transition: all 0.4s ease;
+				&:hover {
+					text-decoration: none;
+				}
+			}
+			&.cta-menu-footer{
+				a{
+					@include cta;
+					@include cta--cta-light;
+					color: $primary;
+					&::after{
+						background-image: url("data:image/svg+xml,%3Csvg width='17' height='13' viewBox='0 0 17 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 5.75C0.585786 5.75 0.25 6.08579 0.25 6.5C0.25 6.91421 0.585786 7.25 1 7.25V5.75ZM16.5303 7.03033C16.8232 6.73744 16.8232 6.26256 16.5303 5.96967L11.7574 1.1967C11.4645 0.903806 10.9896 0.903806 10.6967 1.1967C10.4038 1.48959 10.4038 1.96447 10.6967 2.25736L14.9393 6.5L10.6967 10.7426C10.4038 11.0355 10.4038 11.5104 10.6967 11.8033C10.9896 12.0962 11.4645 12.0962 11.7574 11.8033L16.5303 7.03033ZM1 7.25H16V5.75H1V7.25Z' fill='%23A03259'/%3E%3C/svg%3E%0A");
+					}
+					&:hover{
+						color: $primary;
+					}
+				}
+			}
+			&.cta-menu-footer02{
+				a{
+					@include cta;
+					@include cta--cta-secondary-light;
+				}
+			}
+		}
+	}
+
+	&__awards{
+		display: flex;
+		column-gap: 17px;
+
+		@include media-breakpoint-up(xl) {
+			flex-direction: column;
+			row-gap: 17px;
+		}
+
+		.award{
+			flex: 0 0 79px;
+			height: 79px;
+			width: 79px;
+			img{
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+			}
+		}
+	}
+	&__info-wrapper{
+		display: flex;
+		flex-direction: column;
+		row-gap: 20px;
+
+		@include media-breakpoint-up(md) {
+			margin-left: 26px;
+			padding-left: 24px;
+			border-left: 0.5px solid $white;
+		}
+
+		@include media-breakpoint-up(xl) {
+			margin-left: 15px;
+			padding-left: 15px;
+		}
+
+		@include media-breakpoint-up(xxl) {
+			margin-left: 30px;
+			padding-left: 30px;
+		}
+	}
+
+	&__legal-info{
+		@include font-heading;
+			font-size: px-to-rem(13px);
+			font-style: normal;
+			font-weight: 400;
+			line-height: px-to-rem(19.5px);
+			color: $white;
+			a:last-child{
+				text-decoration-line: underline;
+				&:hover{
+					text-decoration-line: none;
+				}
+			}
+			>*, >*>*{
+				color: $white;
+			}
+	}
+
+	&__links{
+		display: flex;
+		flex-direction: column;
+		row-gap: 20px;
+		a{
+			@include font-heading;
+			font-size: px-to-rem(13px);
+			font-style: normal;
+			font-weight: 400;
+			line-height: px-to-rem(19.5px);
+			text-decoration-line: underline;
+			color: $white;
+		}
+	}
+}
+/*END footer------------------------------------------*/

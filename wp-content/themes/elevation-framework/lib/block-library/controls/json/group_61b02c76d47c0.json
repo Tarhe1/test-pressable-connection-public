@@ -1,0 +1,244 @@
+{
+	"key": "group_61b02c76d47c0",
+	"title": "Global Link",
+	"fields": [
+		{
+			"key": "field_61b02d95c2f99",
+			"label": "Link Text",
+			"name": "link_text",
+			"aria-label": "",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50",
+				"class": "flex-2",
+				"id": ""
+			},
+			"default_value": "",
+			"maxlength": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_61b02c7ed47a5",
+			"label": "Link Style",
+			"name": "link_style",
+			"aria-label": "",
+			"type": "select",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50",
+				"class": "flex-2",
+				"id": ""
+			},
+			"choices": {
+				"cta-primary-red": "Primary Red Button",
+				"cta-primary-green": "Primary Green Button",
+				"cta-light": "Primary White Button",
+				"cta-secondary-red": "Secondary Red Button",
+				"cta-secondary-light": "Secondary White Button",
+				"simple-tertiary-primary": "Tertiary Primary Button",
+				"simple-tertiary-light": "Tertiary Light Button"
+			},
+			"default_value": false,
+			"return_format": "value",
+			"multiple": 0,
+			"allow_null": 0,
+			"ui": 0,
+			"ajax": 0,
+			"placeholder": ""
+		},
+		{
+			"key": "field_61b02ccdd47a7",
+			"label": "Page",
+			"name": "page",
+			"aria-label": "",
+			"type": "page_link",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": [
+				[
+					{
+						"field": "field_61b02ca7d47a6",
+						"operator": "==",
+						"value": "pages"
+					}
+				]
+			],
+			"wrapper": {
+				"width": "50",
+				"class": "flex-2",
+				"id": ""
+			},
+			"post_type": ["page", "post"],
+			"post_status": "",
+			"taxonomy": "",
+			"allow_archives": 0,
+			"multiple": 0,
+			"allow_null": 0
+		},
+		{
+			"key": "field_61b02d09d47a9",
+			"label": "External URL",
+			"name": "external_url",
+			"aria-label": "",
+			"type": "url",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": [
+				[
+					{
+						"field": "field_61b02ca7d47a6",
+						"operator": "==",
+						"value": "external"
+					}
+				]
+			],
+			"wrapper": {
+				"width": "50",
+				"class": "flex-2",
+				"id": ""
+			},
+			"default_value": "",
+			"placeholder": ""
+		},
+		{
+			"key": "field_61b02d1ad47aa",
+			"label": "File",
+			"name": "file",
+			"aria-label": "",
+			"type": "file",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": [
+				[
+					{
+						"field": "field_61b02ca7d47a6",
+						"operator": "==",
+						"value": "file"
+					}
+				]
+			],
+			"wrapper": {
+				"width": "50",
+				"class": "flex-2",
+				"id": ""
+			},
+			"return_format": "array",
+			"library": "all",
+			"min_size": "",
+			"max_size": "",
+			"mime_types": ""
+		},
+		{
+			"key": "field_648b23b930747",
+			"label": "Internal URL",
+			"name": "internal_url",
+			"aria-label": "",
+			"type": "url",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": [
+				[
+					{
+						"field": "field_61b02ca7d47a6",
+						"operator": "==",
+						"value": "internal"
+					}
+				],
+				[
+					{
+						"field": "field_61b02ca7d47a6",
+						"operator": "==",
+						"value": "with-anchor"
+					}
+				]
+			],
+			"wrapper": {
+				"width": "50",
+				"class": "",
+				"id": ""
+			},
+			"default_value": "",
+			"placeholder": ""
+		},
+		{
+			"key": "field_666b4e9198cb1",
+			"label": "Anchor",
+			"name": "anchor",
+			"aria-label": "",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": [
+				[
+					{
+						"field": "field_61b02ca7d47a6",
+						"operator": "==",
+						"value": "with-anchor"
+					}
+				]
+			],
+			"wrapper": {
+				"width": "50",
+				"class": "",
+				"id": ""
+			},
+			"default_value": "",
+			"maxlength": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_61b02ca7d47a6",
+			"label": "Link Type",
+			"name": "link_type",
+			"aria-label": "",
+			"type": "button_group",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50",
+				"class": "flex-2",
+				"id": ""
+			},
+			"choices": {
+				"pages": "Internal Pages",
+				"external": "External URL",
+				"file": "File",
+				"internal": "Internal URL",
+				"with-anchor": "Internal w/ Anchor"
+			},
+			"default_value": "pages",
+			"return_format": "value",
+			"allow_null": 0,
+			"layout": "horizontal"
+		}
+	],
+	"location": [
+		[
+			{
+				"param": "post_type",
+				"operator": "==",
+				"value": "post"
+			}
+		]
+	],
+	"menu_order": 0,
+	"position": "normal",
+	"style": "default",
+	"label_placement": "top",
+	"instruction_placement": "label",
+	"hide_on_screen": "",
+	"active": false,
+	"description": "",
+	"show_in_rest": 0,
+	"modified": 1727578239
+}

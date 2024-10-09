@@ -1,0 +1,133 @@
+{
+	"key": "group_65b2c512dac56",
+	"title": "Custom Columns",
+	"fields": [
+		{
+			"key": "field_65b2c640e5c09",
+			"label": "Settings",
+			"name": "",
+			"aria-label": "",
+			"type": "accordion",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"open": 0,
+			"multi_expand": 0,
+			"endpoint": 0
+		},
+		{
+			"key": "field_65b2c657e5c0a",
+			"label": "Vertical Alignment",
+			"name": "align_items",
+			"aria-label": "",
+			"type": "group",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"layout": "table",
+			"sub_fields": [
+				{
+					"key": "field_65b2c691e5c0b",
+					"label": "Desktop",
+					"name": "align_items_desktop",
+					"aria-label": "",
+					"type": "button_group",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"choices": {
+						"start": "Top",
+						"center": "Middle",
+						"end": "Bottom"
+					},
+					"default_value": "center",
+					"return_format": "",
+					"allow_null": 0,
+					"layout": ""
+				},
+				{
+					"key": "field_65b2c6d8e5c0c",
+					"label": "Tablet",
+					"name": "align_items_tablet",
+					"aria-label": "",
+					"type": "button_group",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"choices": {
+						"start": "Top",
+						"center": "Middle",
+						"end": "Bottom"
+					},
+					"default_value": "center",
+					"return_format": "",
+					"allow_null": 0,
+					"layout": ""
+				},
+				{
+					"key": "field_65b2c6ece5c0e",
+					"label": "Mobile",
+					"name": "align_items_mobile",
+					"aria-label": "",
+					"type": "button_group",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"choices": {
+						"start": "Top",
+						"center": "Middle",
+						"end": "Bottom"
+					},
+					"default_value": "center",
+					"return_format": "",
+					"allow_null": 0,
+					"layout": ""
+				}
+			]
+		}
+	],
+	"location": [
+		[
+			{
+				"param": "block",
+				"operator": "==",
+				"value": "elevation/custom-columns"
+			}
+		]
+	],
+	"menu_order": 0,
+	"position": "normal",
+	"style": "default",
+	"label_placement": "top",
+	"instruction_placement": "label",
+	"hide_on_screen": "",
+	"active": true,
+	"description": "",
+	"show_in_rest": 0,
+	"modified": 1706216811
+}

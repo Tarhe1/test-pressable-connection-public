@@ -1,0 +1,209 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "../../assets/styles/scss/utilities/_functions";
+@import "../../assets/styles/scss/utilities/_variables";
+@import "../../assets/styles/scss/utilities/_mixins";
+@import "../../critical-assets/styles/scss/utilities/mixins";
+
+$section: ".block-home-makeadifference";
+#{$section} {
+
+	&__row-inner{
+		row-gap: 30px;
+	}
+
+	&__cards{
+
+		flex: 0 0 auto;
+		width: 100%;
+
+		@include media-breakpoint-up(xl) {
+			flex: 0 0 (6 * (100% / 10));
+		}
+
+		&-row{
+			row-gap: 21px;
+		}
+	}
+
+	$element: ".card";
+	#{$element} {
+
+		background-color: $light-primary;
+		border-radius: 10px;
+		padding: 45px 30px 30px 30px;
+		box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.08);
+		position: relative;
+		transition: background-color 0.3s ease;
+		height: 100%;
+		display: flex;
+
+		&:hover{
+			@include media-breakpoint-up(xl) {
+				background-color: $base-white;
+			}
+		}
+
+		&__icon + #{$element}__title, &__icon + #{$element}__excerpt{
+			margin-top: 14px;
+		}
+
+		&__title + #{$element}__excerpt{
+			margin-top: 12px;
+		}
+
+		&__body{
+			margin-top: auto;
+			@include media-breakpoint-up(xxl) {
+				width: 246px;
+			}
+		}
+
+		&__icon{
+			img{
+				max-width: 45px;
+				max-height: 40px;
+			}
+		}
+
+		&__button{
+			margin-top: 14px;
+
+			.cta-custom{
+				@include cta;
+			}
+
+		}
+	}
+
+	.col{
+
+		&:nth-child(1){
+			#{$element}{
+				&__button{
+					.cta-custom{
+						@include cta--cta-primary-red;
+					}
+				}
+				&:hover{
+					@include media-breakpoint-up(xl) {
+						#{$element}__button{
+							.cta-custom{
+								background-color: $dark;
+								color: $white;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&:nth-child(2){
+			#{$element}{
+				background-color: $primary;
+				
+				&__title{
+					font-size: px-to-rem($h4_size_mobile);
+					line-height: px-to-rem($h4_line_height_mobile);
+					color: $white;
+
+					@include media-breakpoint-up(sm){
+						font-size: px-to-rem($h4_size_tablet);
+						line-height: px-to-rem($h4_line_height_tablet);
+					}
+					@include media-breakpoint-up(xl){
+						line-height: px-to-rem($h4_line_height_desktop);
+						font-size: px-to-rem($h4_size_desktop);
+					}
+				}
+
+				&__excerpt p{
+					color: $white;
+				}
+
+				&__button{
+
+					@include media-breakpoint-up(xl) {
+						display: flex;
+						justify-content: flex-end;
+					}
+
+					.cta-custom{
+						@include cta--simple-tertiary-light;
+					}
+				}
+
+				&:hover{
+					@include media-breakpoint-up(xl) {
+						#{$element}__button{
+							.cta-custom{
+								color: $white;
+								&::after{
+									width: 32px;
+									background-image: url("data:image/svg+xml,%3Csvg width='33' height='17' viewBox='0 0 33 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='14' y='0.5' width='19' height='16' rx='3' fill='%233A2638'/%3E%3Cpath d='M1 7.75C0.585786 7.75 0.25 8.08579 0.25 8.5C0.25 8.91421 0.585786 9.25 1 9.25V7.75ZM26.5303 9.03033C26.8232 8.73744 26.8232 8.26256 26.5303 7.96967L21.7574 3.1967C21.4645 2.90381 20.9896 2.90381 20.6967 3.1967C20.4038 3.48959 20.4038 3.96447 20.6967 4.25736L24.9393 8.5L20.6967 12.7426C20.4038 13.0355 20.4038 13.5104 20.6967 13.8033C20.9896 14.0962 21.4645 14.0962 21.7574 13.8033L26.5303 9.03033ZM1 9.25H26V7.75H1V9.25Z' fill='%23FBF9F9'/%3E%3C/svg%3E%0A");
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&:nth-child(3), &:nth-child(4){
+			#{$element}{
+				&__button {
+
+					@include media-breakpoint-up(xl) {
+						display: flex;
+						justify-content: flex-end;
+					}
+
+					.cta-custom{
+						@include cta--simple-tertiary-primary
+					}
+				}
+				&:hover{
+					@include media-breakpoint-up(xl) {
+						#{$element}__button{
+							.cta-custom{
+								color: $dark;
+								&::after{
+									width: 32px;
+									background-image: url("data:image/svg+xml,%3Csvg width='33' height='17' viewBox='0 0 33 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='14' y='0.5' width='19' height='16' rx='3' fill='%23FFC0C2'/%3E%3Cpath d='M1 7.75C0.585786 7.75 0.25 8.08579 0.25 8.5C0.25 8.91421 0.585786 9.25 1 9.25V7.75ZM26.5303 9.03033C26.8232 8.73744 26.8232 8.26256 26.5303 7.96967L21.7574 3.1967C21.4645 2.90381 20.9896 2.90381 20.6967 3.1967C20.4038 3.48959 20.4038 3.96447 20.6967 4.25736L24.9393 8.5L20.6967 12.7426C20.4038 13.0355 20.4038 13.5104 20.6967 13.8033C20.9896 14.0962 21.4645 14.0962 21.7574 13.8033L26.5303 9.03033ZM1 9.25H26V7.75H1V9.25Z' fill='%233A2638'/%3E%3C/svg%3E%0A");
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	
+	}
+
+	&__image{
+		flex: 0 0 auto;
+		width: 100%;
+
+		@include media-breakpoint-up(xl) {
+			flex: 0 0 (4 * (100% / 10));
+			height: auto;
+		}
+
+		figure{
+			@include media-breakpoint-up(xl) {
+				height: 100%;
+			}
+		}
+
+		img{
+			border-radius: 10px;
+			@include media-breakpoint-up(xl) {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+
+}

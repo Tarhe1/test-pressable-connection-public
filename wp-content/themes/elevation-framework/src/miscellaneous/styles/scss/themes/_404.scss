@@ -1,0 +1,41 @@
+$section: ".error-404";
+body.error404 {
+	#{$section} {
+		background: $white;
+		padding: 50px 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		color: $text;
+		min-height: calc(100vh - $header-height-desktop);
+
+		&__header,
+		&__content {
+			text-align: center;
+			width: 100%;
+			max-width: 496px;
+			margin: 0 auto;
+		}
+
+		h1#{$section}__title {
+			font-weight: 700;
+			line-height: 1em;
+			font-size: px-to-rem(120px);
+
+			@include media-breakpoint-up(lg) {
+				font-size: px-to-rem(200px);
+			}
+		}
+
+		&__subtitle {
+			color: $light-primary;
+			margin-bottom: 12px;
+		}
+
+		&__content p {
+			color: $text;
+			margin-bottom: 20px;
+		}
+	}
+}

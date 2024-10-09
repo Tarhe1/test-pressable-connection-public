@@ -1,0 +1,28 @@
+{
+  "name": "elevation/home-stayconnected",
+  "title": "Homepage - Stay Connected",
+  "category": "elevation-blocks",
+  "icon": "block-default",
+  "keywords": [
+    "stay connected",
+    "social feed",
+    "homepage",
+    "elevation",
+    "block"
+  ],
+  "description": "",
+  "acf": {
+    "mode": "edit",
+    "renderCallback": "home_stayconnected_block_render_callback"
+  },
+  "supports": {
+    "anchor": true
+  },
+  "style": [
+    "file:./style-index.css"
+  ],
+  "script": "file:./index.js",
+  "editorStyle": [
+    "file:./index.css"
+  ]
+}

@@ -1,0 +1,29 @@
+.skiplink {
+	@include font-body;
+	background-color: $accesible-background;
+	border-color: 1px solid $focus-color;
+	border-radius: 2px;
+	color: $white;
+	font-size: $btn1_font_size;
+	padding: 0.3em 0.5em;
+	position: absolute;
+	z-index: 99999;
+}
+
+body {
+	:focus-visible {
+		outline: none;
+		transition: all 0.4s ease;
+		box-shadow: 0 0 0 0.25rem $focus-color;
+	}
+	a.nav-link:focus-visible{
+		outline: none;
+		transition: all 0.4s ease;
+		box-shadow: 0 0 0 0.25rem $focus-color;
+	}
+	.accessibility_alt .cta:focus-visible, .block--bg-blue .cta:focus-visible{
+		outline: none;
+		transition: all 0.4s ease;
+		box-shadow: 0 0 0 0.25rem $primary;
+	}
+}

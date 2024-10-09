@@ -1,0 +1,78 @@
+.columnPlaceholderNotSelected {
+	padding-top: 1.5rem;
+}
+
+.columnPlaceholder {
+	padding: 1.5rem;
+	border: 1px dashed #777;
+	border-radius: 4px;
+}
+
+.columnPlaceholderDark {
+	border: 1px dashed #444;
+}
+
+.innerBlocksBottomSpace {
+	margin-bottom: 1.5rem;
+}
+
+.align-items-top {
+	justify-content: flex-start;
+}
+
+.align-items-center {
+	justify-content: center;
+}
+
+.align-items-bottom {
+	justify-content: flex-end;
+}
+
+// .flexBase {
+// 	flex: 1;
+// }
+
+.columnsPreview {
+	min-height: 18px;
+	min-width: 24px;
+	border-color: #444;
+	flex-direction: row;
+	align-self: center;
+	margin-right: 10px;
+	border-width: 1px;
+	border-radius: 3px;
+}
+
+.columnsPreviewDark {
+	border-color: #222;
+}
+
+.columnIndicator {
+	background-color: #444;
+}
+
+.columnIndicatorDark {
+	background-color: #222;
+}
+
+.columnAppender {
+	margin-left: 1.5rem;
+	margin-right: 1.5rem;
+}
+.fullwidthColumnAppender {
+	margin-left: 1rem * 2.5;
+	margin-right: 1rem * 2.5;
+}
+.fullwidthHasInnerColumnAppender {
+	margin-left: 1.5rem;
+	margin-right: 1.5rem;
+}
+.hasInnerColumnAppender {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.wideColumnAppender {
+	margin-left: 1.5rem;
+	margin-right: 1.5rem;
+}

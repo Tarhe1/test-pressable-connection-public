@@ -1,0 +1,113 @@
+:root {
+	--tec-color-accent-primary: #cb4b3b;
+	--tec-color-accent-primary-hover: #211f1f;
+	--tec-color-accent-primary-active: rgba($color: #cb4b3b, $alpha: 0.5);
+	--tec-color-link-primary: #cb4b3b;
+	--tec-color-link-accent-hover: #211f1f;
+	--tec-font-size-8: px-to-rem(35px);
+	--tec-font-family-sans-serif: "Inter", sans-serif;
+	--tec-font-weight-bold: 500;
+	--tec-color-button-primary-hover: #211f1f;
+	--tec-color-background-events-bar-submit-button-active: rgba(
+		$color: #211f1f,
+		$alpha: 0.5
+	);
+	--tec-color-border-secondary: #cb4b3b;
+	--tec-color-text-secondary: #211f1f;
+	--tec-color-border-events-bar: #21211f1f;
+}
+
+/*
+ * Single Events
+ */
+.single-tribe_events,
+.tribe-events {
+	button.tribe-common-c-btn:hover,
+	.tribe-tickets__tickets-buy {
+		padding: 11px 20px;
+	}
+
+	/*
+		* Event Details - Venue
+		*/
+
+	.tribe-events-event-meta.primary,
+	.tribe-events-event-meta.secondary {
+		width: 100%;
+	}
+	abbr[title] {
+		cursor: none;
+		text-decoration: unset;
+	}
+
+	.tribe-events-event-meta.secondary {
+		.tribe-events-venue-map {
+			iframe {
+				max-height: 350px;
+			}
+		}
+		@include media-breakpoint-up(xl) {
+			.tribe-events-meta-group-venue,
+			.tribe-events-venue-map {
+				width: 50%;
+			}
+		}
+	}
+
+	.tribe-events-c-subscribe-dropdown__content {
+		position: relative;
+	}
+	.tribe-events-c-subscribe-dropdown
+		.tribe-events-c-subscribe-dropdown__list {
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	/*
+		* Related Events
+ 		*/
+
+	ul.tribe-related-events {
+		li {
+			background: #ffffff;
+			border: 1px solid rgba(217, 217, 217, 0.418324);
+			border-radius: 1px;
+			.tribe-related-events-thumbnail {
+				position: relative;
+				a {
+					img {
+						object-fit: cover;
+						width: 100%;
+						height: 100%;
+						transform: translate(-50%, -50%) scale(1);
+					}
+				}
+			}
+			.tribe-related-event-info {
+				padding: 0 35px var(--tec-spacer-3);
+				h3.tribe-related-events-title {
+					> a {
+						font-size: 1.125rem;
+					}
+				}
+				span {
+					@include font-heading;
+					font-size: px-to-rem(14px);
+					line-height: px-to-rem(20px);
+					letter-spacing: 1px;
+					color: $light-secondary;
+				}
+			}
+		}
+	}
+}
+
+/*
+ * Month View
+ */
+.tribe-events .tribe-events-c-top-bar__datepicker-container .dropdown-menu {
+	min-width: auto;
+	width: auto;
+}

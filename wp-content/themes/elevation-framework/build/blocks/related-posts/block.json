@@ -1,0 +1,27 @@
+{
+  "name": "elevation/related-posts",
+  "title": "Related Posts Block",
+  "category": "elevation-template",
+  "icon": "block-default",
+  "keywords": [
+    "related",
+    "posts",
+    "template",
+    "elevation"
+  ],
+  "description": "Template Contact us.",
+  "acf": {
+    "mode": "edit",
+    "renderCallback": "related_posts_block_render_callback"
+  },
+  "supports": {
+    "anchor": true
+  },
+  "style": [
+    "file:./style-index.css"
+  ],
+  "script": "file:./index.js",
+  "editorStyle": [
+    "file:./index.css"
+  ]
+}

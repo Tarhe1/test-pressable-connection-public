@@ -1,0 +1,145 @@
+.interior-banner {
+	position: relative;
+	overflow: hidden;
+
+	&.category {
+		min-height: 500px;
+		background: $primary;
+
+		.banner-container {
+			min-height: 500px;
+			justify-content: flex-end;
+			padding-bottom: 90px;
+
+			h1,
+			h2,
+			h3,
+			h4 {
+				color: $white;
+			}
+		}
+	}
+
+	.banner-wrapping {
+		height: 100%;
+		padding-top: inherit !important;
+		position: absolute;
+		right: 0;
+		top: 0;
+		transform: all ease;
+		width: 100%;
+		background-color: $accesible-background;
+
+		img {
+			height: 100%;
+			max-height: 100%;
+			max-width: 100%;
+			object-fit: cover;
+			width: 100%;
+
+			&.top {
+				object-position: top;
+			}
+
+			&.center {
+				object-position: center;
+			}
+
+			&.bottom {
+				object-position: bottom;
+			}
+		}
+
+		.top-mask {
+			opacity: 0.55;
+			background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.91) 7.84%, rgba(0, 0, 0, 0.67) 20.26%, rgba(0, 0, 0, 0.33) 29.65%, rgba(0, 0, 0, 0.00) 37%);
+			bottom: unset;
+			height: 101%;
+			left: 50%;
+			position: absolute;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			width: 101%;
+			z-index: 3;
+			display: none;
+		}
+
+		.bottom-mask {
+			opacity: 0.55;
+			background: linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0.91) 13.4%, rgba(0, 0, 0, 0.67) 34.6%, rgba(0, 0, 0, 0.33) 50.65%, rgba(0, 0, 0, 0.00) 63.19%);
+			background-position: right top;
+			background-repeat: repeat-x;
+			background-size: cover;
+			bottom: unset;
+			height: 101%;
+			left: 50%;
+			position: absolute;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			width: 101%;
+			z-index: 2;
+		}
+	}
+
+	.banner-col{
+		display: flex;
+		@include media-breakpoint-up(md) {
+			min-height: 680px;
+		}
+		@include media-breakpoint-up(xl) {
+			min-height: 550px;
+		}
+		@include media-breakpoint-up(xxl) {
+			&.col-xl-7{
+				.banner-container{
+					width: 765px;
+				}
+			}
+		}
+	}
+
+	.banner-container {
+		display: flex;
+		flex-direction: column;
+		max-width: 100%;
+		min-width: inherit;
+		padding: 280px 0 80px 0;
+		position: relative;
+		row-gap: 12px;
+		width: 100%;
+		z-index: 10;
+		align-self: flex-end;
+
+		@include media-breakpoint-up(md) {
+			padding: 150px 0 80px 0;
+		}
+
+		@include media-breakpoint-up(xl) {
+			padding: 362px 0 80px 0;
+		}
+
+		&.left {
+			text-align: left;
+		}
+
+		&.center {
+			text-align: center;
+		}
+
+		&.right {
+			text-align: right;
+		}
+
+	}
+
+	&.custom-banner{
+		@include media-breakpoint-up(xl) {
+			padding-bottom: 60px;
+		}
+		.banner-wrapping{
+			.top-mask{
+				display: block;
+			}
+		}
+	}
+}

@@ -1,0 +1,375 @@
+{
+	"key": "group_65bd5139e23ee",
+	"title": "Slider Settings",
+	"fields": [
+		{
+			"key": "field_65bd513ac14b8",
+			"label": "Slider Settings",
+			"name": "swiper_settings",
+			"aria-label": "",
+			"type": "group",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"layout": "block",
+			"sub_fields": [
+				{
+					"key": "field_65c3c97c99861",
+					"label": "Loop",
+					"name": "loop",
+					"aria-label": "",
+					"type": "true_false",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"message": "",
+					"default_value": 0,
+					"ui_on_text": "",
+					"ui_off_text": "",
+					"ui": 1
+				},
+				{
+					"key": "field_65c10f71055c5",
+					"label": "Centered Slides",
+					"name": "centered-slides",
+					"aria-label": "",
+					"type": "true_false",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"message": "",
+					"default_value": 0,
+					"ui_on_text": "",
+					"ui_off_text": "",
+					"ui": 1
+				},
+				{
+					"key": "field_65bd5169c14b9",
+					"label": "Grab cursor",
+					"name": "grab-cursor",
+					"aria-label": "",
+					"type": "true_false",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"message": "",
+					"default_value": 0,
+					"ui_on_text": "",
+					"ui_off_text": "",
+					"ui": 1
+				},
+				{
+					"key": "field_65bd51b2c14ba",
+					"label": "Space between (Mobile)",
+					"name": "space-between",
+					"aria-label": "",
+					"type": "number",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"default_value": "",
+					"min": "",
+					"max": "",
+					"placeholder": "",
+					"step": 1,
+					"prepend": "",
+					"append": ""
+				},
+				{
+					"key": "field_65bd528fc14bf",
+					"label": "Slides per view (Mobile)",
+					"name": "slides-per-view",
+					"aria-label": "",
+					"type": "text",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"default_value": "",
+					"maxlength": "",
+					"placeholder": "",
+					"prepend": "",
+					"append": ""
+				},
+				{
+					"key": "field_65bd51dec14bb",
+					"label": "Space between (Tablet > 768)",
+					"name": "space-between-md",
+					"aria-label": "",
+					"type": "number",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"default_value": "",
+					"min": "",
+					"max": "",
+					"placeholder": "",
+					"step": 1,
+					"prepend": "",
+					"append": ""
+				},
+				{
+					"key": "field_65bd52b8c14c0",
+					"label": "Slides per view (Tablet > 768)",
+					"name": "slides-per-view-md",
+					"aria-label": "",
+					"type": "text",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"default_value": "",
+					"maxlength": "",
+					"placeholder": "",
+					"prepend": "",
+					"append": ""
+				},
+				{
+					"key": "field_65bd51eec14bc",
+					"label": "Space between (Big Tablet > 992px)",
+					"name": "space-between-lg",
+					"aria-label": "",
+					"type": "number",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"default_value": "",
+					"min": "",
+					"max": "",
+					"placeholder": "",
+					"step": 1,
+					"prepend": "",
+					"append": ""
+				},
+				{
+					"key": "field_65bd52d8c14c1",
+					"label": "Slides per view (Big Tablet > 992px)",
+					"name": "slides-per-view-lg",
+					"aria-label": "",
+					"type": "text",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"default_value": "",
+					"maxlength": "",
+					"placeholder": "",
+					"prepend": "",
+					"append": ""
+				},
+				{
+					"key": "field_65bd5232c14be",
+					"label": "Space between (Desktop > 1200px)",
+					"name": "space-between-xl",
+					"aria-label": "",
+					"type": "number",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"default_value": "",
+					"min": "",
+					"max": "",
+					"placeholder": "",
+					"step": 1,
+					"prepend": "",
+					"append": ""
+				},
+				{
+					"key": "field_65bd530dc14c2",
+					"label": "Slides per view (Desktop > 1200px)",
+					"name": "slides-per-view-xl",
+					"aria-label": "",
+					"type": "text",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"default_value": "",
+					"maxlength": "",
+					"placeholder": "",
+					"prepend": "",
+					"append": ""
+				},
+				{
+					"key": "field_65c1521db1e30",
+					"label": "Space between (Desktop > 1400px)",
+					"name": "space-between-xxl",
+					"aria-label": "",
+					"type": "number",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"default_value": "",
+					"min": "",
+					"max": "",
+					"placeholder": "",
+					"step": 1,
+					"prepend": "",
+					"append": ""
+				},
+				{
+					"key": "field_65c1523cb1e31",
+					"label": "Slides per view (Desktop > 1400px)",
+					"name": "slides-per-view-xxl",
+					"aria-label": "",
+					"type": "text",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"default_value": "",
+					"maxlength": "",
+					"placeholder": "",
+					"prepend": "",
+					"append": ""
+				},
+				{
+					"key": "field_65bd5350c14c3",
+					"label": "Slide to Clicked Slide",
+					"name": "slide-to-click-slide",
+					"aria-label": "",
+					"type": "true_false",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"message": "",
+					"default_value": 0,
+					"ui_on_text": "",
+					"ui_off_text": "",
+					"ui": 1
+				},
+				{
+					"key": "field_65bd53dbc14c4",
+					"label": "Autoplay delay",
+					"name": "delay",
+					"aria-label": "",
+					"type": "number",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"default_value": 7000,
+					"min": "",
+					"max": "",
+					"placeholder": "",
+					"step": 500,
+					"prepend": "",
+					"append": ""
+				},
+				{
+					"key": "field_65bd543ac14c6",
+					"label": "Autoplay Disable on Interaction",
+					"name": "disable-on-interaction",
+					"aria-label": "",
+					"type": "true_false",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"message": "",
+					"default_value": 0,
+					"ui_on_text": "",
+					"ui_off_text": "",
+					"ui": 1
+				}
+			]
+		}
+	],
+	"location": [
+		[
+			{
+				"param": "post_type",
+				"operator": "==",
+				"value": "post"
+			}
+		]
+	],
+	"menu_order": 0,
+	"position": "normal",
+	"style": "default",
+	"label_placement": "top",
+	"instruction_placement": "label",
+	"hide_on_screen": "",
+	"active": false,
+	"description": "",
+	"show_in_rest": 0,
+	"modified": 1707333080
+}

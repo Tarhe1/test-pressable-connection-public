@@ -1,0 +1,11 @@
+{
+	"name": "elevation/miscellaneous",
+	"version": "1.0.0",
+	"title": "Miscellaneous",
+	"icon": "admin-site",
+	"description": "This is use to compile search and 404 templates assets.",
+	"editorScript": "file:index.js",
+	"viewScript": "file:script.js",
+	"editorStyle": "file:index.css",
+	"style": "file:style-index.css"
+}

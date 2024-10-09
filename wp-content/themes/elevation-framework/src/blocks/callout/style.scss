@@ -1,0 +1,163 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "../../assets/styles/scss/utilities/_functions";
+@import "../../assets/styles/scss/utilities/_variables";
+@import "../../assets/styles/scss/utilities/_mixins";
+
+$block: ".block";
+#{$block} {
+	&--bg-light-primary-ii {
+		background-color: $light-primary-ii;
+	}
+	&--bg-light-primary {
+		background-color: $light-primary;
+	}
+	&--bg-light-secondary {
+		background-color: $light-secondary;
+	}
+}
+
+$section: ".block__callout";
+#{$section} {
+	padding: 100px 0;
+
+	.block__buttons{
+		flex: 0 0 auto;
+	}
+
+	.col-xl-8{
+		#{$section}--content{
+			@include media-breakpoint-up(xxl) {
+				width: 870px;
+			}
+		}
+	}
+
+	&--content {
+		display: flex;
+		flex-direction: column;
+		&.flex-row {
+			display: flex;
+			flex-direction: row;
+			column-gap: 50px;
+			@include media-breakpoint-down(lg) {
+				flex-direction: column !important;
+			}
+			.block__buttons {
+				@include media-breakpoint-up(lg) {
+					align-self: center;
+				}
+			}
+		}
+	}
+
+	&--frame:not(.image-auto) {
+		max-height: 50vh;
+		min-height: 25vh;
+		position: relative;
+		@include media-breakpoint-up(lg) {
+			min-height: 600px;
+		}
+		.block__callout--background {
+			position: absolute;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			> img {
+				-o-object-fit: cover;
+				object-fit: cover;
+				height: 100% !important;
+				width: 100%;
+				transform: translate(-50%, -50%);
+				left: 50%;
+				top: 50%;
+				position: absolute;
+			}
+		}
+		.block__callout--background-fixed {
+			&::before {
+				content: none;
+			}
+		}
+	}
+
+	&--frame.image-auto{
+		img{
+			vertical-align: bottom;
+			width: 100%;
+		}
+	}
+
+	&--background {
+		left: 0;
+		overflow: hidden;
+		position: relative;
+		top: 0;
+		width: 100%;
+		> img {
+			-o-object-fit: cover;
+			object-fit: cover;
+			height: 100% !important;
+			width: 100%;
+			transform: translate(-50%, -50%);
+			left: 50%;
+			top: 50%;
+			position: absolute;
+		}
+	}
+
+	&--background-behind {
+		height: 100%;
+		left: 0;
+		overflow: hidden;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 0;
+		> img {
+			-o-object-fit: cover;
+			object-fit: cover;
+			height: 100% !important;
+			width: 100%;
+			transform: translate(-50%, -50%);
+			left: 50%;
+			top: 50%;
+			position: absolute;
+		}
+		&::before {
+			content: "";
+			background: #000000;
+			height: 100%;
+			opacity: 0.66;
+			position: absolute;
+			width: 100%;
+			z-index: 1;
+		}
+	}
+
+	&--background-fixed {
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		background-attachment: fixed;
+		background-repeat: repeat-x;
+		background-position: center;
+		background-color: transparent;
+		background-size: cover;
+		&::before {
+			content: "";
+			background: #000000;
+			height: 100%;
+			opacity: 0.66;
+			position: absolute;
+			width: 100%;
+		}
+	}
+
+	figure + .block__container {
+		position: relative;
+	}
+}

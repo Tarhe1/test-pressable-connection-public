@@ -1,0 +1,26 @@
+{
+  "name": "elevation/buttons",
+  "title": "Buttons Block",
+  "category": "elevation-blocks",
+  "icon": "block-default",
+  "keywords": [
+    "buttons",
+    "block",
+    "elevation"
+  ],
+  "description": "",
+  "acf": {
+    "mode": "edit",
+    "renderCallback": "buttons_block_render_callback"
+  },
+  "supports": {
+    "anchor": true
+  },
+  "style": [
+    "file:./style-index.css"
+  ],
+  "script": "file:./index.js",
+  "editorStyle": [
+    "file:./index.css"
+  ]
+}

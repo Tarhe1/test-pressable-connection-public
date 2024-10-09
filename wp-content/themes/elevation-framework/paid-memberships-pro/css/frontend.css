@@ -1,0 +1,753 @@
+:root {
+	--body-color: #211F1F;
+  --primary-color: #211f1f;
+	--secondary-color: #b4d2d8;
+	--tertiary-color: #cb4b3b;
+	--table-header: #163F7B;
+  --font-family-body: 'Martel', serif;
+	--font-family-headings: 'Inter', sans-serif;
+  --font-size: 14px;
+	--font-size-label: 13px;
+	--font-size-required: 11px;
+	--font-weight: 500;
+	--font-weight-link: 600;
+	--checkbox-color: #254A40;
+	--btn-bg-color: #F5F5F5;
+	--elev-link-hover-color: #000;
+}
+
+/*---------------------------------------
+	Custom Structure
+---------------------------------------*/
+
+#pills-password > h2{
+	display: none;
+}
+#pills-password #pass-strength-result{
+	display: none;
+}
+.pmpro_change_password-field-pass1 .lite{
+	display: none;
+}
+div[class$="_wrap"] ul {
+	list-style-type: none;
+}
+
+.pmpro_table{
+	margin-bottom: 25px;
+}
+
+.pmpro_table thead tr th{
+	color: var(--table-header);
+	font-family: var(--font-family-headings);
+	font-size: var(--font-size);
+	font-style: normal;
+	font-weight: var(--font-weight);
+	letter-spacing: 1px;
+	line-height: 1.2;
+	padding-bottom: 25px;
+}
+
+.pmpro_table tbody tr td, .pmpro_table tbody tr td *{
+	font-family: var(--font-family-headings);
+	font-size: var(--font-size);
+	font-style: normal;
+	font-weight: var(--font-weight);
+	line-height: 1.2;
+	letter-spacing: 1px;
+	color: #000000;
+}
+
+.pmpro_account-membership-levelname{
+	display: flex;
+	gap: 15px;
+}
+
+#pmpro_actionlink-cancel{
+	background-color: var(--tertiary-color);
+	border: none;
+	color: #fff;
+	font-family: var(--font-family-headings);
+	font-size: var(--font-size);
+	font-weight: var(--font-weight-link);
+	letter-spacing: 0.15em;
+	line-height: 1.2;
+	padding: 5px 15px;
+	text-transform: uppercase;
+	text-decoration: none;
+	transition: all 0.4s ease;
+}
+
+#pmpro_actionlink-cancel:hover{
+	background-color: var(--primary-color);
+}
+
+.pmpro_form{
+	display: flex;
+	flex-direction: column;
+	row-gap: 15px;
+}
+
+.pmpro_checkout-field-required label{
+	position: relative;
+}
+.pmpro_checkout-field-required label::after{
+	content: "(required)";
+	color: var(--body-color);
+	font-family: var(--font-family-headings);
+	font-size: var(--font-size-required);
+	font-weight: var(--font-link);
+	letter-spacing: 0.15em;
+}
+
+#pmpro_pricing_fields{
+	display: none;
+}
+#change-password .pmpro_submit{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 15px;
+}
+
+div[class^="pmpro_checkout_box"] > h3 {
+	display: none;
+}
+.pmpro_submit hr{
+	display: none;
+}
+
+body.pmpro-checkout #pmpro_user_fields h2,
+body.pmpro-checkout #pmpro_user_fields h3,
+body.pmpro-checkout div[id^="pmpro_checkout_box"] h3,
+body.pmpro-checkout div[id^="pmpro_checkout_box"] h2,
+body.pmpro-checkout div[id^="pmpro_checkout_box"] hr,
+body.pmpro-checkout #pmpro_user_fields_show{
+	display: none;
+}
+body.pmpro-checkout #pmpro_user_fields{
+	display: block;
+}
+
+body.pmpro-checkout #pmpro_form #pmpro_social_login{
+	order: 100;
+}
+
+/*---------------------------------------
+	Links Global Style
+---------------------------------------*/
+
+.pmpro_actionlinks a{
+	text-decoration-line: none !important;
+}
+
+.pmpro_table a,
+.pmpro_actionlinks a, 
+.pmpro_invoice_wrap > a, 
+.pmpro_actions_nav > a, 
+#pmpro_user_fields_a, 
+.pmpro_checkout-h3-msg a{ 
+	color: var(--tertiary-color);
+	font-family: var(--font-family-headings);
+	font-size: var(--font-size);
+	font-style: normal;
+	font-weight: var(--font-weight);
+	letter-spacing: 0.07em;
+	line-height: 1.2;
+	text-decoration-line: underline;
+	transition: all 0.4s ease;
+	display: inline-block;
+}
+
+.pmpro_actions_nav > a:hover,
+.pmpro_invoice_wrap > a:hover, 
+#pmpro_user_fields_a:hover, 
+.pmpro_checkout-h3-msg a:hover
+ {
+	text-decoration-line: none;
+	color: var(--tertiary-color);
+}
+
+.pmpro_btn-submit, .pmpro_btn-cancel, .pmpro_btn.disabled{
+	padding: 20px 25px;	
+}
+
+/*---------------------------------------
+	Buttons
+---------------------------------------*/
+
+.login-top-link .pmpro_btn, .pmpro_submit .pmpro_btn { 
+	border: none;
+	padding: 20px 28px;
+	border-radius: 0;
+}
+.login-top-link .pmpro_btn.active, .pmpro_submit .pmpro_btn.active{ 
+	opacity: 1;
+}
+
+.pmpro_btn, .pmpro_btn:link, .pmpro_content_message a, .pmpro_content_message a:link{
+  background-color: var(--primary-color);
+	color: #fff;
+	font-family: var(--font-family-headings);
+	font-size: var(--font-size);
+	font-weight: var(--font-weight-link);
+	letter-spacing: 0.15em;
+	line-height: 1.2;
+	text-transform: uppercase;
+	transition: all 0.4s ease;
+}
+
+.pmpro_submit .pmpro_btn:hover,
+.pmpro_submit .pmpro_btn:focus,
+.login-top-link .pmpro_btn:hover, 
+.login-top-link .pmpro_btn:focus
+{ 
+	background-color: var(--tertiary-color);
+	color: #fff;
+}
+
+/* .pmpro_content_message a { } */
+
+.pmpro_btn.disabled,
+.pmpro_btn[disabled],
+fieldset[disabled] .pmpro_btn { 
+	background-color: var(--primary-color);
+	border: none;
+	color: #fff;
+	display: block;
+	font-family: var(--font-family-headings);
+	font-size: var(--font-size);
+	font-weight: var(--font-weight-link);
+	letter-spacing: 0.15em;
+	line-height: 1.2;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: all 0.4s ease;
+	cursor: not-allowed;
+}
+
+.pmpro_btn.pmpro_btn-cancel { 
+	background-color: var(--tertiary-color);
+	color: #fff;
+	text-decoration: none;
+}
+
+/* .pmpro_btn.pmpro_btn-submit-checkout { } */
+
+/*
+input[type="button"]#discount_code_button,
+input[type="button"]#other_discount_code_button { } */
+
+/*---------------------------------------
+	Forms
+---------------------------------------*/
+.pmpro_checkout_gateway-none #pmpro_social_login {
+	display: none;
+}
+
+/* -- Checkout, Billing Information, etc. --*/
+/* form.pmpro_form .pmpro_checkout-fields div { } */
+
+form.pmpro_form label { 
+	color: var(--primary-color);
+	/* display: block; */
+	font-family: var(--font-family-headings);
+	font-size: var(--font-size-label);
+	font-style: normal;
+	font-weight: var(--font-weight);
+	letter-spacing: 0.07em;
+	line-height: 1.2;
+	margin-bottom: 5px;
+}
+
+/* form.pmpro_form #pmpro_payment_information_fields .pmpro_checkout-fields label { } */
+
+/* form.pmpro_form .pmpro_checkout-field-checkbox label { } */
+
+/* form.pmpro_form label.pmpro_label-inline { } */
+
+/* form.pmpro_form label.pmpro_clickable { } */
+
+form.pmpro_form .pmpro_asterisk{
+	display: none;
+}
+form.pmpro_form .pmpro_asterisk abbr { 
+	color: var(--tertiary-color);
+	text-decoration: none;
+}
+
+/* form.pmpro_form input[type=checkbox]#tos { } */
+
+form.pmpro_form .input { 
+	color: #9C9C9C;
+	font-family: var(--font-family-headings);
+	font-size: var(--font-size);
+	font-weight: var(--font-weight);
+	letter-spacing: 1px;
+	line-height: 1.2;
+	display: block;
+	min-height: 40px;
+	padding: 10px 15px;
+	width: 100%;
+	flex-basis: 100%;
+	border: 1px solid #EAE8E6;
+}
+
+input[readonly="readonly"]{
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+input[readonly="readonly"]:focus-visible{
+	outline: none;
+	outline-offset: 0;
+	border: 1px solid #EAE8E6;
+}
+
+/* form.pmpro_form textarea { } */
+
+/* form.pmpro_form select { } */
+
+/* form.pmpro_form .pmpro_checkout-field-bcity_state_zip .input { } */
+
+/* form.pmpro_form .pmpro_checkout-field-bcity_state_zip select { } */
+
+/* form.pmpro_form .pmpro_payment-cvv .input { } */
+
+/* form.pmpro_form .pmpro_payment-discount-code .input { } */
+
+/* form.pmpro_form #other_discount_code.input { } */
+
+form.pmpro_form .lite { 
+	font-size: 12px;
+}
+
+form.pmpro_form .pmpro_captcha div {
+	clear: none;
+	margin: 0;
+}
+
+/* form.pmpro_form .pmpro_submit { } */
+
+/* form.pmpro_form #pmpro_processing_message { } */
+
+/* -- Log In, Password Reset --*/
+/* #loginform label { } */
+/* #loginform input[type=text] { } */
+/* #loginform input[type=password] { } */
+
+/* form.pmpro_form .pmpro_lost_password-fields div { } */
+
+/* -- Member Profile Edit --*/
+form.pmpro_form .pmpro_member_profile_edit-fields { 
+	display: flex;
+	flex-direction: column;
+	row-gap: 15px;
+}
+form.pmpro_form .pmpro_member_profile_edit-fields div{ 
+	font-family: var(--font-family-headings);
+	font-style: normal;
+	font-weight: var(--font-weight);
+	font-size: var(--font-size-label);
+	line-height: 1.2;
+}
+
+/* -- Change Password (logged in) --*/
+form.pmpro_form .pmpro_change_password-fields{
+	display: flex;
+	flex-direction: column;
+	row-gap: 15px;
+}
+
+/* form.pmpro_form .pmpro_change_password-fields div { } */
+
+/* -- Reset Password (not logged in) --*/
+/* .pmpro_reset_password_wrap form.pmpro_form .lite { } */
+
+/* form.pmpro_form .pmpro_change_password-fields .lite { } */
+
+/* -- Password Strength Meter on Frontend Forms --*/
+/* .pmpro_reset_password_wrap form.pmpro_form #pass-strength-result { } */
+
+/* form.pmpro_form .pmpro_change_password-fields #pass-strength-result { } */
+
+/*--------------------------------------------------
+	Messages - Success, Error, Alert
+----------------------------------------------------*/
+.pmpro_message {
+	background-color: #d9edf7;
+	border: 1px solid #bce8f1;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	color: #31708f;
+	font-size: var(--font-size);
+	font-weight: 400;
+	line-height: 1.5em;
+	margin: 0;
+	padding: 10px 15px;
+	text-align: left;
+}
+
+/* .pmpro_message p:last-child { } */
+
+.pmpro_success {
+	background-color: #dff0d8;
+	border-color: #d6e9c6;
+	color: #3c763d;
+}
+
+.pmpro_error,
+input[type="text"].pmpro_error,
+input[type="email"].pmpro_error,
+input[type="url"].pmpro_error,
+input[type="password"].pmpro_error,
+input[type="number"].pmpro_error,
+input[type="tel"].pmpro_error,
+input[type="range"].pmpro_error,
+input[type="date"].pmpro_error,
+input[type="month"].pmpro_error,
+input[type="week"].pmpro_error,
+input[type="time"].pmpro_error,
+input[type="datetime"].pmpro_error,
+input[type="datetime-local"].pmpro_error,
+input[type="color"].pmpro_error,
+ textarea.pmpro_error { 
+	border-color: #cb4b3b;
+	background-color: #f2dede;
+	border-color: #ebccd1;
+	color: #a94442;
+}
+
+.pmpro_alert {
+	background-color: #fcf8e3;
+	border-color: #faebcc;
+	color: #8a6d3b;
+}
+.pmpro_content_message a,
+.pmpro_content_message a:link {
+	margin: 10px 10px 0 0;
+}
+.pmpro_message a {
+	color: #245269;
+	text-decoration: underline;
+}
+.pmpro_success a {
+	color: #2b542c;
+}
+.pmpro_error a {
+	color: #843534;
+}
+.pmpro_alert a {
+	color: #66512c;
+}
+
+/* #pmpro_message_bottom { } */
+
+/*---------------------------------------
+	Membership Account
+---------------------------------------*/
+#pmpro_account{
+	display: flex;
+	flex-direction: column;
+	row-gap: 30px;
+}
+
+/* #pmpro_account .pmpro_box { } */
+
+#pmpro_account .pmpro_box h3 { margin-bottom: 15px; }
+
+/* #pmpro_account .pmpro_box p { } */
+
+#pmpro_account .pmpro_box ul { list-style-type: none; }
+
+/* #pmpro_account .pmpro_box ul li{ } */
+
+/* #pmpro_account #pmpro_account-membership { } */
+
+/* #pmpro_account #pmpro_account-profile { } */
+
+/* #pmpro_account #pmpro_account-billing { } */
+
+/* #pmpro_account #pmpro_account-invoices { } */
+
+/* #pmpro_account #pmpro_account-links { } */
+
+/* #pmpro_account #pmpro_account-profile .pmpro_actionlinks { } */
+
+#pmpro_user_fields_show{
+	font-family: var(--font-family-headings);
+	font-size: var(--font-size);
+	font-style: normal;
+	font-weight: var(--font-weight);
+	line-height: 1.2;
+	letter-spacing: 0.07em;
+}
+
+.pmpro_actionlinks a:last-child { 
+	margin-right: 0;
+}
+
+.pmpro_hidden { 
+	display: none;
+}
+
+/*---------------------------------------
+	Membership Billing Page
+---------------------------------------*/
+/* .pmpro_billing_wrap { } */
+
+/*---------------------------------------
+	Membership Cancel Page
+---------------------------------------*/
+
+.pmpro_cancel_wrap { 
+	display: flex;
+	flex-direction: column;
+	row-gap: 15px;
+}
+
+.pmpro_cancel_wrap .pmpro_actionlinks {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 15px;
+}
+
+/*---------------------------------------
+	Membership Checkout
+---------------------------------------*/
+
+/* #pmpro_form .pmpro_checkout h3 { } */
+
+/* .pmpro_checkout h3 span.pmpro_checkout-h3-name { } */
+
+/* .pmpro_checkout h3 span.pmpro_checkout-h3-msg { } */
+
+/* #pmpro_payment_method span.gateway_paypalexpress { } */
+
+/* #pmpro_payment_information_fields .pmpro_checkout-fields-display-seal { } */
+
+/* #pmpro_license { } */
+
+/*-- Stripe gateway Membership Checkout specific styles. --*/
+
+/*
+.pmpro_checkout_gateway-stripe form.pmpro_form #pmpro_payment_information_fields .pmpro_checkout-fields,
+.pmpro_billing_gateway-stripe form.pmpro_form #pmpro_payment_information_fields .pmpro_checkout-fields { } 
+.pmpro_checkout_gateway-stripe form.pmpro_form #pmpro_payment_information_fields div#AccountNumber,
+.pmpro_checkout_gateway-stripe form.pmpro_form #pmpro_payment_information_fields div#Expiry,
+.pmpro_checkout_gateway-stripe form.pmpro_form #pmpro_payment_information_fields div#CVV,
+.pmpro_billing_gateway-stripe form.pmpro_form #pmpro_payment_information_fields div#AccountNumber,
+.pmpro_billing_gateway-stripe form.pmpro_form #pmpro_payment_information_fields div#Expiry,
+.pmpro_billing_gateway-stripe form.pmpro_form #pmpro_payment_information_fields div#CVV { } 
+
+.pmpro_checkout_gateway-stripe form.pmpro_form #pmpro_payment_information_fields .pmpro_payment-account-number,
+/* .pmpro_billing_gateway-stripe form.pmpro_form #pmpro_payment_information_fields .pmpro_payment-account-number { } 
+
+.pmpro_checkout_gateway-stripe form.pmpro_form #pmpro_payment_information_fields .pmpro_payment-expiration,
+/* .pmpro_billing_gateway-stripe form.pmpro_form #pmpro_payment_information_fields .pmpro_payment-expiration { } 
+
+.pmpro_checkout_gateway-stripe form.pmpro_form #pmpro_payment_information_fields .pmpro_payment-cvv,
+/* .pmpro_billing_gateway-stripe form.pmpro_form #pmpro_payment_information_fields .pmpro_payment-cvv { } 
+
+/* .pmpro_checkout_gateway-stripe form.pmpro_form #pmpro_payment_information_fields .pmpro_payment-discount-code { } */
+
+/*---------------------------------------
+	Membership Confirmation Page
+---------------------------------------*/
+
+.pmpro_confirmation_wrap { 
+	display: flex;
+	flex-direction: column;
+	row-gap: 15px;
+}
+
+/*---------------------------------------
+	Membership Invoice Page
+---------------------------------------*/
+
+/* .pmpro_invoice_wrap > a { } */
+
+/* .pmpro_invoice_details { } */
+
+/* .pmpro_invoice_details .pmpro_invoice-billing-address { } */
+
+/* .pmpro_invoice_details .pmpro_invoice-payment-method { } */
+
+/* .pmpro_invoice_details .pmpro_invoice-total { } */
+
+/* .pmpro_invoice_details .pmpro_invoice-billing-address { } */
+
+/* .pmpro_invoice_details .pmpro_invoice-payment-method { } */
+
+/*---------------------------------------
+	Membership Levels
+---------------------------------------*/
+/* #pmpro_levels_table { } */
+
+/* #pmpro_levels_table td:nth-child(1) {
+	min-width: 200px;
+}
+#pmpro_levels_table .pmpro_btn {
+	display: block;
+} */
+
+/*---------------------------------------
+	Log In and Password Reset Pages
+---------------------------------------*/
+
+.login-top-content{ 
+	text-align: center;
+	margin-bottom: 25px !important;
+}
+
+div.nsl-container{
+	text-align: center;
+}
+
+
+
+div.nsl-container a[data-provider="google"]{
+	background-color: var(--btn-bg-color);
+	color: var(--body-color);
+	font-family: var(--font-family-headings);
+	font-style: normal;
+	font-weight: var(--font-weight-link);
+	justify-content: center;
+	letter-spacing: 2.1px;
+	line-height: normal;
+	min-height: 60px;
+	min-width: 250px;
+	padding: 20px 25px;
+	text-transform: uppercase;
+  font-size: var(--font-size);
+}
+
+.login-legal-text{
+	font-family: var(--font-family-body);
+  font-size: var(--font-size);
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.4;
+	letter-spacing: 0.42px;
+}
+
+#nsl-custom-login-form-1 > div.nsl-container{
+	text-align: center;
+  position: relative;
+  padding-top: 50px;
+	margin-bottom: 25px;
+}
+#nsl-custom-login-form-1 > div.nsl-container::before{
+	content: "or";
+	background-color: #fff;
+	padding: 0 10px;
+	display: block;
+	left: 0;
+	margin: 0 auto;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 50px;
+	height: 30px;
+	z-index: 2;
+}
+#nsl-custom-login-form-1 > div.nsl-container::after{
+  content: "";
+  border: 0.5px dashed #211F1F;
+  display: block;
+  height: 1px;
+  left: 0;
+  margin: 0 auto;
+  opacity: 0.3;
+  position: absolute;
+  right: 0;
+  top: 15px;
+  width: 100%;
+}
+
+#nsl-custom-login-form-1 > div.nsl-container a[data-provider="google"]{
+	align-items: center;
+	background-color: var(--btn-bg-color);
+	display: flex;
+	font-style: normal;
+	font-weight: var(--font-weight-link);
+	justify-content: center;
+	letter-spacing: 2.1px;
+	min-height: 60px;
+	min-width: 250px;
+	padding: 20px 25px;
+	text-transform: uppercase;
+  margin: 0;
+}
+#nsl-custom-login-form-1 > div.nsl-container a[data-provider="google"] > *,
+#nsl-custom-login-form-1 > div.nsl-container a[data-provider="google"] .nsl-button-google > * {
+	font-family: var(--font-family-headings);
+	font-weight: var(--font-weight-link);
+	letter-spacing: 2.1px;
+  color: var(--body-color);
+  font-size: var(--font-size);
+  line-height: 1;
+  text-align: center;
+}
+
+#pmpro_social_login div.nsl-container[data-align="left"]{
+  text-align: center !important;
+}
+#pmpro_social_login div.nsl-container .nsl-button-default{
+	color: var(--body-color);
+}
+
+/* .pmpro_login_wrap { } */
+
+/* .pmpro_lost_password_wrap { } */
+
+/* .pmpro_reset_password_wrap { } */
+
+.pmpro_login_wrap hr, .pmpro_invoice_wrap hr {
+	border: 0.5px dashed #211F1F;
+	opacity: 0.3;
+}
+
+.pmpro_login_wrap .pmpro_actions_nav{
+	justify-content: center;
+}
+
+/*---------------------------------------
+	Member Profile Edit Page
+---------------------------------------*/
+/* .pmpro_member_profile_edit_wrap { } */
+
+/* .pmpro_change_password_wrap { } */
+
+/*---------------------------------------
+	Misc
+---------------------------------------*/
+
+.pmpro_actions_nav { 
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 30px;
+}
+
+.pmpro_actions_nav-left {
+	margin-left: auto !important;
+}
+
+.pmpro_actions_nav-right {
+	margin-right: auto !important;
+}
+
+/* .pmpro_a-print { } */
+
+/* .pmpro_grey { } */
+.clear {
+	clear: both;
+}
+
+.pmpro_small { 
+	font-size: .8em;
+	/* display: none;  */
+}
+
+/*---------------------------------------
+	Responsive Styles
+---------------------------------------*/

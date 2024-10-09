@@ -1,0 +1,150 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "../../assets/styles/scss/utilities/_functions";
+@import "../../assets/styles/scss/utilities/_variables";
+@import "../../assets/styles/scss/utilities/_mixins";
+@import "../../assets/styles/scss/utilities/_swiper";
+
+@import "swiper/css/bundle";
+
+$component: ".component";
+#{$component} {
+	&__content + &__swiper {
+		margin-top: 30px;
+		@include media-breakpoint-up(xl) {
+			margin-top: 50px;
+		}
+	}
+}
+
+$section: ".component__testimonials";
+#{$section} {
+	.swiper__container--testimonials {
+		max-width: 100%;
+		overflow: visible;
+		left: 0;
+		position: relative;
+		width: 100%;
+		@include media-breakpoint-up(lg) {
+			width: 530px;
+			left: -10px;
+			margin-left: 10px;
+		}
+		.testimonial:not(.has-image) {
+			padding: 60px 80px 80px;
+		}
+		.testimonial.has-image {
+			padding: 60px 40px 80px;
+		}
+	}
+
+	.testimonial {
+		background-color: rgba($color: $white, $alpha: 1);
+		border-radius: 1px;
+		box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.0655594);
+		margin: 0;
+		padding: 60px 80px 80px;
+		position: relative;
+
+		display: flex;
+		flex-direction: column;
+		row-gap: 25px;
+		column-gap: 25px;
+
+		transition-duration: 0.4s;
+		transition-property: background-color;
+		transition-timing-function: ease-in-out;
+		width: 100%;
+		@include media-breakpoint-up(lg) {
+			width: 530px !important;
+			flex-direction: row;
+		}
+		&__image {
+			border-radius: 50%;
+			flex: 1 0 100px;
+			height: 100px;
+			overflow: hidden;
+			position: relative;
+			width: 100px;
+		}
+
+		/*Active Swiper*/
+		&.swiper-slide-active {
+			background-color: $dark;
+			&::after {
+				background-image: url("data:image/svg+xml,%3Csvg width='30' height='20' viewBox='0 0 30 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1581_1142)'%3E%3Cpath d='M13.0662 12.5704C11.5345 16.1135 8.6326 18.0774 6.42719 19.1114C5.52984 19.5338 4.58279 18.6399 4.93759 17.7115C5.04389 17.4354 5.14467 17.14 5.22819 16.8287C5.41312 16.1606 5.52605 15.4748 5.56504 14.7827C5.57912 14.5406 5.51314 14.3007 5.37729 14.0998C5.24143 13.899 5.04326 13.7484 4.81334 13.6714C3.40683 13.2065 2.18359 12.3083 1.31894 11.1055C0.454284 9.90273 -0.00738913 8.45707 8.94435e-05 6.97576C0.0201073 3.11025 3.28163 -0.0649927 7.14438 0.00403428C8.83056 0.036226 10.4487 0.675018 11.7021 1.80334C12.9555 2.93165 13.7604 4.47391 13.9691 6.14743V6.14743C13.9691 6.15641 13.9691 6.16537 13.9691 6.17435C13.978 6.25235 13.9863 6.33104 13.9932 6.40973C14.132 7.81374 14.1299 10.1089 13.0662 12.5704Z' fill='%23F5F5F5'/%3E%3Cpath d='M28.8875 12.5704C27.3558 16.1135 24.4539 18.0774 22.2485 19.1114C21.3511 19.5338 20.4041 18.6399 20.7596 17.7115C20.8659 17.4354 20.9666 17.14 21.0495 16.8287C21.2344 16.1606 21.3473 15.4748 21.3863 14.7827C21.4005 14.5407 21.3346 14.3008 21.1989 14.1C21.0631 13.8991 20.8651 13.7485 20.6353 13.6714C19.2287 13.2066 18.0053 12.3085 17.1405 11.1057C16.2757 9.90288 15.8139 8.45716 15.8214 6.97576C15.8421 3.11025 19.1029 -0.0649927 22.9657 0.00403428C24.6518 0.036226 26.2699 0.675018 27.5234 1.80334C28.7768 2.93165 29.5817 4.47391 29.7904 6.14743C29.7904 6.15641 29.7904 6.16537 29.7904 6.17435C29.7993 6.25235 29.8083 6.33104 29.8145 6.40973C29.9505 7.81374 29.9491 10.1089 28.8875 12.5704Z' fill='%23F5F5F5'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1581_1142'%3E%3Crect width='29.8776' height='19.2192' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+			}
+			.testimonial__content {
+				&--quote > p {
+					color: $white;
+					&::selection {
+						background-color: rgba($color: $white, $alpha: 1);
+						color: $selector_color;
+					}
+				}
+				&--cite > span {
+					color: $white !important;
+					&::selection {
+						background-color: rgba($color: $white, $alpha: 1);
+						color: $selector_color;
+					}
+				}
+			}
+		}
+
+		/*Icon Quote*/
+		&::after {
+			content: "";
+			background-image: url("data:image/svg+xml,%3Csvg width='30' height='20' viewBox='0 0 30 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1581_1200)'%3E%3Cpath d='M13.0662 12.5704C11.5345 16.1135 8.6326 18.0774 6.42719 19.1114C5.52984 19.5338 4.58279 18.6399 4.93759 17.7115C5.04389 17.4354 5.14467 17.14 5.22819 16.8287C5.41312 16.1606 5.52605 15.4748 5.56504 14.7827C5.57912 14.5406 5.51314 14.3007 5.37729 14.0998C5.24143 13.899 5.04326 13.7484 4.81334 13.6714C3.40683 13.2065 2.18359 12.3083 1.31894 11.1055C0.454284 9.90273 -0.00738913 8.45707 8.94435e-05 6.97576C0.0201073 3.11025 3.28163 -0.0649927 7.14438 0.00403428C8.83056 0.036226 10.4487 0.675018 11.7021 1.80334C12.9555 2.93165 13.7604 4.47391 13.9691 6.14743C13.9691 6.15641 13.9691 6.16537 13.9691 6.17435C13.978 6.25235 13.9863 6.33104 13.9932 6.40973C14.132 7.81374 14.1299 10.1089 13.0662 12.5704Z' fill='%23211F1F'/%3E%3Cpath d='M28.8875 12.5704C27.3558 16.1135 24.4539 18.0774 22.2485 19.1114C21.3511 19.5338 20.4041 18.6399 20.7596 17.7115C20.8659 17.4354 20.9666 17.14 21.0495 16.8287C21.2344 16.1606 21.3473 15.4748 21.3863 14.7827C21.4005 14.5407 21.3346 14.3008 21.1989 14.1C21.0631 13.8991 20.8651 13.7485 20.6353 13.6714C19.2287 13.2066 18.0053 12.3085 17.1405 11.1057C16.2757 9.90288 15.8139 8.45716 15.8214 6.97576C15.8421 3.11025 19.1029 -0.0649927 22.9657 0.00403428C24.6518 0.036226 26.2699 0.675018 27.5234 1.80334C28.7768 2.93165 29.5817 4.47391 29.7904 6.14743C29.7904 6.15641 29.7904 6.16537 29.7904 6.17435C29.7993 6.25235 29.8083 6.33104 29.8145 6.40973C29.9505 7.81374 29.9491 10.1089 28.8875 12.5704Z' fill='%23211F1F'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1581_1200'%3E%3Crect width='29.8776' height='19.2192' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			bottom: 50px;
+			height: 20px;
+			position: absolute;
+			right: 50px;
+			width: 30px;
+		}
+
+		&__content {
+			display: flex;
+			flex-direction: column;
+			row-gap: 15px;
+			&--quote > p {
+				@include font-body;
+				color: $dark;
+				display: block;
+				font-size: px-to-rem(14px);
+				font-stretch: normal;
+				font-style: normal;
+				font-weight: 400;
+				letter-spacing: 0.03em;
+				line-height: px-to-rem(25px);
+				text-transform: none;
+			}
+			&--cite {
+				display: flex;
+				flex-direction: column;
+				gap: 5px;
+				span {
+					@include font-heading;
+					color: $dark;
+					font-stretch: normal;
+					font-style: normal;
+					line-height: 1.2;
+					&.name {
+						font-weight: 500;
+						letter-spacing: 0.04em;
+						font-size: px-to-rem(16px);
+					}
+					&.other {
+						font-weight: 400;
+						font-size: px-to-rem(14px);
+						letter-spacing: 0.06em;
+					}
+				}
+			}
+		}
+	}
+}

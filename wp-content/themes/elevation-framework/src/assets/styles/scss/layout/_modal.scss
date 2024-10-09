@@ -1,0 +1,102 @@
+.modal-backdrop.show{
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+div[id*="myVideoModal"], div[id*="videoTextBlockModal"]{
+  padding-right: 0 !important;
+  .modal-xl, .modal-lg{
+    max-width: 70vw;
+    @media (max-width: 991.98px){
+      max-width: 100vw;
+    }
+    &:hover, &:focus, &.active{
+      .modal-content{
+        .modal-header{
+          .close{
+            border: none;
+            @media (min-width: 991.98px){
+             top: 5%;
+           }
+          }
+        }
+      }
+    }
+  }
+  .modal-content{
+    background-color: #000;
+    margin-top: 0;
+    @media (max-width: 991.98px){
+      overflow: visible;
+    }
+    .modal-header{
+      border-bottom: none;
+      padding: 0 !important;
+      height: 0;
+      .close{
+        background: transparent;
+        border-radius: 50%;
+        color: #000000;
+        float: none !important;
+        border: none;
+        font-size: 50px;
+        left: 0;
+        margin: 0 auto !important;
+        opacity: 1;
+        padding: 0 !important;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        top: -25%;
+        transition: all 0.3s ease;
+        width: 50px; height: 50px;
+        z-index: 99;
+        @media (max-width: 991.98px){
+          top: -55px;
+          margin: 0;
+          left: unset;
+          right: 5px;
+        }
+        span{
+          transform: translate(-50%, -50%);
+          bottom: unset;
+          display: block;
+          font-size: 0;
+          font-weight: 500;
+          height: 50px;
+          left: 50%;
+          position: absolute;
+          top: 50%;
+          width: 50px;
+          &::after{
+            content: "";
+            background-image: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.5 25C5.6075 25 0 19.3925 0 12.5C0 5.6075 5.6075 0 12.5 0C19.3925 0 25 5.6075 25 12.5C25 19.3925 19.3925 25 12.5 25ZM12.5 1.29912C6.32368 1.29912 1.29896 6.32384 1.29896 12.5C1.29896 18.6762 6.32368 23.701 12.5 23.701C18.6763 23.701 23.701 18.6763 23.701 12.5C23.701 6.32368 18.6762 1.29912 12.5 1.29912Z' fill='white'/%3E%3Cpath d='M9 9L16 16' stroke='white' stroke-width='1.5' stroke-linecap='round'/%3E%3Cpath d='M16 9L9 16' stroke='white' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            bottom: unset;
+            left: 50%;
+            top: 50%;
+            width: 50px;
+            height: 50px;
+          }
+        }
+        &:hover, &:focus, &.active{
+          background: rgba($color: $text, $alpha: 1);
+          box-shadow: 0px 0px 0px 10px  rgba($color: #fff, $alpha: 0.5);
+          opacity: 1;
+          outline: none !important;
+        }
+      }
+    }
+    .modal-body{
+      padding: 0 !important;
+    }
+    .modal-footer{
+      display: none;
+      border-top: 1px solid rgba($color: #fff, $alpha: 0.2);
+    }
+  }
+}

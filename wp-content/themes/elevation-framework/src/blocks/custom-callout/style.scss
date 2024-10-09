@@ -1,0 +1,150 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "../../assets/styles/scss/utilities/_functions";
+@import "../../assets/styles/scss/utilities/_variables";
+@import "../../assets/styles/scss/utilities/_mixins";
+@import "../../critical-assets/styles/scss/utilities/mixins";
+
+
+$section: ".block-custom-callout";
+#{$section} {
+	position: relative;
+	border-radius: 10px;
+	overflow: hidden;
+
+	&__background{
+		
+		@include media-breakpoint-up(lg) {
+			height: 100%;
+			right: 0;
+			overflow: hidden;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			z-index: 0;
+			
+		}
+
+		&::before {
+			content: "";
+			background: $secondary;
+			height: 100%;
+			position: absolute;
+			width: 100%;
+			z-index: 1;
+			mix-blend-mode: multiply;
+		}
+
+		&::after{
+			content: "";
+			position: absolute;
+			width: 153%;
+			height: 100%;
+			background: linear-gradient(90deg, #20716A 25.73%, rgba(32, 113, 106, 0.00) 70.33%);
+			
+			@include media-breakpoint-up(xl) {
+				width: 125%;
+			}
+
+			@include media-breakpoint-up(xxl) {
+				width: 100%;
+			}
+		}
+
+		figure{
+			
+			@include media-breakpoint-up(lg) {
+				position: absolute;
+				height: 100%;
+				right: 0;
+				top: 0;
+			}
+
+			> img {
+
+				width: 100%;
+				height: 100%;
+
+				@include media-breakpoint-up(lg) {			
+					-o-object-fit: cover;
+					object-fit: cover;
+					height: 100% !important;
+					width: 100%;
+					transform: translate(-50%, -50%);
+					left: 50%;
+					top: 50%;
+					position: absolute;
+				}
+			}
+		}
+	}
+
+	&--background-fixed {
+		background-attachment: fixed;
+		background-repeat: repeat-x;
+		background-position: center;
+		background-color: transparent;
+		background-size: cover;
+		border-radius: 10px;
+	}
+
+	&__container{
+		position: relative;
+		z-index: 1;
+	}
+
+	&__col{
+		@include media-breakpoint-up(xl) {
+			min-height: 450px;
+			display: flex;
+		}
+	}
+
+	&__content{
+		padding: 60px 0;
+		align-self: flex-end;
+
+		@include media-breakpoint-up(lg) {
+			padding: 125px 0;
+		}
+
+	}
+
+	.block__content{
+
+		&.left {
+			text-align: left;
+		}
+
+		&.center {
+			text-align: center;
+		}
+
+		&.right {
+			text-align: right;
+		}
+		
+	}
+
+	&__editor{
+		@include editor-gap;
+	}
+
+	&--type-1{
+		#{$section}--background-behind, #{$section}--background-fixed{
+			@include media-breakpoint-up(lg) {
+				width: calc(100% - 345px);
+			}
+		}
+	}
+
+	&--type-2{
+		#{$section}--background-behind, #{$section}--background-fixed{
+			@include media-breakpoint-up(lg) {
+				width: calc(100% - 244px);
+			}
+		}
+	}
+
+}

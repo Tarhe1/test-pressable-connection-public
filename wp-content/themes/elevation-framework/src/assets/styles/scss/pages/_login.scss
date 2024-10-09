@@ -1,0 +1,369 @@
+body.page-template-login {
+	background-color: #f1f2f4;
+	.site-main {
+		.entry-content {
+			align-items: center;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			min-height: 100vh;
+			padding: 10vh 0;
+			position: relative;
+			row-gap: 20px;
+			.login-top-link {
+				align-items: center;
+				column-gap: 15px;
+				display: flex;
+				font-size: 0;
+				position: absolute;
+				right: 0;
+				top: 20px;
+				span {
+					@include font-body;
+					color: var(--body-color);
+					font-size: var(--font-size);
+					font-style: normal;
+					font-weight: 400;
+					letter-spacing: 0.03em;
+					line-height: 1.2;
+				}
+			}
+
+			.login-site-logo {
+				margin-bottom: 60px;
+			}
+
+			.pmpro_lost_password_wrap {
+				.pmpro_lost_password-instructions {
+					@include font-body;
+					color: var(--body-color);
+					font-size: var(--font-size);
+					font-style: normal;
+					font-weight: 400;
+					letter-spacing: 0.03em;
+					line-height: 1.5;
+				}
+				.pmpro_lost_password-fields {
+					margin: 15px 0;
+				}
+			}
+			.pmpro_checkout_gateway-none,
+			.pmpro_lost_password_wrap,
+			.pmpro_login_wrap {
+				margin: 0 auto;
+				background-color: #ffffff;
+				padding: 40px 60px 60px;
+				width: 480px;
+				#loginform {
+					.login-remember label {
+						display: flex;
+						align-items: center;
+					}
+				}
+				p[class^="login-"] {
+					margin-bottom: 15px;
+					label {
+						color: var(--body-color);
+						display: block;
+						font-family: var(--font-family-headings);
+						font-size: var(--font-size);
+						font-style: normal;
+						font-weight: var(--font-weight);
+						letter-spacing: 0.07em;
+						line-height: 1.2;
+						margin-bottom: 5px;
+					}
+					#user_pass {
+						font-size: 11px;
+					}
+					input.input {
+						color: $light-secondary;
+						border: 1px solid $line-border-color;
+						font-family: var(--font-family-headings);
+						font-size: var(--font-size);
+						font-weight: var(--font-weight);
+						letter-spacing: 1px;
+						line-height: 1.2;
+						min-height: 40px;
+						padding: 10px 15px;
+						width: 356px;
+						&::-webkit-input-placeholder {
+							color: $light-secondary;
+							opacity: 1;
+						}
+						&::-moz-placeholder {
+							color: $light-secondary;
+							opacity: 1;
+						} /* firefox 19+ */
+						&:-ms-input-placeholder {
+							color: $light-secondary;
+							opacity: 1;
+						} /* ie */
+						&:-webkit-autofill,
+						&:-webkit-autofill:hover,
+						&:-webkit-autofill:focus,
+						&:-webkit-autofill,
+						&:-webkit-autofill:hover,
+						&:-webkit-autofill:focus,
+						&:-webkit-autofill,
+						&:-webkit-autofill:hover,
+						&:-webkit-autofill:focus {
+							-webkit-text-fill-color: rgba(
+								$color: $light-secondary,
+								$alpha: 1
+							) !important;
+							background: transparent !important;
+							color: rgba(
+								$color: $light-secondary,
+								$alpha: 1
+							) !important;
+							transition: background-color 5000s ease-in-out 0s;
+						}
+					}
+					input[type="submit"] {
+						background-color: var(--body-color);
+						border: none;
+						color: #fff;
+						display: block;
+						font-family: var(--font-family-headings);
+						font-size: var(--font-size);
+						font-weight: var(--font-weight-link);
+						letter-spacing: 0.15em;
+						line-height: 1.2;
+						padding: 21px 28px;
+						text-decoration: none;
+						text-transform: uppercase;
+						transition: all 0.4s ease;
+						margin: 0 auto;
+						&:hover,
+						&:focus {
+							background-color: var(--tertiary-color);
+						}
+					}
+				}
+				.login-remember,
+				#pmpro_tos_fields .pmpro_checkout-fields {
+					label {
+						position: relative;
+						display: flex;
+						column-gap: 10px;
+						input[type="checkbox"] {
+							-webkit-appearance: none;
+							-moz-appearance: none;
+							appearance: none;
+							border-radius: 4px;
+							border: 1px solid #ccc;
+							flex: 0 0 19px;
+							height: 19px;
+							outline: none;
+							position: relative;
+							transition: background-color 0.3s;
+							width: 19px;
+							cursor: pointer;
+						}
+						input[type="checkbox"]::before {
+							content: "";
+							background-image: url("data:image/svg+xml,%3Csvg width='11' height='9' viewBox='0 0 11 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 5.16484L4.10757 8L10 1' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+							background-position: center;
+							background-repeat: no-repeat;
+							background-size: 9px;
+							border-radius: 4px;
+							bottom: unset;
+							height: 19px;
+							left: 50%;
+							position: absolute;
+							top: 50%;
+							transform: translate(-50%, -50%);
+							transition: all 0.4s ease;
+							width: 19px;
+						}
+						input[type="checkbox"]:checked::before {
+							background-color: var(--checkbox-color);
+							border-color: var(--checkbox-color);
+							transition: all 0.4s ease;
+						}
+					}
+				}
+			}
+
+			.pmpro_logged_in_welcome_wrap {
+				display: flex;
+				flex-direction: column;
+				row-gap: 30px;
+				.pmpro_member_display_name {
+					a {
+						font-family: var(--font-family-headings);
+						font-size: var(--font-size);
+						font-style: normal;
+						font-weight: var(--font-weight);
+						line-height: 1.2;
+						letter-spacing: 0.07em;
+						text-decoration-line: underline;
+						color: var(--tertiary-color);
+						transition: all 0.4s ease;
+					}
+				}
+				.pmpro_member_log_out > a {
+					background-color: var(--body-color);
+					color: #fff !important;
+					font-family: var(--font-family-headings);
+					font-size: var(--font-size);
+					font-weight: var(--font-weight-link);
+					letter-spacing: 0.15em;
+					line-height: 1.2;
+					display: inline-block;
+					text-transform: uppercase;
+					padding: 20px 28px;
+					transition: all 0.4s ease;
+				}
+			}
+		}
+	}
+	/*
+  * Checkout Page
+  */
+	&.pmpro-checkout {
+		.site-main .entry-content {
+			.login-top-link {
+				display: none;
+			}
+			.checkout-title-form {
+				text-align: center;
+				margin-bottom: 25px;
+			}
+			#pmpro_form > #pmpro_message {
+				display: none;
+			}
+			#pmpro_form {
+				.pmpro_checkout {
+					width: 356px;
+				}
+			}
+			#pmpro_user_fields,
+			div[id^="pmpro_checkout_box"] {
+				.pmpro_checkout-fields {
+					display: flex;
+					flex-wrap: wrap;
+					row-gap: 15px;
+					column-gap: 10px;
+					.pmpro_checkout-field {
+						flex: 0 0 100%;
+						width: 100%;
+					}
+				}
+			}
+
+			#pmpro_user_fields {
+				.pmpro_checkout-fields {
+					.pmpro_checkout-field-firstname,
+					.pmpro_checkout-field-lastname {
+						flex: 0 0 calc(50% - 5px);
+						width: calc(50% - 5px);
+					}
+					.pmpro_checkout-field-firstname {
+						order: -2;
+					}
+					.pmpro_checkout-field-lastname {
+						order: -1;
+					}
+					#password {
+						font-size: 10px;
+					}
+					.pmpro_checkout-field-firstname,
+					.pmpro_checkout-field-lastname,
+					.pmpro_checkout-field-username,
+					.pmpro_checkout-field-password,
+					.pmpro_checkout-field-bemail {
+						label {
+							display: inline-block;
+							&::after {
+								content: "(required)";
+								color: var(--body-color);
+								display: inline-block;
+								margin-left: 5px;
+								font-family: var(--font-family-headings);
+								font-size: var(--font-size-required);
+								font-weight: var(--font-link);
+								letter-spacing: 0.15em;
+							}
+						}
+					}
+				}
+			}
+			#pmpro_tos_fields {
+				label {
+					align-items: flex-start;
+					p,
+					p > * {
+						color: var(--body-color);
+						font-family: var(--font-family-headings);
+						font-size: var(--font-size);
+						font-style: normal;
+						font-weight: 400;
+						letter-spacing: 0.1px;
+						line-height: 1.3;
+					}
+				}
+			}
+			.pmpro_submit {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 15px;
+				position: relative;
+				#pmpro_processing_message {
+					background-color: #fff;
+					bottom: unset;
+					display: block;
+					padding: 20px 28px;
+					height: 102%;
+					left: 50%;
+					position: absolute;
+					text-align: center;
+					top: 50%;
+					transform: translate(-50%, -50%);
+					width: 100%;
+					transition: all 0.4s ease;
+				}
+			}
+			#pmpro_social_login {
+				text-align: center;
+				position: relative;
+				margin-top: 20px;
+				padding-top: 50px;
+				&::before {
+					content: "or";
+					@include font-heading;
+					background-color: #fff;
+					display: block;
+					font-size: px-to-rem(14px);
+					font-weight: 500;
+					height: 30px;
+					left: 0;
+					letter-spacing: 1px;
+					line-height: 1.4;
+					margin: 0 auto;
+					padding: 0 10px;
+					position: absolute;
+					right: 0;
+					top: 0;
+					width: 50px;
+					z-index: 2;
+				}
+				&::after {
+					content: "";
+					border: 0.5px dashed #211f1f;
+					display: block;
+					height: 1px;
+					left: 0;
+					margin: 0 auto;
+					opacity: 0.3;
+					position: absolute;
+					right: 0;
+					top: 15px;
+					width: 100%;
+				}
+			}
+		}
+	}
+}

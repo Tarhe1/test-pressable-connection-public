@@ -1,0 +1,64 @@
+.wp-block-elevation-columns {
+	display: flex;
+	margin-bottom: 1.75em;
+	box-sizing: border-box;
+	flex-wrap: wrap;
+
+	// Ensure full vertical column stretch when alignment is not set.
+	// This overrides the Layout block support's default align-items setting of `center`.
+	align-items: initial;
+
+	&.container {
+		margin: 0 auto;
+	}
+
+	[class*="col-"] {
+		img,
+		figure,
+		div {
+			max-width: 100% !important;
+		}
+		img,
+		figure {
+			display: block;
+		}
+	}
+
+	/**
+	* All Columns Alignment
+	*/
+	&.align-items-top {
+		align-items: flex-start;
+	}
+
+	&.align-items-center {
+		align-items: center;
+	}
+
+	&.align-items-bottom {
+		align-items: flex-end;
+	}
+}
+
+// Add low specificity default padding to columns blocks with backgrounds.
+:where(.wp-block-elevation-columns.has-background) {
+	// Matches paragraph block padding.
+	padding: 1.5rem 1.5rem;
+}
+
+.wp-block-elevation-column {
+	/**
+	* Individual Column Alignment
+	*/
+	&.align-items-top {
+		align-self: flex-start;
+	}
+
+	&.align-items-center {
+		align-self: center;
+	}
+
+	&.align-items-bottom {
+		align-self: flex-end;
+	}
+}

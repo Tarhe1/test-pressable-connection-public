@@ -1,0 +1,297 @@
+{
+	"key": "group_6701cdfa1a67f",
+	"title": "Homepage - Impact Block",
+	"fields": [
+		{
+			"key": "field_6701cdfa2297b",
+			"label": "Homepage - Impact Block",
+			"name": "",
+			"aria-label": "",
+			"type": "message",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"message": "<h2>Homepage - Impact Block<h2>",
+			"new_lines": "wpautop",
+			"esc_html": 0
+		},
+		{
+			"key": "field_6701cdfa262f2",
+			"label": "Content",
+			"name": "",
+			"aria-label": "",
+			"type": "accordion",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"open": 0,
+			"multi_expand": 0,
+			"endpoint": 0
+		},
+		{
+			"key": "field_6701cdfa29f0d",
+			"label": "Editor",
+			"name": "homestatistics_editor",
+			"aria-label": "",
+			"type": "wysiwyg",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"default_value": "",
+			"tabs": "all",
+			"toolbar": "full",
+			"media_upload": 0,
+			"delay": 1
+		},
+		{
+			"key": "field_6701cdfa31858",
+			"label": "Stats",
+			"name": "homestatistics_stats",
+			"aria-label": "",
+			"type": "repeater",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"layout": "block",
+			"pagination": 0,
+			"min": 0,
+			"max": 0,
+			"collapsed": "",
+			"button_label": "Add Cards",
+			"rows_per_page": 20,
+			"sub_fields": [
+				{
+					"key": "field_6701cdfa74536",
+					"label": "Before Value",
+					"name": "before_value",
+					"aria-label": "",
+					"type": "text",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "18",
+						"class": "",
+						"id": ""
+					},
+					"default_value": "",
+					"maxlength": "",
+					"placeholder": "",
+					"prepend": "",
+					"append": "",
+					"parent_repeater": "field_6701cdfa31858"
+				},
+				{
+					"key": "field_6701cdfa781a0",
+					"label": "Value",
+					"name": "value",
+					"aria-label": "",
+					"type": "number",
+					"instructions": "Only use integers",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "44",
+						"class": "",
+						"id": ""
+					},
+					"default_value": "",
+					"min": "",
+					"max": "",
+					"placeholder": "",
+					"step": "",
+					"prepend": "",
+					"append": "",
+					"parent_repeater": "field_6701cdfa31858"
+				},
+				{
+					"key": "field_6701cdfa7be27",
+					"label": "After Value",
+					"name": "after_value",
+					"aria-label": "",
+					"type": "text",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "18",
+						"class": "",
+						"id": ""
+					},
+					"default_value": "",
+					"maxlength": "",
+					"placeholder": "",
+					"prepend": "",
+					"append": "",
+					"parent_repeater": "field_6701cdfa31858"
+				},
+				{
+					"key": "field_6701cdfa7fa5b",
+					"label": "Remove Comma",
+					"name": "remove_comma",
+					"aria-label": "",
+					"type": "true_false",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "20",
+						"class": "",
+						"id": ""
+					},
+					"message": "",
+					"default_value": 0,
+					"ui_on_text": "",
+					"ui_off_text": "",
+					"ui": 1,
+					"parent_repeater": "field_6701cdfa31858"
+				},
+				{
+					"key": "field_6701cdfa834f4",
+					"label": "Description",
+					"name": "description",
+					"aria-label": "",
+					"type": "textarea",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "100",
+						"class": "",
+						"id": ""
+					},
+					"default_value": "",
+					"maxlength": "",
+					"rows": 4,
+					"placeholder": "",
+					"new_lines": "br",
+					"parent_repeater": "field_6701cdfa31858"
+				}
+			]
+		},
+		{
+			"key": "field_6701cdfa65392",
+			"label": "Button",
+			"name": "homestatistics_button",
+			"aria-label": "",
+			"type": "group",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"layout": "block",
+			"sub_fields": [
+				{
+					"key": "field_6701cdfa6907d",
+					"label": "Link",
+					"name": "link",
+					"aria-label": "",
+					"type": "clone",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"clone": ["group_61b02c76d47c0"],
+					"display": "seamless",
+					"layout": "block",
+					"prefix_label": 0,
+					"prefix_name": 0
+				}
+			]
+		},
+		{
+			"key": "field_6701cdfa353b5",
+			"label": "Settings",
+			"name": "",
+			"aria-label": "",
+			"type": "accordion",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"open": 0,
+			"multi_expand": 0,
+			"endpoint": 0
+		},
+		{
+			"key": "field_6701cdfa5674f",
+			"label": "Numbers Size",
+			"name": "homestatistics_global_title_size",
+			"aria-label": "",
+			"type": "select",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"choices": {
+				"h2": "h2",
+				"h3": "h3",
+				"h4": "h4",
+				"h5": "h5",
+				"h6": "h6"
+			},
+			"default_value": "h4",
+			"return_format": "value",
+			"multiple": 0,
+			"allow_null": 0,
+			"ui": 0,
+			"ajax": 0,
+			"placeholder": ""
+		}
+	],
+	"location": [
+		[
+			{
+				"param": "block",
+				"operator": "==",
+				"value": "elevation/home-statistics"
+			}
+		]
+	],
+	"menu_order": 0,
+	"position": "normal",
+	"style": "default",
+	"label_placement": "top",
+	"instruction_placement": "label",
+	"hide_on_screen": "",
+	"active": true,
+	"description": "",
+	"show_in_rest": 0,
+	"modified": 1728174851
+}

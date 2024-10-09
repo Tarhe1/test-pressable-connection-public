@@ -1,0 +1,6 @@
+{
+	"extends": [ "plugin:@wordpress/eslint-plugin/recommended" ],
+	"rules": {
+		"scss/at-import-no-partial-leading-underscore": null
+	}
+}

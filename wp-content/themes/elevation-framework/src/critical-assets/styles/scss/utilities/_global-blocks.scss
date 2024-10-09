@@ -1,0 +1,564 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "../../../../assets/styles/scss/utilities/_functions";
+@import "../../../../assets/styles/scss/utilities/_variables";
+@import "./mixins";
+
+.block,
+.component {
+	position: relative;
+	padding: 50px 0;
+	@include media-breakpoint-up(lg) {
+		padding: 90px 0;
+	}
+	&.pt-0 {
+		@include media-breakpoint-up(lg) {
+			padding-top: 0 !important;
+		}
+	}
+	&.pb-0 {
+		@include media-breakpoint-up(lg) {
+			padding-bottom: 0 !important;
+		}
+	}
+	&__container:not(.parent-fullwidth) .container {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	.container div:not(.alignfull) > .container {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.block:not(.block-np) + .block:not(.block-np),
+.component:not(.block-np) + .component:not(.block-np),
+.block:not(.block-np) + .component:not(.block-np),
+.component:not(.block-np) + .block:not(.block-np),
+.block-elevation-columns + .component:not(.block-np),
+.block-elevation-columns + .block:not(.block-np),
+.block:not(.block-np) + .block-elevation-columns,
+.component:not(.block-np) + .block-elevation-columns {
+	padding-top: 0;
+}
+
+.site-main .container .entry-content > .block:not(.alignfull) .container,
+.site-main .container .entry-content > .component:not(.alignfull) .container,
+.site-main .entry-content .container > .block:not(.alignfull) .container,
+.site-main .entry-content .container > .component:not(.alignfull) .container,
+.site-main .entry-content .container > div[data-id*="home"] .container {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.block,
+.component {
+	&__background--overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		&::after {
+			content: "";
+			background-color: #000000;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			opacity: 0.45;
+		}
+	}
+
+	/*
+  *   Flex Alignment Properties
+  */
+
+	&__content--start {
+		justify-content: flex-start;
+		text-align: left;
+		> *,
+		* > * {
+			text-align: left;
+		}
+	}
+	&__content--center {
+		justify-content: center;
+		text-align: center;
+		> *,
+		* > * {
+			text-align: center;
+		}
+	}
+	&__content--end {
+		justify-content: flex-end;
+		text-align: right;
+		> *,
+		* > * {
+			text-align: right;
+		}
+	}
+
+	/*
+  *   Light Text - Dark Contrast
+  */
+
+	&__editor--color-light {
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		.h1,
+		.h2,
+		.h3,
+		.h4,
+		.h5,
+		.h6,
+		.h7 {
+			color: $white;
+		}
+
+		> *,
+		* > * {
+			color: $white;
+		}
+
+		hr {
+			border-color: $white !important;
+		}
+
+		p,
+		p > * {
+			color: $white !important;
+		}
+
+		ul > li {
+			color: $white !important;
+			&::before {
+				background-color: $white;
+			}
+			&::marker {
+				color: $white;
+			}
+		}
+
+		span {
+			color: $white;
+			&::after {
+				background-color: $white;
+			}
+		}
+
+		ol > li {
+			color: $white !important;
+			&::before {
+				background-color: $white;
+			}
+			&::marker {
+				color: $white;
+			}
+		}
+	}
+
+	/*
+  *    Dark Text - Light Contrast
+  */
+
+	&__editor--color-dark {
+		> *:not(blockquote),
+		*:not(blockquote) > *:not(blockquote) {
+			color: $text;
+		}
+
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		.h1,
+		.h2,
+		.h3,
+		.h4,
+		.h5,
+		.h6,
+		.h7 {
+			color: $dark;
+		}
+
+		ul > li {
+			&::before {
+				background-color: $primary;
+			}
+			&::marker {
+				color: $primary;
+			}
+		}
+
+		ul li > ul {
+			list-style-type: square;
+        }
+
+        ul li > ul > li > ul {
+			list-style-type: none;
+        }
+
+		ul li > ul > li > ul {
+			list-style-type: none;
+        }
+
+		ul li > ul > li > ul > li{
+			position: relative;
+			// padding-left: 15px;
+		}
+
+		ul li > ul > li > ul > li::marker {
+			display: none;
+		}
+
+		ul li > ul > li > ul > li::after {
+			content: "";
+			background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1.2793' y='0.589844' width='4' height='4' stroke='%23A03259'/%3E%3C/svg%3E%0A");
+			width: 8px;
+			height: 8px;
+			background-repeat: no-repeat;
+			background-size: 8px;
+			display: inline-block;
+			position: absolute;
+			left: -12px;
+			top: 10px;
+		}
+
+		ul li > ul > li > ul > li > ul > li > ul > li::after {
+			content: none !important;
+			display: none;
+		}
+
+		// ul li > ul > li > ul > li::before {
+        //     content: ""; 
+        //     color: $quaternary; 
+		// 	position: relative;
+
+        //     margin-right: 5px; 
+        //     display: inline-block;
+        // }
+
+        ul li > ul > li > ul > li > ul {
+            list-style-type: circle;
+			> li{
+				padding-left: 0;
+				&::after{
+					content: none;
+				}
+			}
+        }
+
+		ol > li {
+			&::before {
+				background-color: $dark;
+			}
+			&::marker {
+				color: $dark;
+			}
+		}
+
+		a:not([class*="cta"]) {
+			color: $link;
+			> *,
+			* > *,
+			* > * > * {
+				color: $link;
+			}
+		}
+	}
+}
+
+/*
+*    Text Alignment Properties
+*/
+
+.block__content{
+	&.left {
+		text-align: left;
+		> * {
+			text-align: left;
+			justify-content: flex-start;
+		}
+	}
+	&.center {
+		text-align: center;
+		> * {
+			text-align: center;
+			justify-content: center;
+		}
+		
+	}
+	&.right {
+		text-align: right;
+		> * {
+			text-align: right;
+			justify-content: flex-end;
+		}
+	}
+	&.flex-row {
+		@include media-breakpoint-up(lg) {
+			flex-direction: row;
+		}
+	}
+}
+
+div[class^="block__content"],
+div[class^="component__content"]
+{
+	display: flex;
+	flex-direction: column;
+	&.left {
+		text-align: left;
+		> * {
+			text-align: left;
+			justify-content: flex-start;
+		}
+	}
+	&.center {
+		text-align: center;
+		.block__editor{
+			text-align: center;
+			> * {
+				text-align: center;
+				justify-content: center;
+			}
+		}
+	}
+	&.right {
+		text-align: right;
+		> * {
+			text-align: right;
+			justify-content: flex-end;
+		}
+	}
+	&.flex-row {
+		@include media-breakpoint-up(lg) {
+			flex-direction: row;
+		}
+	}
+}
+
+/*
+*    Text Default Properties
+*/
+
+div[class^="block__editor"],
+div[class^="component__editor"] {
+	@include editor-gap;
+
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	.h1,
+	.h2,
+	.h3,
+	.h4,
+	.h5,
+	.h6,
+	.h7 {
+		@include font-heading;
+		font-weight: $title_weight;
+		letter-spacing: $title_spacing;
+		margin-bottom: 0 !important;
+		margin-top: 0;
+		text-transform: none;
+
+		> *,
+		span {
+			@include font-heading;
+			font-weight: $title_weight;
+		}
+
+		strong,
+		a,
+		em {
+			font-size: inherit !important;
+			font-weight: inherit !important;
+		}
+	}
+
+	p {
+		font-weight: $font_weight_text;
+		line-height: px-to-rem($line_height_text);
+	}
+
+	strong {
+		font-weight: $font_weight_strong;
+	}
+
+	em {
+		font-style: italic;
+		font-weight: $font_weight_text;
+	}
+
+	> *:not(blockquote):not(li),
+	*:not(blockquote):not(li) > *:not(blockquote):not(li) {
+		margin-bottom: 0;
+		overflow-wrap: break-word;
+		white-space: normal;
+		word-break: break-word;
+	}
+
+	/*
+  *    Blockquote Properties
+  */
+
+	.main-important-text {
+		background-color: rgba($color: $light-primary, $alpha: 1);
+		border-radius: 1px;
+		display: block;
+		padding: 36px 46px;
+		.important-text {
+			padding: 0;
+			background-color: transparent;
+		}
+	}
+
+	.important-text {
+		background-color: rgba($color: $light-primary, $alpha: 1);
+		border-radius: 1px;
+		display: block;
+		padding: 30px;
+
+		@include media-breakpoint-up(xl) {
+			padding: 36px 46px;
+		}
+
+		@include font-body;
+		color: $text;
+		font-size: px-to-rem($font_size_text);
+		font-stretch: normal;
+		font-style: normal;
+		font-weight: $font_weight_text;
+		letter-spacing: $spacing_text;
+		line-height: px-to-rem($line_height_text);
+
+		> *:not(strong) {
+			color: $text !important;
+			font-size: px-to-rem($font_size_text);
+			font-weight: $font_weight_text;
+			letter-spacing: $spacing_text;
+			line-height: px-to-rem($line_height_text);
+		}
+	}
+
+	blockquote,
+	blockquote > * {
+		@include font-body;
+		color: $text;
+		font-size: px-to-rem($blockquote_sizeText);
+		font-style: normal;
+		font-weight: $blockquote_fontWeight;
+		letter-spacing: $blockquote_letterSpacing;
+		line-height: px-to-rem($blockquote_lineHeight);
+	}
+}
+
+.block__editor + .block__buttons {
+	margin-top: 24px;
+}
+
+@include media-breakpoint-up(lg) {
+	.row-cols-xl-7 > * {
+		flex: 0 0 auto;
+		width: 14.28571428571429%;
+	}
+}
+
+.mt-40 {
+	margin-top: 30px;
+	@include media-breakpoint-up(xl) {
+		margin-top: 40px;
+	}
+}
+
+.mt-50 {
+	margin-top: 30px;
+	@include media-breakpoint-up(xl) {
+		margin-top: 50px;
+	}
+}
+
+// div[class*="__background"] {
+// 	height: 100%;
+// 	left: 0;
+// 	position: absolute;
+// 	top: 0;
+// 	width: 100%;
+// 	> img {
+// 		object-fit: cover;
+// 		height: 100% !important;
+// 		width: 100%;
+// 	}
+// }
+
+hr.line {
+	display: block;
+	width: 100%;
+	border-top-width: px-to-rem(0.5px);
+	border-top-style: solid;
+	opacity: 0.5;
+	margin-top: 0;
+	margin-bottom: 0;
+
+	&.hr-top {
+		margin-bottom: 40px;
+	}
+	&.hr-bottom {
+		margin-top: 40px;
+	}
+	&.light {
+		border-color: $white;
+	}
+	&.dark {
+		border-color: $text;
+	}
+	&.grey {
+		border-color: $grey;
+	}
+	&.tiny {
+		border-width: px-to-rem(0.2px);
+	}
+}
+
+.eleva-row {
+	display: flex;
+	flex-wrap: wrap;
+	row-gap: 30px;
+}
+
+.eleva-container {
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 100%;
+	padding: 0 1rem;
+	@include media-breakpoint-up(sm) {
+		max-width: 540px;
+		padding: 0;
+	}
+	@include media-breakpoint-up(md) {
+		max-width: 720px;
+	}
+	@include media-breakpoint-up(lg) {
+		max-width: 960px;
+	}
+	@include media-breakpoint-up(xl) {
+		max-width: 1204px;
+	}
+	@include media-breakpoint-up(xxl) {
+		max-width: 1384px;
+	}
+}

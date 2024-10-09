@@ -1,0 +1,86 @@
+{
+	"key": "group_6617fb8c89563",
+	"title": "Single Post - Options",
+	"fields": [
+		{
+			"key": "field_66bcd02bc7aa8",
+			"label": "Directory Blog Url",
+			"name": "blog_url",
+			"aria-label": "",
+			"type": "page_link",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50",
+				"class": "",
+				"id": ""
+			},
+			"post_type": "",
+			"post_status": "",
+			"taxonomy": "",
+			"allow_archives": 1,
+			"multiple": 0,
+			"allow_null": 0
+		},
+		{
+			"key": "field_66bcd05bc7aa9",
+			"label": "Directory Blog Label",
+			"name": "blog_label",
+			"aria-label": "",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50",
+				"class": "",
+				"id": ""
+			},
+			"default_value": "",
+			"maxlength": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": ""
+		},
+		{
+			"key": "field_6617fb8c9b7fc",
+			"label": "Show Authors",
+			"name": "show_authors",
+			"aria-label": "",
+			"type": "true_false",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50",
+				"class": "",
+				"id": ""
+			},
+			"message": "",
+			"default_value": 1,
+			"ui_on_text": "",
+			"ui_off_text": "",
+			"ui": 1
+		}
+	],
+	"location": [
+		[
+			{
+				"param": "options_page",
+				"operator": "==",
+				"value": "site-options"
+			}
+		]
+	],
+	"menu_order": 0,
+	"position": "normal",
+	"style": "default",
+	"label_placement": "top",
+	"instruction_placement": "label",
+	"hide_on_screen": "",
+	"active": true,
+	"description": "",
+	"show_in_rest": 0,
+	"modified": 1723650204
+}

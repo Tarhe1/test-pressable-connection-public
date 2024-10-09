@@ -1,0 +1,88 @@
+{
+	"key": "group_6273c6fddfe80",
+	"title": "Insert Scripts",
+	"fields": [
+		{
+			"key": "field_6273c735b970b",
+			"label": "Inside <code>&#60;head&#62;</code> Tag",
+			"name": "inside_head_tag",
+			"aria-label": "",
+			"type": "textarea",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 3,
+			"default_value": "",
+			"maxlength": "",
+			"rows": "",
+			"placeholder": "",
+			"new_lines": ""
+		},
+		{
+			"key": "field_6273c7bab970c",
+			"label": "After <code>&#60;body&#62;</code> Tag is opened",
+			"name": "after_body_tag_opens",
+			"aria-label": "",
+			"type": "textarea",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 3,
+			"default_value": "",
+			"maxlength": "",
+			"rows": "",
+			"placeholder": "",
+			"new_lines": ""
+		},
+		{
+			"key": "field_6273c801b970d",
+			"label": "Before <code>&#60;/body&#62;</code> Tag is closed",
+			"name": "before_body_tag_closed",
+			"aria-label": "",
+			"type": "textarea",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"wpml_cf_preferences": 3,
+			"default_value": "",
+			"maxlength": "",
+			"rows": "",
+			"placeholder": "",
+			"new_lines": ""
+		}
+	],
+	"location": [
+		[
+			{
+				"param": "options_page",
+				"operator": "==",
+				"value": "site-options"
+			}
+		]
+	],
+	"menu_order": 100,
+	"position": "normal",
+	"style": "default",
+	"label_placement": "top",
+	"instruction_placement": "label",
+	"hide_on_screen": "",
+	"active": true,
+	"description": "",
+	"show_in_rest": 0,
+	"modified": 1673022337
+}

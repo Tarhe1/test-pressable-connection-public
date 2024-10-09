@@ -1,0 +1,40 @@
+.block__sponsors{
+  .block__sponsors-row {
+    display: flex;
+  }
+  .sponsor {
+    height: auto;
+    .sponsor__image img{
+      mix-blend-mode: unset;
+    }
+    .sponsor__body {
+      text-align: center;
+    }
+  }
+  .block__sponsors--carousel{
+    .swiper-wrapper{
+      display: flex;
+      column-gap: 15px;
+    }
+    .swiper-slide{
+     width: auto;
+      .sponsor__image, a{
+        width: auto;
+      }
+      .sponsor__body{
+        text-align: center;
+      }
+    }
+  }
+  .visually-hidden, .visually-hidden-focusable:not(:focus):not(:focus-within) {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+  }
+}

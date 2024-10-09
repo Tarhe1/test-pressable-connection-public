@@ -1,0 +1,124 @@
+{
+	"key": "group_65afc7743fc08",
+	"title": "Exclude Blocks",
+	"fields": [
+		{
+			"key": "field_65afc774f9903",
+			"label": "Exclude Blocks",
+			"name": "acf_exclude_blocks",
+			"aria-label": "",
+			"type": "select",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"choices": {
+				"accordion": "Accordion",
+				"buttons": "Buttons",
+				"callout": "Callout",
+				"cards": "Cards",
+				"directory": "Directory",
+				"directory-map": "Directory map",
+				"directory-post": "Directory post",
+				"feed-directory": "Feed directory",
+				"feed-event": "Feed event",
+				"feed-post": "Feed post",
+				"image-carousel": "Image carousel",
+				"related-posts": "Related posts",
+				"single-page-container": "Single page container",
+				"single-page-container-column": "Single page container column",
+				"sponsors": "Sponsors",
+				"statistics": "Statistics",
+				"team-bios": "Team bios",
+				"template-cards": "Template cards",
+				"template-contact-box": "Template contact box",
+				"template-media-contacts": "Template media contacts",
+				"template-presskit": "Template presskit",
+				"template-sponsors": "Template sponsors",
+				"testimonials": "Testimonials",
+				"text-photo": "Text photo",
+				"timeline-horizontal": "Timeline horizontal",
+				"timeline-vertical": "Timeline vertical",
+				"video": "Video"
+			},
+			"default_value": [
+				"accordion",
+				"directory",
+				"directory-map",
+				"directory-post",
+				"feed-directory",
+				"feed-event",
+				"feed-post",
+				"related-posts",
+				"single-page-container",
+				"single-page-container-column",
+				"sponsors",
+				"team-bios",
+				"template-cards",
+				"template-contact-box",
+				"template-media-contacts",
+				"template-presskit",
+				"template-sponsors",
+				"testimonials",
+				"timeline-horizontal",
+				"timeline-vertical"
+			],
+			"return_format": "value",
+			"multiple": 1,
+			"allow_null": 1,
+			"ui": 1,
+			"ajax": 1,
+			"placeholder": ""
+		},
+		{
+			"key": "field_65b82271f0bc7",
+			"label": "Exclude Default Post Types",
+			"name": "exclude_default_post_types",
+			"aria-label": "",
+			"type": "select",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"choices": {
+				"resources": "Resources",
+				"map": "Map Directory",
+				"team": "Team"
+			},
+			"default_value": [],
+			"return_format": "value",
+			"multiple": 1,
+			"allow_null": 0,
+			"ui": 1,
+			"ajax": 0,
+			"placeholder": ""
+		}
+	],
+	"location": [
+		[
+			{
+				"param": "options_page",
+				"operator": "==",
+				"value": "acf-options-exclude-blocks"
+			}
+		]
+	],
+	"menu_order": 0,
+	"position": "normal",
+	"style": "default",
+	"label_placement": "top",
+	"instruction_placement": "label",
+	"hide_on_screen": "",
+	"active": true,
+	"description": "",
+	"show_in_rest": 0,
+	"modified": 1710255538
+}

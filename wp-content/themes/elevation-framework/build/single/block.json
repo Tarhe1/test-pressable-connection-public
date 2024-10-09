@@ -1,0 +1,11 @@
+{
+  "name": "elevation/single",
+  "version": "1.0.0",
+  "title": "Single Post",
+  "icon": "admin-site",
+  "description": "This is use to compile single templates assets.",
+  "editorScript": "file:index.js",
+  "viewScript": "file:script.js",
+  "editorStyle": "file:index.css",
+  "style": "file:style-index.css"
+}

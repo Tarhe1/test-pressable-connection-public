@@ -1,0 +1,392 @@
+@import "../../../../critical-assets/styles/scss/utilities/mixins";
+
+#comments {
+	margin-bottom: 80px;
+
+	@include media-breakpoint-down(xl) {
+		margin-bottom: 40px;
+	}
+
+	h3#comments {
+		display: none;
+	}
+
+	.comments-title {
+		@include font-heading;
+		color: $title-form-color;
+		font-size: px-to-rem($title-form-size);
+		font-weight: $title-form-weight;
+		letter-spacing: $title-form-letter-spacing;
+		line-height: 1.1;
+		margin: 0;
+		padding: 0;
+		text-align: left;
+	}
+
+	.count-comments {
+		@include font-body;
+		color: $text;
+		font-size: px-to-rem(25px);
+		font-weight: 500;
+		line-height: 1em;
+		margin-bottom: 10px;
+	}
+
+	/*
+	*  Comment List 
+	*/
+	ol.comment-list {
+		border-bottom: 1px solid rgba($color: $line-border-color, $alpha: 1);
+		counter-reset: none;
+		list-style-type: none;
+		margin: 25px 0;
+		padding: 20px 0 0 0;
+		li.comment {
+			counter-increment: none;
+			display: block;
+			margin: 0 0 10px 0;
+			padding: 0;
+			&::before {
+				content: none;
+			}
+			.children {
+				margin: 25px 0;
+				li.comment {
+					margin: 0 0 10px 0;
+				}
+			}
+		}
+		.comment-body {
+			position: relative;
+			> *,
+			* > *,
+			* > * > * {
+				@include font-body;
+				font-size: px-to-rem(14px);
+				font-weight: 500;
+				line-height: 1.2;
+				color: $text;
+			}
+			p {
+				color: $text;
+			}
+			a {
+				color: $link;
+				text-decoration: underline;
+			}
+
+			/*
+			 * Comment Author 
+			 */
+			.comment-author.vcard {
+				display: block;
+				img {
+					border-radius: 50%;
+					height: 31px;
+					left: 0;
+					position: relative;
+					top: 0;
+					width: 31px;
+				}
+				cite.fn {
+					text-transform: none;
+					margin-left: 10px;
+				}
+				.says {
+					text-decoration: none;
+				}
+			}
+
+			footer.comment-meta {
+				align-items: center;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: flex-start;
+				margin-bottom: 20px;
+			}
+
+			/*
+			 * Comment Metadata 
+			 */
+			.comment-metadata {
+				margin-left: auto;
+				a {
+					text-decoration: none;
+				}
+				.comment-edit-link {
+					margin-left: 20px;
+				}
+			}
+			/*
+			 * Reply Button w/Icon 
+			 */
+			.reply {
+				display: inline-block;
+				margin-top: 20px;
+				a.comment-reply-link {
+					@include font-heading;
+					align-items: center;
+					color: $text;
+					display: flex;
+					font-size: px-to-rem(14px);
+					font-weight: 400;
+					letter-spacing: 0.42px;
+					line-height: px-to-rem(25px);
+					position: relative;
+					text-decoration: none;
+					text-transform: uppercase;
+					&::after {
+						content: "";
+						background-image: url('data:image/svg+xml,%3Csvg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M26.4744 18.104C28.8304 16.678 30.2254 14.539 30.2254 12.307C30.2254 8.184 25.6684 4.836 20.0264 4.836C16.0274 4.836 12.4004 6.60295 10.7884 9.238C5.23939 9.29996 0.775391 12.617 0.775391 16.709C0.775391 18.9409 2.17039 21.08 4.52639 22.506C4.30943 22.94 3.96834 23.312 3.50334 23.6529C3.00736 24.0249 2.79029 24.6449 3.00736 25.2339C3.19334 25.792 3.72042 26.1949 4.34042 26.1949H4.3714C6.66542 26.1329 8.3704 25.0789 9.4244 24.1179C9.95134 24.1799 10.4474 24.211 10.9434 24.211C15.0354 24.211 18.6004 22.4129 20.2124 19.84C20.6464 19.84 21.0494 19.778 21.5455 19.716C22.6305 20.6769 24.3355 21.731 26.6295 21.7929H26.6605C27.2805 21.7929 27.8074 21.421 27.9935 20.8319C28.2105 20.2429 27.9935 19.6229 27.4975 19.251C27.0323 18.91 26.6913 18.538 26.4744 18.104ZM10.9744 22.785C10.4474 22.785 9.85842 22.754 9.30036 22.661C9.08341 22.63 8.86634 22.692 8.74231 22.847C7.87426 23.6839 6.38634 24.707 4.34031 24.7689C5.27031 24.087 5.85934 23.2809 6.07629 22.3509C6.13825 22.0409 6.01433 21.7309 5.73531 21.5759C3.50336 20.398 2.17031 18.5999 2.17031 16.7091C2.17031 13.3301 6.10731 10.6021 10.9743 10.6021C15.8413 10.6021 19.7783 13.3301 19.7783 16.7091C19.7783 20.0881 15.8103 22.7851 10.9743 22.7851L10.9744 22.785ZM22.2584 18.476C22.1034 18.321 21.9174 18.259 21.7003 18.29C21.4213 18.321 21.1734 18.321 20.9253 18.352C21.0803 17.825 21.1734 17.267 21.1734 16.7089C21.1734 12.9269 17.3604 9.82693 12.4314 9.29993C13.9814 7.43993 16.8644 6.23093 20.0264 6.23093C24.8624 6.23093 28.8304 8.95893 28.8304 12.3069C28.8304 14.2289 27.5284 15.9959 25.2964 17.1739C25.0174 17.3289 24.8624 17.6699 24.9554 17.9489C25.2034 18.9099 25.7924 19.7159 26.6914 20.367C24.6454 20.336 23.1574 19.3131 22.2584 18.476Z" fill="%23211f1f"/%3E%3Cpath d="M15.5311 15.996H8.09113L9.64113 14.446C9.92016 14.167 9.92016 13.7329 9.64113 13.4541C9.36211 13.175 8.92808 13.175 8.64918 13.4541L5.92118 16.2131C5.64216 16.4921 5.64216 16.9261 5.92118 17.205L8.64918 19.964C8.7732 20.088 8.95918 20.181 9.14516 20.181C9.33113 20.181 9.48613 20.119 9.64113 19.964C9.92016 19.685 9.92016 19.2509 9.64113 18.9721L8.09113 17.4221H15.5311C15.9031 17.4221 16.2131 17.1121 16.2131 16.7401C16.2132 16.3681 15.9342 15.996 15.5311 15.996V15.996Z" fill="%23211f1f"/%3E%3C/svg%3E%0A');
+						background-color: transparent;
+						background-position: center;
+						background-repeat: no-repeat;
+						background-size: contain;
+						width: 20px;
+						height: 20px;
+						display: inline-block;
+						margin-left: 5px;
+					}
+					&:hover {
+						text-decoration: underline;
+						color: $link;
+						&::after {
+							background-image: url('data:image/svg+xml,%3Csvg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M26.4744 18.104C28.8304 16.678 30.2254 14.539 30.2254 12.307C30.2254 8.184 25.6684 4.836 20.0264 4.836C16.0274 4.836 12.4004 6.60295 10.7884 9.238C5.23939 9.29996 0.775391 12.617 0.775391 16.709C0.775391 18.9409 2.17039 21.08 4.52639 22.506C4.30943 22.94 3.96834 23.312 3.50334 23.6529C3.00736 24.0249 2.79029 24.6449 3.00736 25.2339C3.19334 25.792 3.72042 26.1949 4.34042 26.1949H4.3714C6.66542 26.1329 8.3704 25.0789 9.4244 24.1179C9.95134 24.1799 10.4474 24.211 10.9434 24.211C15.0354 24.211 18.6004 22.4129 20.2124 19.84C20.6464 19.84 21.0494 19.778 21.5455 19.716C22.6305 20.6769 24.3355 21.731 26.6295 21.7929H26.6605C27.2805 21.7929 27.8074 21.421 27.9935 20.8319C28.2105 20.2429 27.9935 19.6229 27.4975 19.251C27.0323 18.91 26.6913 18.538 26.4744 18.104ZM10.9744 22.785C10.4474 22.785 9.85842 22.754 9.30036 22.661C9.08341 22.63 8.86634 22.692 8.74231 22.847C7.87426 23.6839 6.38634 24.707 4.34031 24.7689C5.27031 24.087 5.85934 23.2809 6.07629 22.3509C6.13825 22.0409 6.01433 21.7309 5.73531 21.5759C3.50336 20.398 2.17031 18.5999 2.17031 16.7091C2.17031 13.3301 6.10731 10.6021 10.9743 10.6021C15.8413 10.6021 19.7783 13.3301 19.7783 16.7091C19.7783 20.0881 15.8103 22.7851 10.9743 22.7851L10.9744 22.785ZM22.2584 18.476C22.1034 18.321 21.9174 18.259 21.7003 18.29C21.4213 18.321 21.1734 18.321 20.9253 18.352C21.0803 17.825 21.1734 17.267 21.1734 16.7089C21.1734 12.9269 17.3604 9.82693 12.4314 9.29993C13.9814 7.43993 16.8644 6.23093 20.0264 6.23093C24.8624 6.23093 28.8304 8.95893 28.8304 12.3069C28.8304 14.2289 27.5284 15.9959 25.2964 17.1739C25.0174 17.3289 24.8624 17.6699 24.9554 17.9489C25.2034 18.9099 25.7924 19.7159 26.6914 20.367C24.6454 20.336 23.1574 19.3131 22.2584 18.476Z" fill="%23CB4B3B"/%3E%3Cpath d="M15.5311 15.996H8.09113L9.64113 14.446C9.92016 14.167 9.92016 13.7329 9.64113 13.4541C9.36211 13.175 8.92808 13.175 8.64918 13.4541L5.92118 16.2131C5.64216 16.4921 5.64216 16.9261 5.92118 17.205L8.64918 19.964C8.7732 20.088 8.95918 20.181 9.14516 20.181C9.33113 20.181 9.48613 20.119 9.64113 19.964C9.92016 19.685 9.92016 19.2509 9.64113 18.9721L8.09113 17.4221H15.5311C15.9031 17.4221 16.2131 17.1121 16.2131 16.7401C16.2132 16.3681 15.9342 15.996 15.5311 15.996V15.996Z" fill="%23CB4B3B"/%3E%3C/svg%3E%0A');
+						}
+					}
+				}
+			}
+		}
+	}
+
+	/*
+	 * Comment Respond
+	 */
+	.comment-respond {
+		.comment-reply-title {
+			@include font-heading;
+			color: $text;
+			font-weight: 500;
+			letter-spacing: 2.05px;
+			margin-bottom: 25px;
+			text-transform: none;
+			small {
+				a {
+					@include font-body;
+					color: $link;
+					font-size: px-to-rem(14px);
+					font-weight: 400;
+					letter-spacing: 0.42px;
+					line-height: px-to-rem(25px);
+					text-decoration: underline;
+				}
+			}
+		}
+		p.must-log-in {
+			@include font-body;
+			color: $text;
+			font-size: px-to-rem(14px);
+			font-weight: 400;
+			letter-spacing: 0.42px;
+			line-height: px-to-rem(25px);
+			margin-bottom: 15px;
+			a {
+				@include font-body;
+				color: $link;
+				font-size: px-to-rem(14px);
+				font-weight: 400;
+				letter-spacing: 0.42px;
+				line-height: px-to-rem(25px);
+				text-decoration: underline;
+			}
+		}
+
+		/*
+		*Form Comments
+		*/
+		#commentform {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			column-gap: 20px;
+			row-gap: 15px;
+			> *,
+			* > * {
+				flex: 1 0 100%;
+			}
+			p.logged-in-as {
+				margin: 0 0 15px;
+				display: block;
+				a {
+					@include font-body;
+					color: $secondary;
+					font-size: px-to-rem(14px);
+					font-weight: 400;
+					letter-spacing: 0.42px;
+					line-height: px-to-rem(25px);
+					text-decoration: underline;
+				}
+			}
+			.comment-form-comment,
+			.comment-form-author,
+			.comment-form-email,
+			.comment-form-url {
+				label {
+					@include font-body;
+					color: $label-color;
+					display: block;
+					font-size: $label-size;
+					font-weight: $label-weight;
+					letter-spacing: $label-letter-spacing;
+					line-height: 1.2;
+					margin-bottom: 5px;
+				}
+				textarea,
+				input {
+					@include font-heading;
+					background: $input-background;
+					border-radius: $input-border-radius;
+					border: 1px solid $input-border-color;
+					box-shadow: none;
+					color: $input-color;
+					font-size: px-to-rem($input-size);
+					font-weight: $input-weight;
+					letter-spacing: $input-letter-spacing;
+					min-height: 50px;
+					padding: 10px 15px;
+					&::-webkit-input-placeholder {
+						color: $input-color;
+						opacity: 1;
+					}
+					&::-moz-placeholder {
+						color: $input-color;
+						opacity: 1;
+					} /* firefox 19+ */
+					&:-ms-input-placeholder {
+						color: $input-color;
+						opacity: 1;
+					} /* ie */
+					&:active,
+					&:focus {
+						box-shadow: none;
+						border-color: $input-color;
+						outline: none;
+						color: $input-color;
+						&::-webkit-input-placeholder {
+							color: $input-color;
+							opacity: 1;
+						}
+						&::-moz-placeholder {
+							color: $input-color;
+							opacity: 1;
+						} /* firefox 19+ */
+						&:-ms-input-placeholder {
+							color: $input-color;
+							opacity: 1;
+						} /* ie */
+					}
+				}
+				#comment {
+					height: 160px;
+				}
+			}
+			.comment-form-comment {
+				order: 3;
+			}
+			.comment-form-cookies-consent {
+				order: 4;
+				input {
+					cursor: pointer;
+					height: 100%;
+					opacity: 0;
+					position: absolute;
+					width: 100%;
+					z-index: 1;
+				}
+				[type="checkbox"]:checked + label,
+				[type="checkbox"]:not(:checked) + label {
+					@include font-heading;
+					color: $choises-color;
+					cursor: pointer;
+					display: inline-block;
+					font-size: px-to-rem($choises-size);
+					font-weight: $choises-weight;
+					letter-spacing: $choises-letter-spacing;
+					line-height: normal;
+					margin: 0 auto;
+					min-height: 30px;
+					padding: 0 0 0 30px;
+					position: relative;
+					text-align: left;
+					text-transform: none;
+					vertical-align: middle;
+					z-index: 1;
+					&::after {
+						content: "";
+						background: $choises-background-selected;
+						border-color: $choises-background-selected;
+						border-radius: 4px;
+						border-style: solid;
+						border-width: px-to-rem(1.7px);
+						box-shadow: none;
+						height: 20px;
+						left: 0;
+						position: absolute;
+						top: 0;
+						transition: all 0.2s ease;
+						width: 20px;
+						z-index: -1;
+					}
+				}
+				[type="checkbox"]:checked,
+				[type="checkbox"]:not(:checked) {
+					position: fixed;
+					left: -9999px;
+					margin: 0;
+				}
+				[type="checkbox"]:checked + label {
+					&::before {
+						content: "";
+						background-image: url("data:image/svg+xml,%3Csvg width='11' height='9' viewBox='0 0 11 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 5.16484L4.10757 8L10 1' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+						background-size: px-to-rem(14px);
+						background-repeat: no-repeat;
+						background-position: center;
+						width: 20px;
+						height: 20px;
+						left: 0;
+						position: absolute;
+						top: 0;
+					}
+				}
+				[type="checkbox"]:not(:checked) + label:after {
+					content: "";
+					background: transparent;
+					border-color: $choises-background;
+				}
+			}
+			.comment-notes {
+				font-size: px-to-rem(11px);
+				display: none;
+			}
+			.comment-form-author {
+				flex: 0 0 calc(50% - 10px);
+				order: 1;
+			}
+			.comment-form-email {
+				display: block;
+				flex: 0 0 calc(50% - 10px);
+				order: 2;
+			}
+			.comment-form-url {
+				display: none;
+			}
+			.form-submit {
+				order: 5;
+				input[type="submit"] {
+					@include cta;
+					@include cta--cta-primary-red;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,19 @@
+.block__feed{
+  .card{
+    margin-right: 30px;
+  }
+  .admin-view {
+    padding: 5px;
+    background-color: #000;
+    color: #fff;
+    display: inline-flex;
+    border-radius: 2px;
+    opacity: 0.4;
+    margin: 0 auto 30px;
+    position: relative;
+  }
+}
+.block__feed-row{
+  display: flex;
+  gap: 15px;
+}

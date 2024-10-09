@@ -1,0 +1,48 @@
+.block__team {
+	.modal {
+		display: none;
+	}
+	.block__col {
+		width: 100%;
+	}
+	&.block__team--license {
+		.block__team-row {
+			flex-direction: column;
+			.card {
+				min-width: unset;
+				max-width: unset;
+			}
+		}
+	}
+	&.block__team--card-filter .block__team-row {
+		flex-wrap: wrap;
+		column-gap: 15px;
+	}
+	&.block__team--card-filter .block__team-row .col:not(.show) {
+		flex: 0 0 auto;
+		width: 255px;
+		//width: unset;
+		padding: 0;
+		opacity: 1;
+		height: unset;
+	}
+	.swiper__container--team {
+		overflow: visible;
+	}
+	.block__team-row,
+	.swiper-wrapper {
+		display: flex;
+		column-gap: 15px;
+	}
+	.card {
+		padding: 0;
+		margin-top: 0;
+		border: none;
+		box-shadow: none;
+	}
+	.visually-hidden {
+		height: 0;
+		width: 0;
+		visibility: hidden;
+	}
+}

@@ -1,0 +1,13 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "../../assets/styles/scss/utilities/functions";
+@import "../../assets/styles/scss/utilities/variables";
+@import "../../assets/styles/scss/utilities/mixins";
+@import "../../critical-assets/styles/scss/base/typography";
+
+@import "../../assets/styles/scss/layout/pagination";
+@import "../../assets/styles/scss/plugins/addtoany";
+@import "./scss/_archive";
+@import "./scss/_category";
+@import "./scss/_team";

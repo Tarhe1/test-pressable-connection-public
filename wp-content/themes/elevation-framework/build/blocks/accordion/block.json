@@ -1,0 +1,26 @@
+{
+  "name": "elevation/accordion",
+  "title": "Accordion",
+  "category": "elevation-block",
+  "icon": "block-default",
+  "keywords": [
+    "accordion",
+    "block",
+    "elevation"
+  ],
+  "description": "",
+  "acf": {
+    "mode": "edit",
+    "renderCallback": "accordion_block_render_callback"
+  },
+  "supports": {
+    "anchor": true
+  },
+  "style": [
+    "file:./style-index.css"
+  ],
+  "script": "file:./index.js",
+  "editorStyle": [
+    "file:./index.css"
+  ]
+}

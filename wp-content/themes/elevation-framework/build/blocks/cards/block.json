@@ -1,0 +1,26 @@
+{
+  "name": "elevation/cards",
+  "title": "Cards",
+  "category": "elevation-blocks",
+  "icon": "block-default",
+  "keywords": [
+    "cards",
+    "block",
+    "elevation"
+  ],
+  "description": "",
+  "acf": {
+    "mode": "edit",
+    "renderCallback": "cards_block_render_callback"
+  },
+  "supports": {
+    "anchor": true
+  },
+  "style": [
+    "file:./style-index.css"
+  ],
+  "script": "file:./index.js",
+  "editorStyle": [
+    "file:./index.css"
+  ]
+}

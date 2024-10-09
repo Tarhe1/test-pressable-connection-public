@@ -1,0 +1,147 @@
+/*
+* Dropdown
+*/
+
+/* Show in menu option */
+.menu-item-gtranslate {
+	display: flex;
+	align-items: center;
+	flex-wrap: nowrap;
+	column-gap: 5px;
+	@include media-breakpoint-up(xl) {
+		order: -1;
+	}
+	&::before {
+		content: "";
+		background-image: url("data:image/svg+xml,%3Csvg width='19' height='17' viewBox='0 0 19 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.45882 10.7289H2.5403C1.69087 10.7289 1 10.038 1 9.18858V2.5403C1 1.69087 1.69087 1 2.5403 1H9.18858C10.038 1 10.7289 1.69087 10.7289 2.5403V4.0085C10.7289 4.1608 10.6053 4.28441 10.453 4.28441C10.3007 4.28441 10.1771 4.1608 10.1771 4.0085V2.5403C10.1771 1.99511 9.73378 1.55182 9.18858 1.55182H2.5403C1.99511 1.55182 1.55182 1.99511 1.55182 2.5403V9.18858C1.55182 9.73378 1.99511 10.1771 2.5403 10.1771H7.45882C7.61112 10.1771 7.73473 10.3007 7.73473 10.453C7.73473 10.6053 7.61112 10.7289 7.45882 10.7289Z' fill='%23211F1F' stroke='%23211F1F' stroke-width='0.3'/%3E%3Cpath d='M10.6472 16.2117C10.6086 16.2117 10.57 16.2036 10.5336 16.187C10.435 16.1425 10.3713 16.0439 10.3713 15.9358V14.5397H9.81179C8.96236 14.5397 8.27148 13.8488 8.27148 12.9994V6.35109C8.27148 5.50166 8.96236 4.81079 9.81179 4.81079H16.4597C17.3091 4.81079 18 5.50166 18 6.35109V12.999C18 13.8484 17.3091 14.5393 16.4597 14.5393H12.6562L10.829 16.1429C10.7775 16.1881 10.7127 16.2113 10.6469 16.2113L10.6472 16.2117ZM9.81179 5.36261C9.26659 5.36261 8.8233 5.8059 8.8233 6.35109V12.999C8.8233 13.5442 9.26696 13.9875 9.81179 13.9875H10.6472C10.7995 13.9875 10.9231 14.1111 10.9231 14.2634V15.3262L12.3707 14.0559C12.4211 14.0118 12.4859 13.9875 12.5528 13.9875H16.4601C17.0053 13.9875 17.4486 13.5442 17.4486 12.999V6.35109C17.4486 5.8059 17.0053 5.36261 16.4601 5.36261H9.81215H9.81179Z' fill='%23211F1F' stroke='%23211F1F' stroke-width='0.3'/%3E%3Cpath d='M8.668 4.36261H3.0347C2.8824 4.36261 2.75879 4.239 2.75879 4.0867C2.75879 3.9344 2.8824 3.81079 3.0347 3.81079H8.668C8.8203 3.81079 8.94391 3.9344 8.94391 4.0867C8.94391 4.239 8.8203 4.36261 8.668 4.36261Z' fill='%23211F1F' stroke='%23211F1F' stroke-width='0.3'/%3E%3Cpath d='M5.8511 4.36227C5.6988 4.36227 5.5752 4.23866 5.5752 4.08636V3.00296C5.5752 2.85066 5.6988 2.72705 5.8511 2.72705C6.0034 2.72705 6.12701 2.85066 6.12701 3.00296V4.08636C6.12701 4.23866 6.0034 4.36227 5.8511 4.36227Z' fill='%23211F1F' stroke='%23211F1F' stroke-width='0.3'/%3E%3Cpath d='M3.28677 8.94864C3.17604 8.94864 3.0712 8.88132 3.02926 8.77169C2.97445 8.62932 3.04545 8.46967 3.18781 8.41522C4.67698 7.84244 5.80489 6.95291 6.53991 5.77129C7.08915 4.88838 7.20135 4.16256 7.20246 4.15557C7.2249 4.00511 7.36433 3.90026 7.51515 3.9227C7.66562 3.94441 7.77009 4.08383 7.74876 4.2343C7.74397 4.26777 7.62552 5.06055 7.02441 6.03689C6.4748 6.92973 5.39765 8.1566 3.38573 8.93025C3.35299 8.94276 3.31951 8.94864 3.28677 8.94864Z' fill='%23211F1F' stroke='%23211F1F' stroke-width='0.3'/%3E%3Cpath d='M8.34201 8.94876C8.30927 8.94876 8.27579 8.94287 8.24305 8.93036C5.90004 8.02906 4.72725 6.3497 4.42375 5.85638C4.34392 5.72652 4.38439 5.55656 4.51425 5.47673C4.64411 5.3969 4.81407 5.43737 4.8939 5.56723C5.17459 6.0234 6.25946 7.57621 8.44134 8.41533C8.58371 8.47015 8.65434 8.62981 8.59989 8.77181C8.55759 8.88143 8.45311 8.94876 8.34238 8.94876H8.34201Z' fill='%23211F1F' stroke='%23211F1F' stroke-width='0.3'/%3E%3Cpath d='M15.1266 12.4019C15.0177 12.4019 14.9143 12.3368 14.8709 12.2298L13.1323 7.95025L11.3937 12.2298C11.3363 12.371 11.1756 12.4387 11.0343 12.3813C10.893 12.3239 10.8253 12.1632 10.8827 12.0219L12.877 7.11333C12.9193 7.00922 13.0205 6.94116 13.1327 6.94116C13.2449 6.94116 13.346 7.00922 13.3883 7.11333L15.3826 12.0219C15.44 12.1632 15.3719 12.3239 15.231 12.3813C15.1972 12.3953 15.1619 12.4016 15.1273 12.4016L15.1266 12.4019Z' fill='%23211F1F' stroke='%23211F1F' stroke-width='0.3'/%3E%3Cpath d='M14.4285 10.8072H11.7857C11.6334 10.8072 11.5098 10.6836 11.5098 10.5313C11.5098 10.379 11.6334 10.2554 11.7857 10.2554H14.4285C14.5808 10.2554 14.7044 10.379 14.7044 10.5313C14.7044 10.6836 14.5808 10.8072 14.4285 10.8072Z' fill='%23211F1F' stroke='%23211F1F' stroke-width='0.3'/%3E%3C/svg%3E%0A");
+		background-color: transparent;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		height: 17px;
+		width: 17px;
+		display: inline-block;
+		position: absolute;
+		left: 0;
+	}
+}
+
+.gt_selector {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	-ms-word-break: normal;
+	word-break: normal;
+	@include font-heading;
+	background-image: url("data:image/svg+xml,%3Csvg width='6' height='4' viewBox='0 0 6 4' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L3 3L5 1' stroke='%23211F1F' stroke-width='0.5'/%3E%3C/svg%3E%0A");
+	background-color: transparent;
+	background-position: calc(100% - 4px) center;
+	background-repeat: no-repeat;
+	background-size: px-to-rem(12px);
+	border: unset;
+	color: $text;
+	cursor: pointer;
+	font-size: px-to-rem(11px);
+	font-style: normal;
+	font-weight: 400;
+	letter-spacing: 0.99px;
+	line-height: normal;
+	outline: none;
+	padding: 0 18px 0 25px !important;
+	text-transform: uppercase;
+	//min-width: 135px;
+	option {
+		white-space: normal;
+		color: $text;
+	}
+}
+
+/*
+* Nice dropdown with flags 
+*/
+.menu-item-gtranslate {
+	div[id*="gtranslate_menu_wrapper_"] {
+		position: relative !important;
+	}
+}
+
+div[id*="gtranslate_menu_wrapper_"] {
+	.gt_switcher {
+		@include font-heading;
+		.gt_selected {
+			background: transparent !important;
+			opacity: 1;
+			border-radius: 0;
+			> a {
+				@include font-heading;
+				border: none !important;
+				color: $text;
+				cursor: pointer;
+				font-size: px-to-rem(11px);
+				font-weight: 400;
+				letter-spacing: 0.99px;
+				background: transparent;
+				padding: 0;
+				display: flex;
+				flex-direction: row-reverse;
+				align-items: center;
+				column-gap: 10px;
+				img {
+					height: 20px !important;
+					width: 20px !important;
+				}
+				&::after {
+					display: none !important;
+					background-image: unset !important;
+				}
+				&:hover,
+				&:focus,
+				&:active {
+					background: inherit !important;
+				}
+			}
+		}
+		.gt_option {
+			@media (min-width: 1199.98px) {
+				position: absolute !important;
+				top: 25px !important;
+				max-height: 240px !important;
+				height: 240px !important;
+				width: 173px !important;
+				text-align: left;
+				transform: translate(-50%, 0%);
+				bottom: unset;
+				left: 50%;
+			}
+
+			@-moz-document url-prefix() {
+				scrollbar-color: rgba($color: $primary, $alpha: 1) rgba($color: $primary, $alpha: 0.15) ;
+				scrollbar-width: thin !important;
+			}
+			
+			&::-webkit-scrollbar {
+				width: 8px;
+			}
+			&::-webkit-scrollbar-track {
+				-webkit-border-radius: 0;
+				border-radius: 0;
+			}
+			&::-webkit-scrollbar-thumb {
+				-webkit-border-radius: 0;
+				border-radius: 0;
+				background: rgba($color: $grey, $alpha: 0.4);
+			}
+			&::-webkit-scrollbar-thumb:window-inactive {
+				background: rgba($color: $grey, $alpha: 0.2);
+			}
+			> a {
+				@include font-heading;
+				color: $text;
+				font-size: px-to-rem(11px);
+				font-weight: 400;
+				letter-spacing: 0.99px;
+				text-align: left;
+			}
+		}
+	}
+}

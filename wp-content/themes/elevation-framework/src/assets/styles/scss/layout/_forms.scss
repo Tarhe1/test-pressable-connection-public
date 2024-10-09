@@ -1,0 +1,770 @@
+@import "../../../../critical-assets/styles/scss/utilities/mixins";
+
+.gform_wrapper.gravity-theme:not(.sign-up_wrapper):not(
+		.donateSteps_wrapper
+	) {
+	.gform_heading {
+		margin-bottom: 0;
+		.gform_title {
+			color: $title-form-color;
+			letter-spacing: $title_spacing;
+			margin: 0;
+			padding: 0;
+			text-align: left;
+
+			font-size: px-to-rem($h2_size_mobile);
+			line-height: px-to-rem($h2_line_height_mobile);
+	
+			@include media-breakpoint-up(sm){
+				font-size: px-to-rem($h2_size_tablet);
+				line-height: px-to-rem($h2_line_height_tablet);
+			}
+			@include media-breakpoint-up(xl){
+				line-height: px-to-rem($h2_line_height_desktop);
+				font-size: px-to-rem($h2_size_desktop);
+			}
+		}
+		.gform_description {
+			color: $description-form-color;
+			display: block;
+			font-size: px-to-rem($description-form-size);
+			font-weight: $description-form-weight;
+			letter-spacing: $description-form-letter-spacing;
+			line-height: 1.1;
+			margin: 0 0 10px 0;
+			padding: 0;
+			text-align: left;
+			width: 100%;
+		}
+		.gform_required_legend {
+			display: none;
+		}
+	}
+
+	form {
+		margin-top: 0;
+		.gform_body {
+			margin-top: 0;
+			.gform_fields .gfield {
+				padding-left: 0;
+				margin-top: 0;
+				/*
+        * Custom Classes
+        */
+				&.hide-field {
+					visibility: hidden;
+					margin: 0;
+					height: 0;
+				}
+				&.hide-instruction{
+					.gfield_description.instruction{
+						visibility: hidden;
+						margin: 0;
+						height: 0;
+					}
+				}
+				&.hide-label {
+					legend.gfield_label {
+						visibility: hidden;
+						margin: 0;
+						height: 0;
+					}
+				}
+				&.gfield--input-type-section{
+					margin-top: 30px ;
+				}
+				/*
+        * Label Fields
+        */
+				.top_label .gfield_label {
+					@include font-heading;
+					color: $label-color;
+					font-size: px-to-rem($label-size);
+					font-weight: $label-weight;
+					letter-spacing: $label-letter-spacing;
+					line-height: $label-line-height;
+					text-align: left;
+					text-transform: none;
+				}
+
+				/*
+        * Radio Button 
+        */
+				.ginput_container_radio {
+					margin-top: 6px;
+					.gfield_radio {
+						.gchoice {
+							//margin-bottom: 5px;
+							input {
+								cursor: pointer;
+								height: 100%;
+								opacity: 0;
+								position: absolute;
+								width: 100%;
+								z-index: 1;
+							}
+							[type="radio"]:checked + label,
+							[type="radio"]:not(:checked) + label {
+								@include font-heading;
+								color: $choises-color;
+								cursor: pointer;
+								display: inline-block;
+								font-size: $choises-size;
+								font-weight: $choises-weight;
+								letter-spacing: $choises-letter-spacing;
+								line-height: $label-line-height;
+								margin: 0 auto;
+								max-width: 100%;
+								padding: 2px 0 2px 26px;
+								position: relative;
+								vertical-align: middle;
+								z-index: 1;
+								&::after {
+									content: "";
+									background: $white;
+									border-color: $choises-background-selected;
+									border-radius: 50%;
+									border-style: solid;
+									border-width: px-to-rem(6px);
+									height: 20px;
+									left: 0;
+									position: absolute;
+									top: 1px;
+									transition: all 0.2s ease;
+									width: 20px;
+									z-index: -1;
+								}
+							}
+							[type="radio"]:checked + label {
+								&::before {
+									content: "";
+									color: $white;
+									font-size: px-to-rem(14px);
+									left: 3px;
+									position: absolute;
+									top: 3px;
+								}
+							}
+							[type="radio"]:checked,
+							[type="radio"]:not(:checked) {
+								position: fixed;
+								left: -9999px;
+								margin: 0;
+							}
+							[type="radio"]:not(:checked) + label:after {
+								content: "";
+								background: transparent;
+								border-width: px-to-rem(1.7px);
+								border-color: $choises-background-selected;
+							}
+						}
+						&:focus-within {
+							box-shadow: 0 0 0 0.25rem $accesible-background;
+						}
+					}
+				}
+				/*
+        * Checkbox & Consent
+        */
+
+				.ginput_container_checkbox {
+					margin-top: 6px;
+					.gfield_checkbox {
+						.gchoice {
+							&:last-of-type {
+								margin-bottom: 0;
+							}
+						}
+						&:focus-within {
+							box-shadow: 0 0 0 0.25rem $accesible-background;
+						}
+					}
+				}
+				.ginput_container_consent,
+				.ginput_container_checkbox .gfield_checkbox .gchoice {
+					margin-bottom: 5px;
+					input {
+						cursor: pointer;
+						height: 100%;
+						opacity: 0;
+						position: absolute;
+						width: 100%;
+						z-index: 1;
+					}
+					[type="checkbox"]:checked + label,
+					[type="checkbox"]:not(:checked) + label {
+						@include font-heading;
+						color: $choises-color;
+						cursor: pointer;
+						display: inline-block;
+						font-size: px-to-rem($choises-size);
+						font-weight: $choises-weight;
+						letter-spacing: $choises-letter-spacing;
+						line-height: normal;
+						margin: 0 auto;
+						min-height: 30px;
+						padding: 0 0 0 30px;
+						position: relative;
+						text-align: left;
+						text-transform: none;
+						vertical-align: middle;
+						z-index: 1;
+						&::after {
+							content: "";
+							background: $choises-background-selected;
+							border-color: $choises-background-selected;
+							border-radius: 4px;
+							border-style: solid;
+							border-width: px-to-rem(1.7px);
+							box-shadow: none;
+							height: 20px;
+							left: 0;
+							position: absolute;
+							top: 2px;
+							transition: all 0.2s ease;
+							width: 20px;
+							z-index: -1;
+						}
+					}
+					[type="checkbox"]:checked,
+					[type="checkbox"]:not(:checked) {
+						position: fixed;
+						left: -9999px;
+						margin: 0;
+					}
+					[type="checkbox"]:checked + label {
+						&::before {
+							content: "";
+							background-image: url("data:image/svg+xml,%3Csvg width='11' height='9' viewBox='0 0 11 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 5.16484L4.10757 8L10 1' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+							background-size: px-to-rem(14px);
+							background-repeat: no-repeat;
+							background-position: center;
+							width: 20px;
+							height: 20px;
+							left: 0;
+							position: absolute;
+							top: 2px;
+						}
+					}
+					[type="checkbox"]:not(:checked) + label:after {
+						content: "";
+						background: transparent;
+						border-color: $choises-background-selected;
+					}
+				}
+				/*
+				* Address 
+				*/
+				.ginput_container_address {
+					.address_country {
+						select {
+							line-height: 1.2;
+						}
+					}
+				}
+
+				/*
+				* Fileupload
+				*/
+				.ginput_container_fileupload {
+					input::file-selector-button {
+						@include font-body;
+						font-size: 12px;
+						font-weight: 700;
+						line-height: 14.4px;
+						letter-spacing: 1px;
+						text-align: left;
+						background-color: $black;
+						color: white;
+						border: none;
+						padding: 6px 18px;
+						border-radius: 100px;
+						text-transform: uppercase;
+						cursor: pointer;
+					}
+
+					.gform_fileupload_rules {
+						@include font-body;
+						font-size: px-to-rem($rules-size);
+						font-weight: $rules-weight;
+						line-height: px-to-rem($rules-line-height);
+						letter-spacing: $rules-letter-spacing;
+					}
+				}
+				/*
+				* Time
+				*/
+				.ginput_container_time{
+					min-width: 90px;
+				}
+
+			}
+		}
+
+		.gform_footer {
+			display: inline-block;
+			margin: 24px 0 0 0;
+			padding: 0;
+			position: relative;
+			width: auto;
+			// &::after {
+			// 	content: "";
+			// 	background-image: url("data:image/svg+xml,%3Csvg width='17' height='13' viewBox='0 0 17 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 5.75C0.585786 5.75 0.25 6.08579 0.25 6.5C0.25 6.91421 0.585786 7.25 1 7.25V5.75ZM16.5303 7.03033C16.8232 6.73744 16.8232 6.26256 16.5303 5.96967L11.7574 1.1967C11.4645 0.903806 10.9896 0.903806 10.6967 1.1967C10.4038 1.48959 10.4038 1.96447 10.6967 2.25736L14.9393 6.5L10.6967 10.7426C10.4038 11.0355 10.4038 11.5104 10.6967 11.8033C10.9896 12.0962 11.4645 12.0962 11.7574 11.8033L16.5303 7.03033ZM1 7.25H16V5.75H1V7.25Z' fill='%23FBF9F9'/%3E%3C/svg%3E%0A");
+			// 	background-repeat: no-repeat;
+			// 	background-size: contain;
+			// 	display: inline-flex;
+			// 	height: 15px;
+			// 	transition: all 0.2s ease;
+			// 	width: 15px;
+			// }
+			@include cta;
+				@include cta--cta-primary-red;
+			input[type="submit"],
+			input.button {
+				// @include cta;
+				// @include cta--cta-primary-red;
+				@include font-heading;
+				font-size: px-to-rem($btn1_font_size);
+				letter-spacing: $btn1_letter-spacing;
+				line-height: $btn1_line_height;
+				text-transform: $btn1_transform;
+				color: $white;
+				font-weight: $btn1_font_weight;
+				padding: 0;
+				border: 0;
+				margin: 0;
+				background-color: transparent;
+				height: unset;
+				width: unset;
+			}
+		}
+	}
+
+	/*
+  *  Error Form Properties
+  */
+	.gform_validation_errors {
+		background-color: $error-background;
+		border: none;
+		padding: $error-main-padding;
+		margin: 0 0 10px;
+		box-shadow: none;
+
+		&:focus,
+		&:focus-visible {
+			box-shadow: none;
+			border: none;
+			outline: none;
+		}
+
+		h2 {
+			@include font-body;
+			color: $error-color;
+			font-size: px-to-rem($error-main-size);
+			font-weight: $error-main-weight;
+			line-height: px-to-rem($error-main-line-height);
+			margin-bottom: 0;
+
+			.gform-icon {
+				color: $white;
+				background-color: $error-color;
+				font-size: px-to-rem(35px);
+				position: relative;
+				width: 16px;
+				height: 16px;
+				border-radius: 50%;
+				margin-right: 8px;
+				top: 3px;
+				left: unset;
+				display: inline-block;
+				background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='8' fill='%23ff0000'/%3E%3Cpath d='M6 6L10 10M10 6L6 10' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+
+				&::before {
+					content: none;
+				}
+			}
+		}
+	}
+	.gfield_required{
+		margin-left: 2px;
+	}
+
+	.gfield_required,
+	.gfield_error legend,
+	.gfield_error label {
+		color: $error-color;
+	}
+
+	.gfield_error .gfield_required_text{
+		color: $error-color;
+	}
+
+	.gfield_error [aria-invalid="true"] {
+		background-color: rgba($color: $error-input-bg, $alpha: 1);
+		color: $text;
+		border: 1px solid $error-color;
+		&::-webkit-input-placeholder {
+			color: $error-color;
+			opacity: 1;
+		}
+		&::-moz-placeholder {
+			color: $error-color;
+			opacity: 1;
+		} /* firefox 19+ */
+		&:-ms-input-placeholder {
+			color: $error-color;
+			opacity: 1;
+		} /* ie */
+	}
+
+	.gfield.gfield_error.gfield_contains_required div.gfield_description {
+		@include font-body;
+		background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.9987 13.6668C3.3167 13.6668 0.332031 10.6822 0.332031 7.00016C0.332031 3.31816 3.3167 0.333496 6.9987 0.333496C10.6807 0.333496 13.6654 3.31816 13.6654 7.00016C13.6654 10.6822 10.6807 13.6668 6.9987 13.6668ZM6.33203 9.00016V10.3335H7.66536V9.00016H6.33203ZM6.33203 3.66683V7.66683H7.66536V3.66683H6.33203Z' fill='%23FF0016'/%3E%3C/svg%3E%0A");
+		background-color: transparent;
+		background-position: left;
+		background-repeat: no-repeat;
+		border-radius: $error-box-line-radius;
+		border: none;
+		color: $error-color;
+		font-size: px-to-rem($error-box-size);
+		font-weight: $error-box-weight;
+		letter-spacing: $error-box-letter-spacing;
+		line-height: px-to-rem($error-box-line-height);
+		margin-block-start: 4px;
+		margin-top: 0;
+		padding: $error-box-padding;
+		position: relative;
+		text-align: left;
+		text-transform: $error-box-transform;
+		.validation_message--hidden-on-empty{
+			padding: 0 !important;
+		}
+	}
+
+	&.gform_validation_error {
+		.gform_body .gform_fields .gfield {
+			padding-right: 0;
+			margin-top: 5px;
+		}
+	}
+
+	.gfield_validation_message,
+	.validation_message {
+		@include font-body;
+		background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.9987 13.6668C3.3167 13.6668 0.332031 10.6822 0.332031 7.00016C0.332031 3.31816 3.3167 0.333496 6.9987 0.333496C10.6807 0.333496 13.6654 3.31816 13.6654 7.00016C13.6654 10.6822 10.6807 13.6668 6.9987 13.6668ZM6.33203 9.00016V10.3335H7.66536V9.00016H6.33203ZM6.33203 3.66683V7.66683H7.66536V3.66683H6.33203Z' fill='%23FF0016'/%3E%3C/svg%3E%0A");
+		background-color: transparent;
+		background-position: left;
+		background-repeat: no-repeat;
+		border-radius: $error-box-line-radius;
+		border: none;
+		color: $error-color;
+		font-size: px-to-rem($error-box-size);
+		font-weight: $error-box-weight;
+		letter-spacing: $error-box-letter-spacing;
+		line-height: px-to-rem($error-box-line-height);
+		margin-block-start: 4px;
+		margin-top: 0;
+		padding: $error-box-padding;
+		position: relative;
+		text-align: left;
+		text-transform: $error-box-transform;
+	}
+
+	.gfield_validation_message:not(.validation_message--hidden-on-empty:empty),
+	.validation_message:not(.validation_message--hidden-on-empty:empty) {
+		display: inline;
+	}
+}
+
+/*
+*  Confirmation Default Message
+*/
+.gform_confirmation_wrapper {
+	.gform_confirmation_message {
+		@include editor-gap;
+		color: $text;
+		padding: 0;
+		position: relative;
+	}
+}
+
+/*
+*  Global Styles Gform
+*/
+
+.gform_wrapper .hidden_label input {
+	margin-top: 0;
+}
+.gfield_html {
+	@include font-heading;
+	font-size: px-to-rem(14px);
+}
+.gfield_html_formatted {
+	margin-top: 30px;
+}
+
+.gform_wrapper.gravity-theme:not(.donateSteps_wrapper) {
+	.gsection .gsection_title {
+		font-size: px-to-rem(30px);
+	}
+	.ginput_complex label {
+		font-size: px-to-rem($label-size);
+		font-weight: $label-weight;
+		margin-bottom: 0;
+	}
+	.field_sublabel_above .gfield_description {
+		padding-top: 5px;
+		margin-top: 0;
+	}
+	.gfield.field_sublabel_above.field_description_below + .gfield {
+		margin-top: 0;
+	}
+
+
+	input:not([type="submit"]),
+	textarea,
+	select {
+		@include font-heading;
+		background: $input-background;
+		border-radius: $input-border-radius;
+		border: 1px solid $input-border-color;
+		box-shadow: none;
+		color: $input-color;
+		font-size: px-to-rem($input-size);
+		font-weight: $input-weight;
+		letter-spacing: $input-letter-spacing;
+		min-height: 50px;
+		padding: 10px 15px;
+		&::-webkit-input-placeholder {
+			color: $input-color;
+			opacity: 1;
+		}
+		&::-moz-placeholder {
+			color: $input-color;
+			opacity: 1;
+		} /* firefox 19+ */
+		&:-ms-input-placeholder {
+			color: $input-color;
+			opacity: 1;
+		} /* ie */
+		&:active,
+		&:focus {
+			box-shadow: none;
+			border-color: $input-color;
+			outline: none;
+			color: $input-color;
+			&::-webkit-input-placeholder {
+				color: $input-color;
+				opacity: 1;
+			}
+			&::-moz-placeholder {
+				color: $input-color;
+				opacity: 1;
+			} /* firefox 19+ */
+			&:-ms-input-placeholder {
+				color: $input-color;
+				opacity: 1;
+			} /* ie */
+		}
+	}
+
+	select {
+		background-image: url("data:image/svg+xml,%3Csvg width='9' height='5' viewBox='0 0 9 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.8449 0.193363C7.9722 0.0694889 8.14409 0 8.32323 0C8.50237 0 8.67427 0.0694889 8.80156 0.193363C8.86441 0.254191 8.91432 0.326698 8.94839 0.406662C8.98246 0.486627 9 0.572452 9 0.659143C9 0.745834 8.98246 0.831659 8.94839 0.911623C8.91432 0.991588 8.86441 1.06409 8.80156 1.12492L4.97882 4.80694C4.85124 4.93064 4.67922 5 4.5 5C4.32078 5 4.14876 4.93064 4.02118 4.80694L0.198437 1.12492C0.135589 1.06409 0.0856788 0.991588 0.0516114 0.911623C0.017544 0.831659 0 0.745834 0 0.659143C0 0.572452 0.017544 0.486627 0.0516114 0.406662C0.0856788 0.326698 0.135589 0.254191 0.198437 0.193363C0.325732 0.0694889 0.497631 0 0.676769 0C0.855907 0 1.02781 0.0694889 1.1551 0.193363L4.50147 3.213L7.8449 0.193363Z' fill='%23221F20'/%3E%3C/svg%3E%0A");
+		background-position: calc(100% - 15px) 50%;
+		background-size: 9px;
+		background-repeat: no-repeat;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		line-height: 1.2;
+		padding: 14px 10px;
+		transition: all 0.4s ease;
+		color: $input-color;
+		option {
+			color: $input-color;
+		}
+		&:focus,
+		&:active {
+			border-color: $light-secondary;
+			transition: all 0.4s ease;
+			color: $input-color;
+		}
+	}
+
+	textarea {
+		height: 100px;
+		resize: none;
+		max-width: 100%;
+	}
+
+	input[type="checkbox"],
+	input[type="radio"] {
+		height: 30px;
+	}
+
+	.gfield_label,
+	label,
+	legend {
+		@include font-heading;
+		color: $label-color;
+		display: block;
+		font-size: px-to-rem($label-size);
+		font-weight: $label-weight;
+		letter-spacing: $label-letter-spacing;
+		line-height: 1.2;
+		margin-bottom: 8px;
+		text-align: left;
+		text-transform: none;
+		float: none;
+		span.gfield_required,
+		* > * {
+			color: $label-color;
+			font-size: px-to-rem($label-size);
+			font-style: normal;
+			font-weight: $label-weight;
+			letter-spacing: $label-letter-spacing;
+			padding: 0;
+			position: relative;
+			&.gfield_required_custom {
+				&::after {
+					content: "*";
+					@include font-heading;
+					color: initial;
+					display: inline-block;
+					font-style: normal;
+					font-size: px-to-rem($label-size);
+					font-weight: initial;
+					line-height: 0;
+					&::selection {
+						background-color: $selector_color;
+						color: white;
+					}
+				}
+				&::selection {
+					background-color: $selector_color;
+					color: white;
+				}
+			}
+		}
+		a {
+			color: $link;
+			text-decoration: underline;
+		}
+	}
+}
+
+.gform_wrapper .field_sublabel_above .ginput_complex.ginput_container label,
+.gform_wrapper
+	.top_label
+	.gfield.gf_left_half
+	.ginput_container:not(.gfield_time_hour):not(.gfield_time_minute):not(
+		.gfield_time_ampm
+	):not(.ginput_container_date):not(.ginput_quantity):not(.datepicker):not(
+		.gfield_signature_container
+	),
+.gform_wrapper
+	.top_label
+	.gfield.gf_right_half
+	.ginput_container:not(.gfield_time_hour):not(.gfield_time_minute):not(
+		.gfield_time_ampm
+	):not(.ginput_container_date):not(.ginput_quantity):not(.datepicker):not(
+		.gfield_signature_container
+	) {
+	margin-bottom: 5px;
+	&::selection {
+		background-color: $selector_color;
+		color: white;
+	}
+}
+.gform_wrapper .field_sublabel_hidden_label .ginput_complex.ginput_container {
+	input[type="text"],
+	select {
+		margin-bottom: 0;
+	}
+	&.has_street,
+	&.has_city,
+	&.has_state,
+	&.has_zip,
+	&.has_country,
+	&.ginput_container_address {
+		input[type="text"],
+		select {
+			margin-bottom: 10px;
+		}
+	}
+}
+.gform_wrapper.gravity-theme:not(.newsletterForm_wrapper):not(.donateSteps_wrapper){
+	.gform_page {
+		margin-top: 0;
+		.gform_page_footer {
+			align-items: center;
+			border-top: none;
+			display: flex;
+			font-size: 0;
+			justify-content: center;
+			margin: 30px auto 0;
+			//margin: 0;
+			padding: 0;
+			text-align: left;
+			input.gform_previous_button {
+				background-color: $primary;
+				border-color: $primary;
+				&:hover,
+				&:focus,
+				&:active {
+					color: $primary;
+				}
+			}
+			input.gform_next_button {
+				background-color: $primary;
+				border-color: $primary;
+				&:hover,
+				&:focus,
+				&:active {
+					color: $primary;
+				}
+			}
+			input[type="submit"] {
+				background-color: $primary;
+				&:hover,
+				&:focus,
+				&:active {
+					color: $primary;
+				}
+			}
+			input {
+				@include font-body;
+				align-items: center;
+				border-radius: 0;
+				border: 1px solid transparent;
+				color: $white;
+				column-gap: 10px;
+				display: inline-flex;
+				font-size: px-to-rem(14px);
+				font-weight: 700;
+				justify-content: center;
+				letter-spacing: 0.02em;
+				line-height: px-to-rem(18.2px);
+				margin-bottom: 0;
+				min-height: 54px;
+				min-width: 126px;
+				padding: 18px 45px;
+				text-transform: uppercase;
+				transition: all 0.2s ease;
+				&:hover,
+				&:focus,
+				&:active {
+					background-color: transparent;
+					text-decoration: none;
+				}
+			}
+			img.gform_ajax_spinner {
+				position: absolute;
+				bottom: -50px;
+				left: 0;
+				right: 0;
+				margin: 0 auto;
+			}
+		}
+	}
+}

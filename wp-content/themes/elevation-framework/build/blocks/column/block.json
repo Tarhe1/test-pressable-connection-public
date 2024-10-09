@@ -1,0 +1,64 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "elevation/column",
+  "title": "Column",
+  "category": "elevation-blocks",
+  "parent": [
+    "elevation/columns"
+  ],
+  "icon": "screenoptions",
+  "description": "A single column within a columns block.",
+  "textdomain": "default",
+  "attributes": {
+    "verticalAlignment": {
+      "type": "string"
+    },
+    "width": {
+      "type": "string"
+    },
+    "widthSm": {
+      "type": "string"
+    },
+    "widthMd": {
+      "type": "string"
+    },
+    "widthLg": {
+      "type": "string"
+    },
+    "widthXl": {
+      "type": "string"
+    },
+    "widthXxl": {
+      "type": "string"
+    },
+    "allowedBlocks": {
+      "type": "array"
+    },
+    "templateLock": {
+      "type": [
+        "string",
+        "boolean"
+      ],
+      "enum": [
+        "all",
+        "insert",
+        "contentOnly",
+        false
+      ]
+    }
+  },
+  "supports": {
+    "anchor": true,
+    "reusable": false,
+    "html": false,
+    "spacing": {
+      "padding": true,
+      "__experimentalDefaultControls": {
+        "padding": true
+      }
+    }
+  },
+  "editorScript": "file:index.js",
+  "editorStyle": "file:index.css"
+}

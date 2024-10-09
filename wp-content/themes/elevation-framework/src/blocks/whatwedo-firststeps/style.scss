@@ -1,0 +1,172 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "../../assets/styles/scss/utilities/_functions";
+@import "../../assets/styles/scss/utilities/_variables";
+@import "../../assets/styles/scss/utilities/_mixins";
+@import "../../critical-assets/styles/scss/utilities/mixins";
+
+$section: ".block-whatwedo-firststeps";
+#{$section} {
+
+	&__content + #{$section}__row-inner{
+		margin-top: 24px;
+	}
+
+	&__row-inner{
+		row-gap: 30px;
+	}
+
+	&__cards{
+
+		flex: 0 0 auto;
+		width: 100%;
+
+		@include media-breakpoint-up(xl) {
+			flex: 0 0 (6 * (100% / 10));
+		}
+
+		&-row{
+			row-gap: 21px;
+		}
+	}
+
+	$element: ".card";
+	#{$element} {
+
+		background-color: $light-primary;
+		border-radius: 10px;
+		padding: 45px 30px 30px 30px;
+		box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.08);
+		position: relative;
+		transition: background-color 0.3s ease;
+		height: 100%;
+		display: flex;
+
+		&:hover{
+			@include media-breakpoint-up(xl) {
+				background-color: $base-white;
+
+				#{$element}__button{
+					.cta-custom{
+						color: $dark;
+						font-size: 100%;
+						&::after{
+							opacity: 0;
+						}
+						&::before{
+							opacity: 1;
+						}
+					}
+				}
+			}
+		}
+
+		&__icon + #{$element}__title, &__icon + #{$element}__excerpt{
+			margin-top: 23px;
+		}
+
+		&__title + #{$element}__excerpt{
+			margin-top: 12px;
+		}
+
+		&__body{
+			margin-top: auto;
+			@include media-breakpoint-up(xxl) {
+				width: 246px;
+			}
+		}
+
+		&__icon{
+			img{
+				max-width: 45px;
+				max-height: 40px;
+			}
+		}
+
+		&__button{
+			margin-top: 14px;
+			justify-content: flex-end;
+			display: flex;
+			.cta-custom{
+				@include cta;
+				@include cta--simple-tertiary-primary;
+				@include media-breakpoint-up(xl) {		
+					font-size: 0;
+					min-height: 32px;
+				}
+			}
+		}
+
+	}
+
+	$element2: ".last-card";
+	#{$element2} {
+		background-color: $primary;
+		border-radius: 10px;
+		padding: 45px 30px 30px 30px;
+		position: relative;
+		transition: background-color 0.3s ease;
+		height: 100%;
+		display: flex;
+		
+		&__title, &__subtitle{
+			color: $white;
+		}
+
+		&__button{
+			margin-top: 14px;
+			justify-content: flex-end;
+  			display: flex;
+			.cta-custom{
+				@include cta--simple-tertiary-light;
+				@include media-breakpoint-up(xl) {
+					min-height: 32px;
+				}
+			}
+		}
+
+		&:hover{
+			@include media-breakpoint-up(xl) {
+				#{$element2}__button{
+					.cta-custom{
+						color: $white;
+						&::after{
+							opacity: 0;
+						}
+						&::before{
+							opacity: 1;
+						}
+					}
+				}
+			}
+		}
+	
+	}
+	
+	&__image{
+		flex: 0 0 auto;
+		width: 100%;
+
+		@include media-breakpoint-up(xl) {
+			flex: 0 0 (4 * (100% / 10));
+			height: auto;
+		}
+
+		figure{
+			@include media-breakpoint-up(xl) {
+				height: 100%;
+			}
+		}
+
+		img{
+			border-radius: 10px;
+			@include media-breakpoint-up(xl) {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+
+}

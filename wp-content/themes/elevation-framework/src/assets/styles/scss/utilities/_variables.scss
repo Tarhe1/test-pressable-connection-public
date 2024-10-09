@@ -1,0 +1,266 @@
+@import "./variables-figma";
+/*
+*  Colors
+*/
+
+$primary: $background-primary;
+$light-primary: $foreground-primary-accent-04;
+$light-primary-ii: $foreground-primary-accent-05;
+
+$secondary: $foreground-primary-accent-02;
+$light-secondary: $foreground-primary-accent-03;
+
+$error: $error-color;
+$error-input-bg: $error-input-color;
+
+$dark: $foreground-primary-text-body-text;
+$black: $base-black;
+$grey: #d7d7d7;
+$white: $base-white;
+
+$link: $foreground-primary-text-body-text;
+$hover-link: $foreground-primary-text-body-text;
+
+$text: $foreground-primary-text-body-text;
+$strong: $foreground-primary-text-body-text;
+
+$line-border-color: $border-bounds;
+
+/*
+*  Header Dimensions
+*/
+
+$header-height-desktop-xl: 127px;
+$header-height-desktop: 127px;
+$header-height-tablet: 80px;
+$header-height-mobile: 80px;
+
+/*
+*  Accesibility Colors
+*/
+$active-color: $border-input-controls-active;
+$focus-color: $border-input-controls-focus;
+$accesible-background: $secondary;
+$accesible-background-focus: $border-input-controls-focus;
+
+/*
+*    Fonts Properties
+*/
+
+$font_size_text: 16px;
+$line_height_text: 24px;
+$spacing_text: 0.32px;
+$font_weight_text: 500;
+$font_weight_strong: 700;
+
+$blockquote_sizeText: 16px;
+$blockquote_lineHeight: 24px;
+$blockquote_letterSpacing: 0.32px;
+$blockquote_fontWeight: 700;
+
+$title_weight: 600;
+$title_spacing: normal;
+
+$selector_color: darken($secondary, 10);
+
+$font_size_subheading: 24px;
+$line_height_subheading: 32px;
+
+/*
+*    Headings Sizes
+*/
+
+$h1_size_desktop: 45px;
+$h2_size_desktop: 38px;
+$h3_size_desktop: 36px;
+$h4_size_desktop: 30px;
+$h5_size_desktop: 25px;
+$h6_size_desktop: 19px;
+
+$h1_size_tablet: 40px;
+$h2_size_tablet: 36px;
+$h3_size_tablet: 34px;
+$h4_size_tablet: 30px;
+$h5_size_tablet: 24px;
+$h6_size_tablet: 19px;
+
+$h1_size_mobile: 40px;
+$h2_size_mobile: 35px;
+$h3_size_mobile: 32px;
+$h4_size_mobile: 30px;
+$h5_size_mobile: 24px;
+$h6_size_mobile: 19px;
+
+/*
+*    Headings Line Heights
+*/
+
+$h1_line_height_desktop: 54px;
+$h2_line_height_desktop: 45.6px;
+$h3_line_height_desktop: 43.2px;
+$h4_line_height_desktop: 36px;
+$h5_line_height_desktop: 30px;
+$h6_line_height_desktop: 22.8px;
+
+$h1_line_height_tablet: 40px;
+$h2_line_height_tablet: 43.2px;
+$h3_line_height_tablet: 40.8px;
+$h4_line_height_tablet: 36px;
+$h5_line_height_tablet: 28.8px;
+$h6_line_height_tablet: 22.8px;
+
+$h1_line_height_mobile: 40px;
+$h2_line_height_mobile: 42px;
+$h3_line_height_mobile: 38.4px;
+$h4_line_height_mobile: 36px;
+$h5_line_height_mobile: 28.8px;
+$h6_line_height_mobile: 22.8px;
+
+/*
+*    Buttons Properties
+*/
+
+$btn1_font_size: 16px;
+$btn1_font_weight: 700;
+$btn1_line_height: normal;
+$btn1_letter-spacing: 0.1px;
+$btn1_border_radius: 3px;
+$btn1_transform: capitalize;
+$btn1_min_width: unset;
+$btn1_min_height: unset;
+$btn1_padding: 15px 20px;
+
+$btn2_font_size: 16px;
+$btn2_font_weight: 700;
+$btn2_line_height: normal;
+$btn2_letter-spacing: 0.32px;
+$btn2_border_radius: 0;
+$btn2_transform: capitalize;
+$btn2_min_height: unset;
+$btn2_padding: 5px 0;
+
+$submit-size: 16px;
+$submit-weight: 700;
+$submit-line-height: normal;
+$submit-letter-spacing: 0.1px;
+$submit-color: $white;
+$submit-background: $primary;
+$submit-radius: 3px;
+$submit-transform: capitalize;
+$submit-padding: 15px 20px;
+$submit-background-hover: $dark;
+$submit-color-hover: $white;
+
+/*
+*    Header Properties
+*/
+
+$text-menu-parent-size: 16px;
+$text-menu-parent-color: $primary;
+$text-menu-parent-spacing: 0.32px;
+$text-menu-parent-font-weight: 700;
+
+$text-menu-child-color: $dark;
+$text-menu-child-size: 16px;
+$text-menu-child-font-weight: normal;
+$text-menu-child-spacing: normal;
+
+$active-menu-color: $light-primary;
+$bg-menu-child: rgba(255, 255, 255, 1);
+$bg-menu-grandchild: #ffffff;
+
+$logo_width: 137px;
+$header-width-mobile: 385px;
+
+/*
+*    Forms Properties
+*/
+
+/*Heading & Description*/
+$title-form-color: $dark;
+$title-form-size: 22px;
+$title-form-weight: 500;
+$title-form-letter-spacing: 1px;
+
+$description-form-color: $dark;
+$description-form-size: 14px;
+$description-form-weight: 500;
+$description-form-letter-spacing: 1px;
+
+/*Label & Input/Select/TextArea*/
+$label-color: $dark;
+$label-size: 14px;
+$label-weight: 500;
+$label-letter-spacing: 0.14px;
+$label-line-height: 20px;
+
+$input-color: $dark;
+$input-color-placeholder: $dark;
+$input-size: 16px;
+$input-weight: 500;
+$input-letter-spacing: 0.16px;
+$input-border-radius: 2px;
+
+$input-background: transparent;
+$input-border-color: $dark;
+
+$input-border-active-color: $active-color;
+$input-color-active: $active-color;
+
+$input-border-focus-color: $focus-color;
+$input-color-focus: $focus-color;
+
+
+/*checkbox & radio buttons*/
+$choises-size: 14px;
+$choises-color: $dark;
+$choises-weight: 500;
+$choises-letter-spacing: normal;
+$choises-background-selected: $primary;
+$choises-background: #cdcdd5;
+
+/*Rules Message - Description*/
+
+$rules-size: 14px;
+$rules-weight: 400;
+$rules-letter-spacing: normal;
+$rules-line-height: 25px;
+
+/*Error*/
+
+$error-color: $error;
+$error-background: transparent;
+
+/*Error Main Message*/
+
+$error-main-size: 14px;
+$error-main-weight: 400;
+$error-main-letter-spacing: normal;
+$error-main-line-height: 25px;
+$error-main-padding: 0;
+
+/*Error Box Message*/
+
+$error-box-size: 12px;
+$error-box-weight: 500;
+$error-box-letter-spacing: normal;
+$error-box-line-height: 18px;
+$error-box-line-radius: 0;
+$error-box-padding: 8px 15px 8px 20px;
+$error-box-transform: capitalize;
+
+/*Error Invested*/
+
+$error-invested-color: white;
+$error-invested-background: $error;
+$error-main-padding-invested: 15px;
+
+/*Pagination*/
+
+$pagination-current: $primary;
+$pagination-numbers: $secondary;
+$pagination-text-transform: uppercase;
+$pagination-font-size: 16px;
+$pagination-letter-spacing: 0.48px;
+$pagination-font-weight: 700;
+$pagination-line-height: 1.2;

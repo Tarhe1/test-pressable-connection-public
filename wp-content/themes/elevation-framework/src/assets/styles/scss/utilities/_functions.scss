@@ -1,0 +1,25 @@
+@use "sass:math";
+// Remove the unit of a length
+@function strip-unit($number) {
+	@if type-of($number) == "number" and not unitless($number) {
+		@return math.div($number, ($number * 0 + 1));
+	}
+
+	@return $number;
+}
+// Used to transform px to rem
+@function px-to-rem($px, $base: 16) {
+	// force values to px so that they cancel units
+	$numerator: strip-unit($px) * 1px;
+	$denominator: strip-unit($base) * 1px;
+	$rems: math.div($numerator, $denominator) * 1rem;
+
+	@return $rems;
+}
+
+// Calculate the aspect ratio of an element
+@function height-in-vw($height, $width: 1440) {
+	$aspectRatio: $height * 100 / $width;
+
+	@return $aspectRatio * 1vw;
+}

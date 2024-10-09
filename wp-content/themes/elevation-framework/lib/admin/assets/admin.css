@@ -1,0 +1,141 @@
+/*
+*  Login Modal on Dashboard
+*/
+#wp-auth-check-wrap #wp-auth-check{
+  bottom: unset;
+  height: 100vh;
+  left: 0;
+  margin: -33px 0;
+  max-height: 100vh !important;
+  position: absolute;
+  top: 0;
+  transform: unset;
+  width: 100vw;
+}
+.mce-menu-item.mce-menu-item-preview.mce-active .mce-text, .mce-menu-item.mce-menu-item-preview.mce-active .mce-ico{
+  color: #ffffff !important;
+}
+.editor-styles-wrapper a:where(:not(.wp-element-button)) {
+  text-decoration: none !important;
+}
+.menu-item-settings, .menu-item-bar .menu-item-handle{
+  max-width: 100%;
+}
+.menu-item:not(.menu-item-depth-0):not(.menu-item-depth-1) .acf-menu-item-fields{
+  display: none;
+}
+.menu-item.menu-item-depth-0 .acf-field.display_depth_0:not(.acf-hidden){
+  /* display: block; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.menu-item.menu-item-depth-0 .acf-field.display_depth_1:not(.acf-hidden){
+  display: none;
+}
+.menu-item.menu-item-depth-1:not(.menu-item-depth-0) .acf-field.display_depth_0:not(.acf-hidden){
+  display: none;
+}
+.menu-item.menu-item-depth-1:not(.menu-item-depth-1) .acf-field.display_depth_1:not(.acf-hidden){
+  display: block;
+}
+.menu-item.menu-item-depth-0 .acf-menu-item-fields{
+  box-shadow: 0 0 0 2px rgba(197, 60, 186, 1);
+  padding: 10px;
+}
+.menu-item .acf-menu-item-fields > .acf-field{
+  box-shadow: 0 0 0 2px rgb(51, 74, 177);
+  padding: 5px 15px 10px;
+  min-height: 90px;
+}
+.menu-item .acf-menu-item-fields .acf-range-wrap input[type="range"]{
+  background-color: transparent;
+}
+.acf-range-wrap input[type="number"] {
+  min-width: 4.5em !important;
+}
+.acf-button-group label:first-child, .acf-button-group label:last-child{
+  border-radius: 0;
+}
+.d-none{
+  display: none;
+}
+
+/*
+ * Global Editor Assets
+ */
+
+.editor-styles-wrapper .is-layout-flow > * + * {
+  margin-block-start: 3rem !important;
+}
+html :where(.editor-styles-wrapper) p, html :where(.editor-styles-wrapper) blockquote{
+  margin: 0;
+}
+.editor-styles-wrapper .is-layout-flow > * + * {
+  margin-block-start: 3rem !important;
+}
+.component, .block{
+  padding: 0 !important;
+}
+.cta{
+  min-width: unset !important;
+  min-height: unset !important; 
+  text-decoration: none;
+}
+.post-type-resources.block-editor-page .acf-accordion .acf-accordion-title label,
+.post-type-map_directory.block-editor-page .acf-accordion .acf-accordion-title label
+{
+  font-size: 20px;
+  padding-left: 13px;
+}
+.post-type-resources.block-editor-page .acf-fields > .acf-field,
+.post-type-map_directory.block-editor-page .acf-fields > .acf-field
+{
+  padding-left: 25px;
+}
+.post-type-resources.block-editor-page .acf-field.acf-accordion,
+.post-type-map_directory.block-editor-page .acf-field.acf-accordion
+{
+  background-color: rgba(0,0,0,0.05);
+  transition: all 0.4s ease;
+}
+.post-type-resources.block-editor-page .acf-field.acf-accordion .acf-input.acf-accordion-content > .acf-fields,
+.post-type-map_directory.block-editor-page .acf-field.acf-accordion .acf-input.acf-accordion-content > .acf-fields 
+{
+  border-top: 2px solid #fff;
+}
+
+
+/*
+ * From WTR Assets
+ */
+
+.acf-block-component .acf-block-fields {
+  display: flex;
+  flex-wrap: wrap;
+}
+.acf-block-body .acf-fields > .acf-field {
+  width: 100%;
+}
+.acf-fields > .acf-tab-wrap {
+  width: 100%;
+}
+.components-popover__content{
+  width: 400px;
+}
+.tribe-editor__organizer__form dl dd{
+  flex: 0 0 100%
+} 
+#edittag {
+  display: flex;
+  flex-direction: column;
+}
+#edittag #poststuff{
+order: 3;
+}
+#profile-page .form-table textarea{
+  display: block;
+}
+.woocommerce-filters-advanced__add-filter .components-popover:not(.is-mobile) .components-popover__content{
+  width: 54px;
+}

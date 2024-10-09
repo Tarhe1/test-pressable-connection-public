@@ -1,0 +1,27 @@
+{
+	"name": "elevation/text-photo",
+	"title": "Basic Interior Text Options",
+	"category": "elevation-blocks",
+	"icon": "block-default",
+	"keywords": [
+		"basic",
+		"interior",
+		"columns",
+		"options",
+		"text",
+		"photo",
+		"elevation",
+		"block"
+	],
+	"description": "",
+	"acf": {
+		"mode": "edit",
+		"renderCallback": "text_photo_block_render_callback"
+	},
+	"supports": {
+		"anchor": true
+	},
+	"style": ["file:./style-index.css"],
+	"script": "file:./index.js",
+	"editorStyle": ["file:./index.css"]
+}

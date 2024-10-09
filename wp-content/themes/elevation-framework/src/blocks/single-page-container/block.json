@@ -1,0 +1,23 @@
+{
+	"name": "elevation/single-page-container",
+	"title": "Single Page Container",
+	"category": "elevation-structure",
+	"icon": "media-default",
+	"keywords": ["sigle", "page", "container", "member", "rx"],
+	"support": {
+		"align": true,
+		"mode": false,
+		"jsx": true
+	},
+	"description": "Wrap everything inside a div with class container",
+	"acf": {
+		"mode": "preview",
+		"renderCallback": "single_page_container_block_render_callback"
+	},
+	"supports": {
+		"anchor": true
+	},
+	"style": ["file:./style-index.css"],
+	"script": "file:./index.js",
+	"editorStyle": ["file:./index.css"]
+}

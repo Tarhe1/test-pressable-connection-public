@@ -1,0 +1,35 @@
+ .important-text{
+  background-color:rgba(22, 63, 123, 0.08);
+  border-radius: 1px;
+  display: block;
+  padding: 36px 46px;
+}
+
+.important-text > * {
+  color: #163F7B !important;
+}
+
+blockquote{
+  font-family: 'Martel', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 27px;
+  letter-spacing: 0.03em;
+  color: #CB4B3B;
+  margin: 20px 0;
+}
+
+.font-bold{
+  font-weight: bold;
+}
+
+.column-list-2{
+  -moz-column-count: 2;
+  -moz-column-gap: 20px;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 20px;
+  column-count: 2;
+  column-gap: 20px;
+  display: block;
+}

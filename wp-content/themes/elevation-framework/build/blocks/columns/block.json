@@ -1,0 +1,49 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "elevation/columns",
+  "version": "1.0.0",
+  "title": "Custom Columns",
+  "category": "elevation-blocks",
+  "icon": "columns",
+  "description": "Columns based on bootstrap 12 columns grid",
+  "supports": {
+    "anchor": true,
+    "html": false,
+    "spacing": {
+      "margin": [
+        "top",
+        "bottom"
+      ],
+      "padding": true,
+      "__experimentalDefaultControls": {
+        "padding": true
+      }
+    }
+  },
+  "attributes": {
+    "verticalAlignment": {
+      "type": "string"
+    },
+    "hasContainer": {
+      "type": "boolean",
+      "default": false
+    },
+    "templateLock": {
+      "type": [
+        "string",
+        "boolean"
+      ],
+      "enum": [
+        "all",
+        "insert",
+        "contentOnly",
+        false
+      ]
+    }
+  },
+  "textdomain": "columns",
+  "editorScript": "file:index.js",
+  "editorStyle": "file:index.css",
+  "style": "file:style-index.css"
+}

@@ -1,0 +1,64 @@
+@import "./mixins";
+
+$cta: ".cta";
+
+#{$cta} {
+	@include cta;
+
+	&--cta {
+		&-primary-red {
+			@include cta--cta-primary-red;
+		}
+		&-primary-green {
+			@include cta--cta-primary-green;
+		}
+		&-light {
+			@include cta--cta-light;
+		}
+		&-secondary-red {
+			@include cta--cta-secondary-red;
+		}
+		&-secondary-light {
+			@include cta--cta-secondary-light;
+		}
+	}
+
+	&--simple {
+		&-tertiary-primary {
+			@include cta--simple-tertiary-primary;
+		}
+		&-tertiary-secondary {
+			@include cta--simple-tertiary-secondary;
+		}
+		&-tertiary-light {
+			@include cta--simple-tertiary-light;
+		}
+	}
+
+	&.active {
+		background-color: $dark;
+	}
+}
+
+.block__buttons {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	flex-direction: row;
+	row-gap: 20px;
+	column-gap: 30px;
+	&.column {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	&.aligncenter,
+	&.center {
+		text-align: center !important;
+		justify-content: center;
+	}
+	&.alignright,
+	&.right {
+		text-align: right !important;
+		justify-content: end;
+	}
+}

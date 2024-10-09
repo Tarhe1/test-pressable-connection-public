@@ -1,0 +1,689 @@
+main {
+	.entry-content {
+		.container
+			> *:not(.block):not(div[class*="--bg-"])
+			+ *:not(.block):not(div[class*="--bg-"]) {
+			margin-block-start: 1.5rem;
+			margin-block-end: 0;
+		}
+	}
+
+	/*
+ * Horizontal Rule
+ */
+	hr {
+		border-color: $light-primary;
+		border-width: 1px 0px 0px;
+		margin-bottom: 15px;
+		margin-top: 15px;
+		opacity: 1;
+		border-style: solid none none;
+		&.dashed {
+			border-style: dashed none none;
+		}
+		&.dotted {
+			border-style: dotted none none;
+		}
+	}
+
+	/*
+ * Paragraph
+ */
+	p {
+		@include font-body;
+		font-size: px-to-rem($font_size_text);
+		font-stretch: normal;
+		font-style: normal;
+		font-weight: $font_weight_text;
+		letter-spacing: $spacing_text;
+		line-height: px-to-rem($line_height_text);
+		margin-bottom: 0;
+		overflow-wrap: break-word;
+		white-space: normal;
+		word-break: break-word;
+		> * {
+			@include font-body;
+			color: inherit;
+			overflow-wrap: break-word;
+			white-space: normal;
+			word-break: break-word;
+			letter-spacing: $spacing_text;
+			line-height: px-to-rem($line_height_text);
+		}
+		strong {
+			@include font-body;
+			color: inherit;
+			font-size: bold;
+			font-weight: $font_weight_strong;
+			line-height: px-to-rem($line_height_text);
+		}
+		a {
+			color: $link;
+			font-weight: $font_weight_text;
+			text-decoration: underline !important;
+			transition: all 0.4s ease;
+			> *,
+			* > * {
+				color: $link;
+			}
+			strong {
+				font-weight: bold;
+				color: $link;
+			}
+			&:hover {
+				text-decoration: none !important;
+			}
+		}
+		em {
+			@include font-body;
+			font-size: px-to-rem($font_size_text);
+			font-style: italic;
+			font-weight: $font_weight_text;
+		}
+		strong,
+		em,
+		a,
+		span {
+			margin: 0 !important;
+		}
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+
+	/*
+ * Blockquote
+ */
+	blockquote,
+	.wp-block-quote {
+		background-color: transparent;
+		// border-left: unset !important;
+		// padding-left: 0 !important;
+		> *,
+		> * > *,
+		> * > * > * {
+			@include font-body;
+			color: $light-primary;
+			font-size: px-to-rem($blockquote_sizeText);
+			font-weight: $blockquote_fontWeight;
+			letter-spacing: $blockquote_letterSpacing;
+			line-height: px-to-rem($blockquote_lineHeight);
+		}
+		cite {
+			font-weight: bold !important;
+		}
+		.has-text-align-center {
+			p,
+			strong,
+			em,
+			ul,
+			ul > li,
+			ol,
+			ol > li,
+			span,
+			dl.list > dd,
+			dl.list > dt,
+			cite {
+				text-align: center !important;
+			}
+		}
+	}
+
+	/*
+ * Hyperlink
+ */
+	//a,
+	a:not([class*="btn"])
+		:not([class*="cta"])
+		:not([role="button"])
+		:not([rel="boxlink"])
+		:not([rel="bookmark"])
+		:not([rel="noopener"])
+		:not([class*="bbp-topic"])
+		:not(.tribe-events-calendar-month__calendar-event-title-link)
+		:not(.aos-init)
+		:not(.bbp-reply-permalink)
+		:not(.bbp-author-link)
+		:not(.subscription-toggle)
+		:not(.favorite-toggle) {
+		@include font-body;
+		color: $link;
+		font-size: px-to-rem($font_size_text);
+		font-weight: $font_weight_text;
+		letter-spacing: $spacing_text;
+		line-height: px-to-rem($line_height_text);
+		text-decoration: underline;
+		transition-duration: 0.4s;
+		transition-property: color;
+		> *,
+		* > * {
+			color: $link !important;
+		}
+		strong {
+			line-height: px-to-rem($line_height_text);
+			color: $link;
+			font-weight: bold;
+		}
+		&:hover {
+			color: $hover-link;
+		}
+		&::selection {
+			background-color: $selector_color;
+			border-color: white;
+			color: white;
+			text-decoration-color: white;
+		}
+	}
+
+	.image-wrapping {
+		max-width: 100%;
+		overflow: hidden;
+		position: relative;
+		img,
+		.wrapped-image {
+			transform: translate(-50%, -50%);
+			height: 100%;
+			left: 50%;
+			object-fit: cover;
+			position: absolute;
+			top: 50%;
+			width: 100%;
+			&.image-fit-contain {
+				object-fit: contain !important;
+			}
+			&.top {
+				object-position: top;
+			}
+			&.center {
+				object-position: center;
+			}
+			&.bottom {
+				object-position: bottom;
+			}
+		}
+	}
+
+	.image-fit-cover {
+		object-fit: cover;
+		width: 100% !important;
+		height: 100%;
+	}
+	.image-fit-contain {
+		object-fit: contain;
+		width: 100% !important;
+		height: 100%;
+	}
+
+	/*--- Images With Caption (wordpress) ---*/
+
+	.wp-caption {
+		display: block;
+		max-width: 100%;
+		img {
+			display: block;
+			margin: 0 auto 10px;
+			max-width: 100%;
+			width: 100%;
+		}
+		.wp-caption-text {
+			@include font-body;
+			color: $text !important;
+			font-size: px-to-rem($font_size_text);
+			font-stretch: normal;
+			font-style: normal;
+			font-weight: $font_weight_text;
+			letter-spacing: $spacing_text;
+			line-height: px-to-rem($line_height_text);
+		}
+	}
+
+	figure {
+		a {
+			border: none !important;
+		}
+		img {
+			max-width: 100%;
+		}
+		figcaption {
+			@include font-body;
+			color: $text;
+			font-size: px-to-rem($font_size_text);
+			font-stretch: normal;
+			font-style: normal;
+			font-weight: $font_weight_text;
+			letter-spacing: $spacing_text;
+			line-height: px-to-rem($line_height_text);
+			strong {
+				font-weight: bold;
+			}
+		}
+	}
+
+	figure.wp-block-embed-youtube {
+		height: 600px;
+		width: 100%;
+		.wp-block-embed__wrapper {
+			height: 600px;
+			iframe {
+				height: 100%;
+				width: 100%;
+			}
+		}
+	}
+
+	/*
+ * Unordered (Bulleted) List
+ */
+	ul.no-bullets {
+		padding: 0;
+		> li {
+			@include font-body;
+			color: $text;
+			font-size: px-to-rem($font_size_text);
+			font-stretch: normal;
+			font-weight: $font_weight_text;
+			letter-spacing: $spacing_text;
+			line-height: px-to-rem($line_height_text);
+			list-style-type: none;
+			margin: 0 0 0.6em 0px;
+			padding-left: 0;
+			position: relative;
+			text-align: left;
+			&::marker {
+				content: none;
+			}
+			a {
+				text-decoration: underline;
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+
+	ul {
+		margin-top: 0;
+		padding-left: 15px;
+		// display: flex;
+		// flex-direction: column;
+		// row-gap: 15px;
+
+		@media (min-width: 767.98px) {
+			&.column-list-2 {
+				-moz-column-count: 2;
+				-moz-column-gap: 20px;
+				-webkit-column-count: 2;
+				-webkit-column-gap: 20px;
+				column-count: 2;
+				column-gap: 20px;
+			}
+		}
+		li {
+			@include font-body;
+			color: $text;
+			font-size: px-to-rem($font_size_text);
+			font-weight: $font_weight_text;
+			letter-spacing: $spacing_text;
+			line-height: px-to-rem($line_height_text);
+			margin-bottom: 0.6em;
+			&::marker {
+				color: $dark;
+			}
+			a {
+				text-decoration: underline;
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+
+	ul.list {
+		padding: 0 !important;
+		br {
+			display: none;
+		}
+		> li {
+			@include font-body;
+			color: $text;
+			font-size: px-to-rem($font_size_text);
+			font-stretch: normal;
+			font-weight: $font_weight_text;
+			letter-spacing: $spacing_text;
+			line-height: px-to-rem($line_height_text);
+			list-style-type: none;
+			margin: 0 0 0.6em 0px;
+			padding-left: 15px;
+			position: relative;
+			text-align: left;
+			&::marker {
+				content: none;
+			}
+			&::before {
+				content: "";
+				background: $text;
+				border-radius: 50%;
+				display: inline-block;
+				left: 0;
+				margin-left: 0;
+				margin-right: 6px;
+				margin-top: 6px;
+				position: absolute;
+				top: 6px;
+				width: 6px;
+				height: 6px;
+			}
+			a {
+				@include font-body;
+				color: $link;
+				font-size: px-to-rem($font_size_text);
+				font-weight: $font_weight_text;
+				letter-spacing: $spacing_text;
+				line-height: px-to-rem($line_height_text);
+				text-align: left;
+				text-decoration: underline;
+			}
+			p {
+				@include font-body;
+				color: $text;
+				font-size: px-to-rem($font_size_text);
+				font-stretch: normal;
+				font-weight: $font_weight_text;
+				letter-spacing: $spacing_text;
+				line-height: px-to-rem($line_height_text);
+				text-align: left;
+				strong {
+					color: $text;
+					font-size: px-to-rem($font_size_text);
+					font-weight: bold;
+					line-height: px-to-rem($line_height_text);
+				}
+			}
+			ul {
+				padding-left: 15px;
+			}
+			ol {
+				padding: 0;
+				li {
+					@include font-body;
+					color: $text;
+					font-size: px-to-rem($font_size_text);
+					line-height: px-to-rem($line_height_text);
+					padding-left: 0;
+					margin-bottom: 0.6em;
+					position: relative;
+					&::marker {
+						@include font-body;
+						background: transparent;
+						border-radius: 0;
+						color: $text;
+						display: inline-block;
+						font-size: px-to-rem($font_size_text);
+						font-weight: bold;
+						left: 0;
+						padding-right: 0;
+						position: absolute;
+						top: 0;
+					}
+				}
+			}
+		}
+	}
+
+	/*
+ * Ordered (Numbered) List
+ */
+	/*--- Order List ---*/
+	ol:not(.list):not(.carousel-indicators) {
+		padding: 0 0 0 20px;
+		@media (min-width: 767.98px) {
+			&.column-list-2 {
+				-moz-column-count: 2;
+				-moz-column-gap: 20px;
+				-webkit-column-count: 2;
+				-webkit-column-gap: 20px;
+				column-count: 2;
+				column-gap: 20px;
+				display: block;
+			}
+		}
+		li {
+			@include font-body;
+			color: $text;
+			font-size: px-to-rem($font_size_text);
+			line-height: px-to-rem($line_height_text);
+			padding-left: 0;
+			margin-bottom: 0.6em;
+			position: relative;
+			a {
+				padding: 0;
+			}
+			&::marker {
+				@include font-body;
+				background: transparent;
+				border-radius: 0;
+				color: $text;
+				display: inline-block;
+				font-size: px-to-rem($font_size_text);
+				font-weight: bold;
+				left: 0;
+				padding-right: 0;
+				position: absolute;
+				top: 0;
+			}
+		}
+	}
+
+	ol.list {
+		counter-reset: item;
+		list-style-type: none;
+		margin-bottom: 1rem;
+		padding: 0;
+		position: relative;
+		> li {
+			display: table;
+			counter-increment: item;
+			margin-bottom: 0.6em;
+			&:before {
+				content: counters(item, ".") ". ";
+				display: table-cell;
+				padding-right: 0.6em;
+			}
+			ol > li:before {
+				content: counters(item, ".") " ";
+			}
+		}
+		li {
+			@include font-body;
+			color: $text;
+			font-size: px-to-rem($font_size_text);
+			line-height: px-to-rem($line_height_text);
+			list-style-type: none;
+			//margin-bottom: 0;
+			margin-left: 0;
+			padding-left: 20px;
+			position: relative;
+			margin-bottom: 0.6em;
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6 {
+				margin-top: 0 !important;
+				display: inline-block !important;
+			}
+			a {
+				padding: 0;
+			}
+			&::before {
+				@include font-body;
+				background: transparent;
+				border-radius: 0;
+				color: $text;
+				display: inline-block;
+				font-size: px-to-rem($font_size_text);
+				font-weight: bold;
+				left: 0;
+				padding-right: 0;
+				position: absolute;
+				top: 0;
+			}
+			ol {
+				margin-top: 10px;
+				li {
+					padding-left: 20px;
+				}
+			}
+		}
+	}
+	$spacer_post: 30px;	
+@include media-breakpoint-up(xl) {
+  $spacer_post: 80px;
+}
+
+.wp-block-table:not(.is-style-stripes) {
+  margin-bottom: calc(($spacer_post/2) / 2);
+  margin-top: calc(($spacer_post/2) / 2);
+  table {
+    border-left: 2px solid $primary;
+    border-right: 2px solid $primary;
+    border-top: 2px solid $primary;
+    tr {
+      border-bottom: 2px solid $primary;
+      > td {
+        border-left: 2px solid $primary;
+        &:first-of-type {
+          border-left: none;
+        }
+      }
+    }
+  }
+}
+
+.wp-block-table{
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  display: block;
+  @include media-breakpoint-down(sm){
+    max-width: unset
+
+  }
+  table{
+    width: 100%;
+    caption-side: bottom;
+    border-collapse: collapse;
+	@include media-breakpoint-down(sm){
+		max-width: unset;
+		width: 500px;
+	  }
+    td {
+      @include font-body;
+      color: $text;
+      font-size: px-to-rem($font_size_text);
+      font-stretch: normal;
+      font-style: normal;
+      font-weight: $font_weight_text;
+      letter-spacing: $spacing_text;
+      line-height: px-to-rem($line_height_text);
+      margin-bottom: 0;
+      overflow-wrap: break-word;
+      padding: 10px;
+      white-space: normal;
+      word-break: break-word;
+
+      > * {
+        @include font-body;
+        color: inherit;
+        letter-spacing: $spacing_text;
+        line-height: px-to-rem($line_height_text);
+        overflow-wrap: break-word;
+        white-space: normal;
+        word-break: break-word;
+      }
+      strong {
+        @include font-body;
+        color: inherit;
+        font-size: bold;
+        font-weight: $font_weight_strong;
+        line-height: px-to-rem($line_height_text);
+      }
+      a {
+        color: $link;
+        font-weight: $font_weight_text;
+        text-decoration: underline !important;
+        transition: all 0.4s ease;
+        > *,
+        * > * {
+          color: $link;
+        }
+        strong {
+          font-weight: bold;
+          color: $link;
+        }
+        &:hover {
+          text-decoration: none !important;
+        }
+      }
+      em {
+        @include font-body;
+        font-size: px-to-rem($font_size_text);
+        font-style: italic;
+        font-weight: $font_weight_text;
+      }
+      strong,
+      em,
+      a,
+      span {
+        margin: 0 !important;
+      }
+    }
+  }
+}
+
+.wp-block-table.first-col-300{
+  table{
+    thead{
+      tr{
+        th:first-child {
+          @include media-breakpoint-up(md){
+            width: 300px;
+          }
+        }
+      }
+    }
+    tbody{
+      tr{
+        td:first-child {
+          @include media-breakpoint-up(md){
+            width: 300px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.wp-block-table.first-col-200{
+  table{
+    thead{
+      tr{
+        th:first-child {
+          @include media-breakpoint-up(md){
+            width: 300px;
+          }
+        }
+      }
+    }
+    tbody{
+      tr{
+        td:first-child {
+          @include media-breakpoint-up(md){
+            width: 200px;
+          }
+        }
+      }
+    }
+  }
+}
+}

@@ -1,0 +1,161 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "../../assets/styles/scss/utilities/_functions";
+@import "../../assets/styles/scss/utilities/_variables";
+@import "../../assets/styles/scss/utilities/_mixins";
+@import "../../critical-assets/styles/scss/utilities/mixins";
+
+$section: ".block-home-stats";
+#{$section} {
+
+	position: relative;
+
+	&::after{
+		content: "";
+		position: absolute;
+		left: calc(-50vw + 50%);
+		top: 0;
+		background-color: $light-secondary;
+		width: 100vw;
+		height: 100%;
+		z-index: -1;
+	}
+
+	&__container{
+		background-color: $white;
+		padding: 80px 0;
+		border-radius: 30px;
+		box-shadow: 0px 2px 10px 5px rgba(0, 0, 0, 0.05);
+		z-index: 1;
+	}
+
+	&__stats{
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__editor{
+		flex: 0 0 auto;
+		width: 100%;
+		justify-content: center;
+		margin: 0 auto 25px auto;
+		text-align: center;
+		@include editor-gap;
+
+		@include media-breakpoint-up(lg) {
+			flex: 0 0 83.333%;
+			width: 83.333%;
+		}
+
+		@include media-breakpoint-up(xl) {
+			flex: 0 0 calc(8 * (100% / 10));
+			width: calc(8 * (100% / 10));
+		}
+
+	}
+
+	&-row{
+		display: flex;
+		flex-wrap: wrap;
+		row-gap: 60px;
+
+		@include media-breakpoint-up(md) {
+			column-gap: 44px;
+		}
+
+	}
+
+	.statistic {
+
+		flex: 0 0 auto;
+		width: 100%;
+		text-align: center;
+
+		@include media-breakpoint-up(md) {
+			flex: 0 0 calc(33.333% - 36px);
+			width: calc(33.333% - 36px);
+			text-align: start;
+		}
+
+		@include media-breakpoint-up(lg) {
+			flex: 0 0 calc(20% - 36px);
+			width: calc(20% - 36px);
+		}
+
+		@include media-breakpoint-up(xl) {
+			flex: 0 0 calc(2 * (100% / 10) - 36px);
+			width: calc(2 * (100% / 10) - 36px);
+		}
+		
+		&__body {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			flex: 1;
+		}
+
+		&__title {
+			font-size: 0;
+			color: $primary;
+			>*{
+				color: $primary;
+			}
+		}
+
+		&:nth-child(4){
+			@include media-breakpoint-between(md, lg) {		
+				&::after{
+					content: none !important;
+				}
+			}
+		}
+		
+	}
+
+	.statistic + .statistic{
+		position: relative;
+
+		&::after{
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			height: 1px;
+			width: 100px;
+			background-color: $primary;
+			top: -30px;
+
+			@include media-breakpoint-up(md) {
+				top: 0;
+				left: -22px;
+				right: unset;
+				height: 100px;
+				width: 1px;
+			}
+
+		}
+	}
+
+	&__buttons{
+		margin-top: 35px;
+		justify-content: center;
+	}
+	
+}
+
+#{$section} + .block__image-carousel{
+	position: relative;
+	padding-top: 0 !important;
+	&::after{
+		content: "";
+		position: absolute;
+		left: calc(-50vw + 50%);
+		top: 0;
+		background-color: $light-secondary;
+		width: 100vw;
+		height: 255px;
+		z-index: -1;
+	}
+}

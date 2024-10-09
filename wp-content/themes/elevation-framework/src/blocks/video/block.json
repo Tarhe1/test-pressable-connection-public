@@ -1,0 +1,18 @@
+{
+	"name": "elevation/video",
+	"title": "Video Block",
+	"category": "elevation-blocks",
+	"icon": "block-default",
+	"keywords": ["video", "block", "youtube", "vimeo", "file", "elevation"],
+	"description": "",
+	"acf": {
+		"mode": "edit",
+		"renderCallback": "video_block_render_callback"
+	},
+	"supports": {
+		"anchor": true
+	},
+	"style": ["file:./style-index.css"],
+	"script": "file:./index.js",
+	"editorStyle": ["file:./index.css"]
+}

@@ -1,0 +1,193 @@
+/*
+* Swiper Global Styles
+*/
+div[class^="swiper__container--"] {
+	position: relative;
+	// @media (max-width: 1199.98px){
+	//   overflow: hidden;
+	// }
+}
+.swiper__container-controls {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-wrap: nowrap;
+	gap: 30px;
+	position: relative;
+	margin-top: 30px;
+	@include media-breakpoint-up(xl) {
+		margin-top: 50px;
+	}
+	&.left {
+		justify-content: flex-start;
+	}
+	&.center {
+		justify-content: center;
+	}
+	&.right {
+		justify-content: flex-end;
+	}
+	/*
+  * Paginador
+  */
+  .swiper-pagination-bullets.swiper-pagination-horizontal:not(.swiper-pagination-bullets-dynamic),
+  .swiper-pagination:not(.swiper-pagination-bullets-dynamic) {
+	  bottom: 0;
+	  display: flex;
+	  gap: 12px;
+	  height: auto;
+	  justify-content: center;
+	  position: relative;
+	  text-align: center;
+	  transform: unset;
+	  width: auto;
+	  .swiper-pagination-bullet {
+		  background: $secondary;
+		  border-radius: 50%;
+		  height: 8px;
+		  opacity: 0.4;
+		  width: 8px;
+		  &.swiper-pagination-bullet-active {
+			  background: $secondary;
+			  opacity: 1;
+		  }
+	  }
+  }
+
+		/*
+  * Paginador Dynamic
+  */
+  .swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
+  .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+	  bottom: unset;
+	  left: unset;
+	  position: relative;
+	  top: unset;
+	  transform: unset;
+	  padding: 5px 0;
+	  .swiper-pagination-bullet {
+		  background: $text;
+		  opacity: 0.4;
+		  margin: 0 8px;
+		  &.swiper-pagination-bullet-active {
+			  background: $text;
+			  opacity: 1;
+		  }
+	  }
+  }
+	/*
+  * Scrollbar
+  */
+	.swiper-scrollbar.swiper-scrollbar-horizontal {
+		width: 100%;
+		background: transparent;
+		opacity: 1 !important;
+		position: relative;
+		bottom: 0;
+		height: auto;
+		&::after {
+			content: "";
+			display: block;
+			width: 100%;
+			height: 1px;
+			position: absolute;
+			left: 0;
+			top: 0;
+			background: $secondary;
+		}
+	}
+	.swiper-scrollbar-drag {
+		height: 3px;
+		background: $secondary;
+		z-index: 1;
+		top: -1px;
+	}
+	/*
+  * Buttons Container Tugheder
+  */
+	.swiper__container-buttons {
+		display: flex;
+		position: relative;
+		column-gap: 13px;
+		.swiper-button-next,
+		.swiper-button-prev {
+			background-image: url("data:image/svg+xml,%3Csvg width='52' height='52' viewBox='0 0 52 52' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle opacity='0.9' cx='26' cy='26' r='25' stroke='%2320716A' stroke-width='2'/%3E%3Cpath d='M31.5303 26.5303C31.8232 26.2374 31.8232 25.7626 31.5303 25.4697L26.7574 20.6967C26.4645 20.4038 25.9896 20.4038 25.6967 20.6967C25.4038 20.9896 25.4038 21.4645 25.6967 21.7574L29.9393 26L25.6967 30.2426C25.4038 30.5355 25.4038 31.0104 25.6967 31.3033C25.9896 31.5962 26.4645 31.5962 26.7574 31.3033L31.5303 26.5303ZM20 26.75L31 26.75L31 25.25L20 25.25L20 26.75Z' fill='%2320716A'/%3E%3C/svg%3E%0A");
+			height: 52px;
+			width: 52px;
+			&::before{
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 0;
+				background-color: $secondary;
+				opacity: 0;
+				width: 100%;
+				height: 100%;
+				border-radius: 50%;
+				transition: all 0.4s ease;
+			}
+			&:hover{
+				@include media-breakpoint-up(xl) {
+					&::before{
+						opacity: 0.14;
+					}
+				}
+			}
+		}
+	}
+	/*
+  * Buttons Between Paginatior
+  */
+	.swiper-button-next,
+	.swiper-button-prev {
+		background-image: url("data:image/svg+xml,%3Csvg width='17' height='9' viewBox='0 0 17 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.8774 4.82914C16.0727 4.63388 16.0727 4.3173 15.8774 4.12203L12.6954 0.940053C12.5002 0.744791 12.1836 0.744791 11.9883 0.940053C11.7931 1.13532 11.7931 1.4519 11.9883 1.64716L14.8168 4.47559L11.9883 7.30401C11.7931 7.49928 11.7931 7.81586 11.9883 8.01112C12.1836 8.20638 12.5002 8.20638 12.6954 8.01112L15.8774 4.82914ZM0.462891 4.97559L15.5239 4.97559L15.5239 3.97559L0.462891 3.97559L0.462891 4.97559Z' fill='%23211F1F'/%3E%3C/svg%3E%0A");
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		background-size: contain;
+		height: 20px;
+		left: unset;
+		margin: 0 !important;
+		position: relative;
+		right: unset;
+		top: unset;
+		transform: unset;
+		width: 20px;
+		&::after {
+			content: none;
+		}
+	}
+	.swiper-button-prev {
+		transform: rotate(180deg);
+	}
+	.swiper-button-next.swiper-button-disabled,
+	.swiper-button-prev.swiper-button-disabled {
+		opacity: 0.5;
+	}
+	/*
+  * Buttons Play Puse
+  */
+	.swiper-button-play-pause {
+		display: none;
+		cursor: pointer;
+		font-size: 0;
+		height: 25px;
+		width: 25px;
+		padding: 0;
+		background-color: transparent;
+		border: none;
+		.icon {
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			display: block;
+			height: 25px;
+			width: 25px;
+		}
+	}
+	.swiper-button-play-pause[aria-label="play"] .icon {
+		background-image: url("data:image/svg+xml,%3Csvg width='12' height='15' viewBox='0 0 12 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1593_526)'%3E%3Cpath opacity='0.4' d='M1.09088 13.8461V1.15384L10.5143 7.50003L1.09088 13.8461Z' fill='%23211F1F' stroke='%23211F1F' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1593_526'%3E%3Crect width='12' height='15' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+	}
+	.swiper-button-play-pause[aria-label="pause"] .icon {
+		background-image: url("data:image/svg+xml,%3Csvg width='11' height='15' viewBox='0 0 11 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='4' height='15' rx='2' fill='%23211F1F'/%3E%3Crect x='7' width='4' height='15' rx='2' fill='%23211F1F'/%3E%3C/svg%3E%0A");
+	}
+}

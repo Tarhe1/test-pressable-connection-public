@@ -1,0 +1,29 @@
+{
+  "name": "elevation/directory-post",
+  "title": "Directory Post Block",
+  "category": "elevation-template",
+  "icon": "block-default",
+  "keywords": [
+    "filters",
+    "directory",
+    "post",
+    "blog",
+    "elevation",
+    "block"
+  ],
+  "description": "",
+  "acf": {
+    "mode": "edit",
+    "renderCallback": "directory_post_block_render_callback"
+  },
+  "supports": {
+    "anchor": true
+  },
+  "style": [
+    "file:./style-index.css"
+  ],
+  "script": "file:./index.js",
+  "editorStyle": [
+    "file:./index.css"
+  ]
+}

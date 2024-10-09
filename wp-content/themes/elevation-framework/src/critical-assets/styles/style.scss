@@ -1,0 +1,157 @@
+* {
+	font-synthesis: none !important;
+}
+
+// BOOTSTRAP
+
+// @import 'bootstrap/scss/bootstrap';
+@import "bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+$prefix: "elev-";
+$font-family-heading: "Urbanist", Arial, sans-serif;
+$font-family-text: "Urbanist", Arial, sans-serif;
+
+$form-check-input-bg: #000;
+
+// header__top-menu variables
+$nav-link-font-size: 11px;
+$navbar-nav-link-padding-x: 0;
+$nav-link-padding-y: 0;
+$nav-link-font-weight: 400;
+$navbar-dark-active-color: #cb4b3b;
+$btn-border-radius: 0;
+
+$navbar-dark-toggler-icon-bg: url("data:image/svg+xml,%3Csvg width='19' height='12' viewBox='0 0 19 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.25 1H17.75' stroke='%23211F1F' stroke-width='1.5' stroke-linecap='round'/%3E%3Cpath d='M1.25 11H17.75' stroke='%23211F1F' stroke-width='1.5' stroke-linecap='round'/%3E%3Cpath d='M1.25 6H17.75' stroke='%23211F1F' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+$navbar-toggler-padding-y: 0.75rem;
+$navbar-toggler-padding-x: 0.75rem;
+$navbar-toggler-border-radius: 1px;
+$navbar-dark-toggler-border-color: #000;
+
+$dropdown-border-radius: 0;
+$dropdown-link-active-color: #fff;
+$dropdown-link-active-bg: #cb4b3b;
+
+$link-color: #cb4b3b;
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+
+$theme-colors: map-remove($theme-colors, "info", "light", "dark");
+// Custom Variables
+
+@import "../../assets/styles/scss/utilities/_variables";
+
+// 4. Include any default map overrides here
+
+$custom-colors: (
+	"primary": $primary,
+	"container-primary": $light-primary,
+	"light-primary": $light-primary,
+	"secondary": $secondary,
+	"container-secondary": $light-secondary,
+	"tertiary": $secondary,
+	"container-tertiary": $light-secondary,
+	"light-grey": $light-secondary,
+	"error": $error,
+);
+
+$container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1204px,
+	xxl: 1384px,
+);
+
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+// Remove from maps
+
+// 5. Include remainder of required parts
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/root";
+
+// 6. Optionally include any other parts as needed
+@import "bootstrap/scss/utilities";
+@import "bootstrap/scss/reboot";
+// @import "bootstrap/scss/type";
+@import "bootstrap/scss/images";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+// @import "bootstrap/scss/tables";
+@import "bootstrap/scss/forms";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/transitions";
+@import "bootstrap/scss/dropdown";
+@import "bootstrap/scss/button-group";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar";
+// @import "bootstrap/scss/card";
+@import "bootstrap/scss/accordion";
+// @import "bootstrap/scss/breadcrumb";
+// @import "bootstrap/scss/pagination";
+// @import "bootstrap/scss/badge";
+// @import "bootstrap/scss/alert";
+// @import "bootstrap/scss/progress";
+// @import "bootstrap/scss/list-group";
+// @import "bootstrap/scss/close";
+// @import "bootstrap/scss/toasts";
+@import "bootstrap/scss/modal";
+// @import "bootstrap/scss/tooltip";
+// @import "bootstrap/scss/popover";
+// @import "bootstrap/scss/carousel";
+// @import "bootstrap/scss/spinners";
+// @import "bootstrap/scss/offcanvas";
+// @import "bootstrap/scss/placeholders";
+
+$component-active-bg: #000;
+$component-active-color: #000;
+$form-check-input-checked-bg-color: #000;
+
+// Helpers
+@import "bootstrap/scss/helpers";
+@import "bootstrap/scss/utilities/api";
+
+.container,
+.container-fluid,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl,
+.container-xxl {
+	--elev-gutter-x: 32px;
+
+	@include media-breakpoint-up(sm) {
+		--elev-gutter-x: 48px;
+	}
+
+	@include media-breakpoint-up(xxl) {
+		--elev-gutter-x: 64px;
+	}
+}
+
+@import "../../assets/styles/scss/utilities/_functions";
+@import "../../assets/styles/scss/utilities/_mixins";
+@import "./scss/base/_reset";
+@import "./scss/base/_typography";
+
+@import "./scss/utilities/_global-blocks";
+@import "./scss/utilities/_utilities";
+@import "./scss/utilities/_mixins";
+@import "./scss/utilities/_buttons";
+
+@import "./scss/layout/_banner";
+@import "./scss/layout/_header";
+@import "./scss/layout/_navigation";
+@import "./scss/layout/_mega-menu";
+@import "./scss/layout/_breadcrumbs";
+@import "./scss/layout/_form-steps";
+
+@import "./scss/plugins/_tribe-events_calendar";
+@import "./scss/plugins/_gTranslate";
+@import "./scss/plugins/_popup-maker";
+
+@import "./scss/pages/_page";

@@ -1,0 +1,50 @@
+{
+	"name": "elevation-framework",
+	"version": "1.0.0",
+	"author": "Elevation",
+	"private": true,
+	"keywords": [
+		"WordPress",
+		"Theme"
+	],
+	"engines": {
+		"node": ">=20.0.0"
+	},
+	"homepage": "https://github.com/Elevation-Web/elevation-framework#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Elevation-Web/elevation-framework.git"
+	},
+	"bugs": {
+		"url": "https://github.com/Elevation-Web/elevation-framework/issues"
+	},
+	"devDependencies": {
+		"@wordpress/eslint-plugin": "^17.6.0",
+		"@wordpress/icons": "9.40.0",
+		"@wordpress/prettier-config": "3.6.0",
+		"@wordpress/scripts": "27.0.0",
+		"browser-sync": "2.27.10",
+		"browser-sync-webpack-plugin": "2.3.0",
+		"file-loader": "^6.2.0",
+		"node-sass": "^9.0.0",
+		"sass-loader": "^14.1.1",
+		"style-loader": "^3.3.4",
+		"webpack-assets-manifest": "^5.2.1"
+	},
+	"scripts": {
+		"format": "wp-scripts format",
+		"dev": "wp-scripts start --webpack-copy-php",
+		"build": "yarn format & yarn wp-scripts build --webpack-copy-php",
+		"lint:scss": "wp-scripts lint-style 'blocks/**/*.scss' & wp-scripts lint-style 'assets/**/*.scss'",
+		"lint:js": "wp-scripts lint-js 'blocks/**/*.js' & wp-scripts lint-js 'assets/**/*.js'",
+		"check-engines": "wp-scripts check-engines"
+	},
+	"dependencies": {
+		"@popperjs/core": "2.11.8",
+		"bootstrap": "5.3.2",
+		"prettier": "^3.2.4",
+		"sticky-sidebar": "3.3.1",
+		"swiper": "11.0.5"
+	},
+	"prettier": "@wordpress/prettier-config"
+}

@@ -1,0 +1,18 @@
+{
+	"name": "elevation/statistics",
+	"title": "Impact Block",
+	"category": "elevation-blocks",
+	"icon": "block-default",
+	"keywords": ["impact", "statistics", "elevation", "block"],
+	"description": "",
+	"acf": {
+		"mode": "edit",
+		"renderCallback": "statistics_block_render_callback"
+	},
+	"supports": {
+		"anchor": true
+	},
+	"style": ["file:./style-index.css"],
+	"script": "file:./index.js",
+	"editorStyle": ["file:./index.css"]
+}

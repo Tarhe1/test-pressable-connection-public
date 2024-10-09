@@ -1,0 +1,11 @@
+{
+	"name": "elevation/archive",
+	"version": "1.0.0",
+	"title": "Archive / Category / Blog",
+	"icon": "admin-site",
+	"description": "This is use to compile archive, ctegory and blog templates assets.",
+	"editorScript": "file:index.js",
+	"viewScript": "file:script.js",
+	"editorStyle": "file:index.css",
+	"style": "file:style-index.css"
+}

@@ -1,0 +1,34 @@
+.outside .aioseo-location-map , .outside .wp-block-image{
+  height: 100%;
+  width: 50vw;
+}
+.outside .wp-block-image > img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.wp-block-cover.alignfull.banner-contact-us{
+  > .wp-block-cover__inner-container{
+    max-width: 1320px;
+    --elev-gutter-x: 64px;
+    padding-right: calc(var(--elev-gutter-x) * 0.5);
+    padding-left: calc(var(--elev-gutter-x) * 0.5);
+  }
+}
+
+.page-template-contact-us {
+
+  .wp-block-group, .wp-block-columns .wp-block-column{
+    .wp-block-heading{
+      margin-bottom: 17px;
+    }
+    p{
+      margin-bottom: 20px;
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+    }
+  }
+
+}
